@@ -103,8 +103,8 @@
 
 <!-- left main -->
  <gear x="0.08" y="1.4" z="-1.3" retract-time="7" compression="0.6">
-  <control-input axis="/controls/gear/wheel[0]/brake" control="BRAKE"/>
-  <control-input axis="/controls/gear/parking-brake" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="7"/>
   <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
@@ -112,8 +112,8 @@
 
 <!-- right main -->
  <gear x="0.08" y="-1.4" z="-1.3" retract-time="7" compression="0.6">
-  <control-input axis="/controls/gear/wheel[1]/brake" control="BRAKE"/>
-  <control-input axis="/controls/gear/parking-brake" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="7"/>
   <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
@@ -121,7 +121,7 @@
 
 <!-- Canopy -->
  <gear x="3.0" y="0.0" z="0.6" retract-time="7" compression="0.6">
-  <control-input axis="/controls/gear/parking-brake" control="EXTEND"/>
+  <control-input axis="/controls/gear/brake-parking" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="10"/>
   <control-output control="EXTEND" prop="/canopy/position-norm"/>
  </gear>
