@@ -41,10 +41,10 @@
   <object-name>CLWing</object-name>
   <object-name>CRWing</object-name>
   <property>/wingman/position-norm</property>
-  <offset-deg>-120</offset-deg>
-  <factor>120</factor>
+  <offset-deg>-90</offset-deg>
+  <factor>90</factor>
   <center>
-   <x-m>10.0</x-m>
+   <x-m>12.0</x-m>
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </center>
@@ -84,8 +84,8 @@
   <object-name>CLWing</object-name>
   <object-name>CRWing</object-name>
   <property>/wingman/position-norm</property>
-  <offset-deg>120</offset-deg>
-  <factor>-120</factor>
+  <offset-deg>90</offset-deg>
+  <factor>-90</factor>
   <center>
    <x-m>0.0</x-m>
    <y-m>0.0</y-m>
@@ -128,10 +128,10 @@
   <object-name>CLWing</object-name>
   <object-name>CRWing</object-name>
   <property>/orientation/pitch-deg</property>
-  <factor>1.4</factor>
+  <factor>1.0</factor>
   <center>
-   <x-m>10.0</x-m>
-   <y-m>0.0</y-m>
+   <x-m>12.0</x-m>
+   <y-m>12.0</y-m>
    <z-m>0.0</z-m>
   </center>
   <axis>
@@ -215,7 +215,7 @@
   <property>/orientation/roll-deg</property>
   <factor>1.0</factor>
   <center>
-   <x-m>10.0</x-m>
+   <x-m>12.0</x-m>
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </center>
@@ -268,6 +268,91 @@
   </axis>
  </animation>
 
+<!-- heading offset -->
+<!-- <animation>
+  <type>rotate</type>
+  <object-name>CHull</object-name>
+  <object-name>CFCanopy</object-name>
+  <object-name>CCanopy</object-name>
+  <object-name>CBCanopy</object-name>
+  <object-name>CRudder</object-name>
+  <object-name>CLElevator</object-name>
+  <object-name>CRElevator</object-name>
+  <object-name>CAHook</object-name>
+  <object-name>CFStrut</object-name>
+  <object-name>CFTyre</object-name>
+  <object-name>CFDoor</object-name>
+  <object-name>CBDoor</object-name>
+  <object-name>CLDoor1</object-name>
+  <object-name>CLDoor2</object-name>
+  <object-name>CLStrut</object-name>
+  <object-name>CLTyre</object-name>
+  <object-name>CRStrut</object-name>
+  <object-name>CRTyre</object-name>
+  <object-name>CRDoor1</object-name>
+  <object-name>CRDoor2</object-name>
+  <object-name>CLAileron</object-name>
+  <object-name>CRAileron</object-name>
+  <object-name>CLFlap</object-name>
+  <object-name>CRFlap</object-name>
+  <object-name>CLWing</object-name>
+  <object-name>CRWing</object-name>
+  <property>/orientation/heading-deg</property>
+  <factor>1.0</factor>
+  <center>
+   <x-m>15.0</x-m>
+   <y-m>15.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>CHull</object-name>
+  <object-name>CFCanopy</object-name>
+  <object-name>CCanopy</object-name>
+  <object-name>CBCanopy</object-name>
+  <object-name>CRudder</object-name>
+  <object-name>CLElevator</object-name>
+  <object-name>CRElevator</object-name>
+  <object-name>CAHook</object-name>
+  <object-name>CFStrut</object-name>
+  <object-name>CFTyre</object-name>
+  <object-name>CFDoor</object-name>
+  <object-name>CBDoor</object-name>
+  <object-name>CLDoor1</object-name>
+  <object-name>CLDoor2</object-name>
+  <object-name>CLStrut</object-name>
+  <object-name>CLTyre</object-name>
+  <object-name>CRStrut</object-name>
+  <object-name>CRTyre</object-name>
+  <object-name>CRDoor1</object-name>
+  <object-name>CRDoor2</object-name>
+  <object-name>CLAileron</object-name>
+  <object-name>CRAileron</object-name>
+  <object-name>CLFlap</object-name>
+  <object-name>CRFlap</object-name>
+  <object-name>CLWing</object-name>
+  <object-name>CRWing</object-name>
+  <property>/orientation/heading-deg</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+-->
 <!-- Canopy -->
  <animation>
   <type>rotate</type>

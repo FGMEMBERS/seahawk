@@ -12,8 +12,9 @@ The model was originally constructed in Realsoft3D (linux beta
 V4.5) and then exported as .3ds.
 
 The seahawk-yasim-set.xml file includes references to the
-a4-sound.xml, c310-vfr-panel.xml and c310-mini-panel.xml files.
-Some of the features of the panels are not used, or used incorrectly.
+a4-sound.xml file.  Two Panels have been included - a full panel,
+which imposes a frame-rate hit on my system, and a mini panel,
+which seems to run ok.
 
 The autopilot is quite aggressive and can cause elevator
 'hunting' at low speeds < approx 230 asi.
@@ -29,5 +30,7 @@ Files included:
 
 /Aircraft-yasim/seahawk-yasim.xml
 ---
+Various Panel files.
+
 Lee Elliott.
 leee-fgfs@spatial.freeserve.co.uk
