@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Hawker Sea Hawk simulation config.
+
+This 'set' file is for the WV908 version
+
+2002-12-26 Lee Elliott  leee-fgfs@spatial.freeserve.co.uk
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+  <flight-model>yasim</flight-model>
+  <aero>seahawk-WV908-yasim</aero>
+  <fuel-fraction>1.0</fuel-fraction>
+
+  <systems>
+    <electrical>
+      <path>Aircraft/c172/c172-electrical.xml</path>
+    </electrical>
+  </systems>
+
+  <sound>
+   <audible>true</audible>
+   <path>Aircraft/a4/a4-sound.xml</path>
+  </sound>
+
+  <panel>
+   <path>Aircraft/seahawk/seahawk-vfr-panel.xml</path>
+  </panel>
+  <panel_2>
+   <path>Aircraft/seahawk/seahawk-mini-panel.xml</path>
+  </panel_2>
+
+  <hud>
+   <path>Huds/Default/default.xml</path>
+   <visibility>true</visibility>
+  </hud>
+
+  <model>
+   <path>Aircraft/seahawk/seahawk-WV908-model.xml</path>
+  </model>
+
+  <chase-distance-m type="double" archive="y">-18.0</chase-distance-m>
+ </sim>
+
+ <autopilot>
+   <config>
+
+     <min-climb-speed-kt type="float">100.0</min-climb-speed-kt>
+     <best-climb-speed-kt type="float">550.0</best-climb-speed-kt>
+
+     <target-climb-rate-fpm type="float">6000.0</target-climb-rate-fpm>
+     <target-descent-rate-fpm type="float">6000.0</target-descent-rate-fpm>
+
+     <elevator-adj-factor type="float">300.0</elevator-adj-factor>
+
+     <integral-contribution type="float">0.005</integral-contribution>
+
+     <max-aileron type="float">0.5</max-aileron>
+     <max-roll-deg type="float">60.0</max-roll-deg>
+
+     <roll-out-deg type="float">8</roll-out-deg>
+     <roll-out-smooth-deg type="float">15.0</roll-out-smooth-deg>
+
+     <zero-pitch-throttle type="float">0.5</zero-pitch-throttle>
+     <zero-pitch-trim-full-throttle type="float">0.001</zero-pitch-trim-full-throttle>
+
+   </config>
+ </autopilot>
+
+</PropertyList>
+
+
