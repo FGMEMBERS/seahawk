@@ -27,7 +27,6 @@ Hawker Sea Hawk simulation config.
   </systems>
 	 
   <sound>
-   <audible>true</audible>
    <path>Aircraft/seahawk/Sounds/seahawk-sound.xml</path>
   </sound>
 
