@@ -119,15 +119,12 @@ Hawker Sea Hawk simulation config.
 			<standby-khz>341</standby-khz>
 		</frequencies>
 	</adf>
- </instrumentation>
- 
- <!-- radio dme switch ON -->
- <radios>
+        <!-- radio dme switch ON -->
  	<dme>
 		<switch-position>1</switch-position>	
 	</dme>
- </radios>
-
+ </instrumentation>
+ 
 <!-- **************** map keyboard input ********************** -->
  <input>
   <keyboard>
