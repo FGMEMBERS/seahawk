@@ -92,7 +92,7 @@ Hawker Sea Hawk simulation config.
 <!-- nosewheel lock OFF -->
  <controls>
   <gear>
-   <parking-brake>1</parking-brake>
+   <brake-parking>1</brake-parking>
    <tailwheel-lock>true</tailwheel-lock>
   </gear>
   <flight>
