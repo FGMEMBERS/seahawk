@@ -3,6 +3,13 @@
       that, the numbers, where I could find them, roughly match
       those of the original aircraft.
       Lee Elliott. leee-fgfs@spatial.freeserve.co.uk
+
+16.12.2004
+	  
+	  Modified by Vivian Meazza. vivian.meazza at lineone.net 
+      to add new arrester hook and launchbar code to make 
+      the seahawk carrier-capable  
+	  
 -->
 
 <airplane mass="9720">
@@ -11,8 +18,8 @@
      Approach Details are taken from the Pilot' Notes
      The airbrakes are modelled as spoilers
 -->
- <approach speed="110" aoa="10">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
+ <approach speed="110" aoa="8.0">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
   <control-setting axis="/controls/flight/flaps" value="1.0"/>
   <control-setting axis="/controls/gear/gear-down" value="1"/>
  </approach>
@@ -22,7 +29,7 @@
      also quoted 587 mph at 'altitude'.
 -->
  <cruise speed="521" alt="0">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="1.5"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
   <control-setting axis="/controls/gear/gear-down" value="0"/>
  </cruise>
@@ -115,9 +122,7 @@
 <!-- left main -->
  <gear x="0.08" y="1.4" z="-1.45" retract-time="7" compression="0.60">
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/> 
-<!--  <control-input axis="/controls/gear/wheel[0]/brake" control="BRAKE"/>-->
- <control-input axis="/controls/gear/brake-parking" control="BRAKE"/> 
-<!--   <control-input axis="/controls/gear/parking-brake" control="BRAKE" /> -->
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/> 
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="7"/>
   <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
@@ -125,10 +130,8 @@
 
 <!-- right main -->
  <gear x="0.08" y="-1.4" z="-1.45" retract-time="7" compression="0.60">
-<control-input axis="/controls/gear/brake-right" control="BRAKE"/> 
-<!--  <control-input axis="/controls/gear/wheel[1]/brake" control="BRAKE"/>-->
-<control-input axis="/controls/gear/brake-parking" control="BRAKE"/> 
-<!-- <control-input axis="/controls/gear/parking-brake" control="BRAKE" /> -->
+  <control-input axis="/controls/gear/brake-right" control="BRAKE"/> 
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/> 
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="7"/>
   <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
@@ -140,15 +143,21 @@
   <control-speed control="EXTEND" transition-time="10"/>
   <control-output control="EXTEND" prop="/canopy/position-norm"/>
  </gear>
-
+ 
  <!-- Hook -->
-<gear x="-4.93" y="0.0" z="-0.36" compression="1" spring="0.15">
-  <control-input axis="/controls/gear/tailhook" control="EXTEND"/>
-  <control-speed control="EXTEND" transition-time="5"/>
-  <control-output control="EXTEND" prop="/gear/tailhook/position-norm"/>
-</gear>
+ <hook x="-4.45" y="0.0" z="-0.38" length="1.85" down-angle="83" up-angle="-7">
+  <control-input axis="/controls/gear/tailhook" control="HEXTEND"/>
+  <control-speed control="HEXTEND" transition-time="5"/>
+</hook>
 
+<!-- Launch-bar 
+Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult strop,
+the launch-bar is included here as a workable subsitute. --> 
 
+<launchbar x="4.03" y="0.0" z="-1.0" length="0.85">
+  <control-input axis="/controls/gear/launchbar" control="LEXTEND"/>
+  <control-speed control="LEXTEND" transition-time="1"/>
+</launchbar>
 
 <!-- Ballast -->
  <ballast x="3.0" y="0" z="0.5" mass="1000"/> <!-- C/pit + Pilot -->
