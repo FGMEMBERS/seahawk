@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 
-<!-- emergency flap loering -->
+<!-- hook lower/raise -->
 
 <PropertyList>
 
  <path>switch-hook.ac</path>
 
-<!-- **************** handle **************** -->
+<!-- **************** switch **************** -->
 <animation>
   <type>rotate</type>
-  <object-name>cylinder</object-name>
+  <object-name>Switch</object-name>
   <property>controls/gear/tailhook</property>
   <interpolation>
    <entry><ind>0</ind><dep>-30</dep></entry>
