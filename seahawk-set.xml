@@ -11,6 +11,7 @@ Hawker Sea Hawk simulation config.
 -->
   <PropertyList> 
     <sim> 
+      <author>Lee Elliott, Vivian Meazza</author>
       <flight-model>yasim</flight-model>
       <status>early-production</status>
       <aero>seahawk-3d-yasim</aero>
