@@ -12,6 +12,7 @@ Hawker Sea Hawk simulation config.
 <PropertyList>
  <sim>
   <flight-model>yasim</flight-model>
+  <status>early-production</status>
   <aero>seahawk-3d-yasim</aero>
   <fuel-fraction>1.0</fuel-fraction>
  
