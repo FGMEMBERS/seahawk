@@ -4,7 +4,7 @@
 <!-- Lee Elliott 2002/12/26 leee-fgfs@spatial.freeserve.co.uk -->
 
 <PropertyList>
- <path>SeaHawk.3ds</path>
+ <path>SeaHawk.ac</path>
  <offsets>
    <z-m>0.0</z-m>
    <pitch-deg>0</pitch-deg>
@@ -31,8 +31,10 @@
 <!-- Left Wing -->
  <animation>
   <type>rotate</type>
-  <object-name>LWing</object-name>
-  <object-name>LAileron</object-name>
+  <object-name>LUWing</object-name>
+  <object-name>LLWing</object-name>
+  <object-name>LUAileron</object-name>
+  <object-name>LLAileron</object-name>
   <object-name>LFlap</object-name>
   <property>/canopy/position-norm</property>
   <factor>-108</factor>
@@ -51,8 +53,10 @@
 <!-- Right Wing -->
  <animation>
   <type>rotate</type>
-  <object-name>RWing</object-name>
-  <object-name>RAileron</object-name>
+  <object-name>RUWing</object-name>
+  <object-name>RLWing</object-name>
+  <object-name>RUAileron</object-name>
+  <object-name>RLAileron</object-name>
   <object-name>RFlap</object-name>
   <property>/canopy/position-norm</property>
   <factor>108</factor>
@@ -89,7 +93,8 @@
 <!-- Elevator bits -->
  <animation>
   <type>rotate</type>
-  <object-name>LElevator</object-name>
+  <object-name>LUElevator</object-name>
+  <object-name>LLElevator</object-name>
   <property>/surface-positions/elevator-pos-norm</property>
   <factor>40</factor>
   <center>
@@ -106,7 +111,8 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>RElevator</object-name>
+  <object-name>RUElevator</object-name>
+  <object-name>RLElevator</object-name>
   <property>/surface-positions/elevator-pos-norm</property>
   <factor>40</factor>
   <center>
@@ -124,7 +130,8 @@
 <!-- Alieron bits -->
  <animation>
   <type>rotate</type>
-  <object-name>LAileron</object-name>
+  <object-name>LUAileron</object-name>
+  <object-name>LLAileron</object-name>
   <property>/surface-positions/left-aileron-pos-norm</property>
   <factor>40</factor>
   <center>
@@ -141,7 +148,8 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>RAileron</object-name>
+  <object-name>RUAileron</object-name>
+  <object-name>RLAileron</object-name>
   <property>/surface-positions/right-aileron-pos-norm</property>
   <factor>-40</factor>
   <center>
