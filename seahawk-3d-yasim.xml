@@ -113,7 +113,8 @@
 <!-- nose - castering-->
  <gear x="4.03" y="0.0" z="-1.45" retract-time="7" compression="0.3">
 <!--  <control-input axis="/controls/flight/rudder" control="STEER" square="true"/> -->
-  <control-input axis="/controls/gear/tailwheel-lock" control="CASTERING"/>
+  <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1"
+                 dst0="1" dst1="0" control="CASTERING"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="6"/>
   <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
