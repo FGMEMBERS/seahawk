@@ -9,7 +9,7 @@
  <animation>
   <type>rotate</type>
   <object-name>adf-Needle1</object-name>
-  <property>instrumentation/adf/indicated-bearing-deg</property>
+  <property>instrumentation/tacan/indicated-bearing-true-deg</property>
   
   <interpolation>
    <entry><ind>0</ind><dep>0</dep></entry>

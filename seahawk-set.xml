@@ -100,6 +100,18 @@ Hawker Sea Hawk simulation config.
     <!-- *************** set properties **********************-->
     <!--parking brake ON -->
     <!-- nosewheel lock OFF -->
+	 <instrumentation>    
+	  <path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
+	  <tacan n="0">
+        <serviceable type="bool" archive="y">true</serviceable>
+        <switch-position type="int" archive="y">1</switch-position>
+      </tacan>
+	  <!-- hsi heading bug and source select-->
+      <heading-indicator> 
+        <heading-bug-deg type="double">95</heading-bug-deg>
+        <heading-source type="bool">true</heading-source>
+      </heading-indicator>
+    </instrumentation>
     <controls> 
       <gear> 
         <brake-parking>1</brake-parking>
@@ -113,28 +125,18 @@ Hawker Sea Hawk simulation config.
     </controls>
     <!-- hsi heading bug and source select-->
     <instrumentation> 
+	  <path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
       <heading-indicator> 
         <heading-bug-deg type="double">95</heading-bug-deg>
         <heading-source type="bool">true</heading-source>
       </heading-indicator>
-      <dme> 
-        <frequencies> 
-          <selected-mhz>115.8</selected-mhz>
-        </frequencies>
-      </dme>
-      <adf> 
-        <frequencies> 
-          <selected-khz>379</selected-khz>
-          <standby-khz>341</standby-khz>
-        </frequencies>
-      </adf>
     </instrumentation>
-    <!-- radio dme switch ON -->
+    <!-- radio dme switch ON 
     <radios> 
       <dme> 
         <switch-position>1</switch-position>
       </dme>
-    </radios>
+    </radios>-->
     <!-- **************** map keyboard input ********************** -->
     <input> 
       <keyboard include="../../Input/Keyboard/carrier-bindings.xml">

@@ -9,7 +9,7 @@
  <animation>
   <type>rotate</type>
   <object-name>dme-Needle1</object-name>
-  <property>instrumentation/dme/indicated-distance-nm</property>
+  <property>instrumentation/tacan/indicated-distance-nm</property>
   
   <interpolation>
    <entry><ind>0</ind><dep>-150</dep></entry>
