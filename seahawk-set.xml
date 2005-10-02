@@ -55,11 +55,27 @@ Hawker Sea Hawk simulation config.
       <help>
         <key>
           <name>Ctrl-B</name>
-          <desc>toggle speedbrake.</desc>
+          <desc>toggle speedbrake</desc>
+        </key>
+        <key>
+          <name>C</name>
+          <desc>catapult launch command</desc>
+        </key>
+        <key>
+          <name>f/F</name>
+          <desc>wing fold up/down</desc>
         </key>
         <key>
           <name>Ctrl-F</name>
-          <desc>emergency flap lowering.</desc>
+          <desc>emergency flap lowering</desc>
+        </key>
+        <key>
+          <name>L</name>
+          <desc>launch-bar engage</desc>
+        </key>
+        <key>
+          <name>o/O</name>
+          <desc>hook up/down</desc>
         </key>
         <key>
           <name>u/U</name>
@@ -67,7 +83,7 @@ Hawker Sea Hawk simulation config.
         </key>
         <key>
           <name>Ctrl-U</name>
-          <desc>seat default.</desc>
+          <desc>seat default</desc>
         </key>
       </help>
     </sim>
