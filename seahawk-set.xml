@@ -9,85 +9,114 @@ Hawker Sea Hawk simulation config.
            to include keyboard bindings for carrier operations
 ************************************************************************
 -->
-  <PropertyList> 
-    <sim> 
-      <author>Lee Elliott, Vivian Meazza</author>
-      <description>Seahawk</description>
-      <flight-model>yasim</flight-model>
-      <status>early-production</status>
-      <aero>seahawk-3d-yasim</aero>
-      <fuel-fraction>0.25</fuel-fraction>
-      <systems> 
-        <autopilot> 
-          <path>Aircraft/seahawk/Systems/seahawk-autopilot.xml</path>
-        </autopilot>
-        <electrical> 
-          <path>Aircraft/seahawk/Systems/seahawk-electrical.xml</path>
-        </electrical>
-      </systems>
-      <sound> 
-        <path>Aircraft/seahawk/Sounds/seahawk-sound.xml</path>
-      </sound>
-      <!-- hide the 2D panel -->
-      <panel> 
-        <visibility archive="n">false</visibility>
-      </panel>
-      <!-- no HUD -->
-      <hud> 
-        <path>Huds/Default/default.xml</path>
-        <visibility>false</visibility>
-      </hud>
-      <model> 
-        <path>Aircraft/seahawk/Models/seahawk-3d-model.xml</path>
-      </model>
-      <!-- x="3.0" y="0.0" z="0.7" -->
-      <view n="0"> 
-        <internal archive="y">true</internal>
-        <config> 
-          <x-offset-m archive="y">0</x-offset-m>
-          <y-offset-m archive="y">0.7</y-offset-m>
-          <z-offset-m archive="y">-3.24</z-offset-m>
-          <pitch-offset-deg>-15</pitch-offset-deg>
-          <default-field-of-view-deg>60</default-field-of-view-deg>
-        </config>
-      </view>
-      <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
-      <help>
-        <key>
-          <name>Ctrl-B</name>
-          <desc>toggle speedbrake</desc>
-        </key>
-        <key>
-          <name>C</name>
-          <desc>catapult launch command</desc>
-        </key>
-        <key>
-          <name>f/F</name>
-          <desc>wing fold up/down</desc>
-        </key>
-        <key>
-          <name>Ctrl-F</name>
-          <desc>emergency flap lowering</desc>
-        </key>
-        <key>
-          <name>L</name>
-          <desc>launch-bar engage</desc>
-        </key>
-        <key>
-          <name>o/O</name>
-          <desc>hook up/down</desc>
-        </key>
-        <key>
-          <name>u/U</name>
-          <desc>seat up/down</desc>
-        </key>
-        <key>
-          <name>Ctrl-U</name>
-          <desc>seat default</desc>
-        </key>
-      </help>
-    </sim>
-    <!--
+<PropertyList>
+	<sim>
+		<author>Lee Elliott, Vivian Meazza</author>
+		<description>Seahawk</description>
+		<flight-model>yasim</flight-model>
+		<status>early-production</status>
+		<aero>seahawk-3d-yasim</aero>
+		<fuel-fraction>0.25</fuel-fraction>
+		<systems>
+			<autopilot>
+				<path>Aircraft/seahawk/Systems/seahawk-autopilot.xml</path>
+			</autopilot>
+			<electrical>
+				<path>Aircraft/seahawk/Systems/seahawk-electrical.xml</path>
+			</electrical>
+		</systems>
+		<submodels> 
+        <serviceable type="bool">true</serviceable>
+        <path>Aircraft/seahawk/Models/seahawk-submodels.xml</path>
+      </submodels>
+		<sound>
+			<path>Aircraft/seahawk/Sounds/seahawk-sound.xml</path>
+		</sound>
+		<!-- hide the 2D panel -->
+		<panel>
+			<visibility archive="n">false</visibility>
+		</panel>
+		<!-- no HUD -->
+		<hud>
+			<path>Huds/Default/default.xml</path>
+			<visibility>false</visibility>
+		</hud>
+		<model>
+			<path>Aircraft/seahawk/Models/seahawk-3d-model.xml</path>
+		</model>
+		<!-- x="3.0" y="0.0" z="0.7" -->
+		<view n="0">
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">0</x-offset-m>
+				<y-offset-m archive="y">0.7</y-offset-m>
+				<z-offset-m archive="y">-3.24</z-offset-m>
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<default-field-of-view-deg>60</default-field-of-view-deg>
+			</config>
+		</view>
+		<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
+		<help>
+			<key>
+				<name>Ctrl-B</name>
+				<desc>toggle speedbrake</desc>
+			</key>
+			<key>
+				<name>C</name>
+				<desc>catapult launch command</desc>
+			</key>
+			<key>
+				<name>f/F</name>
+				<desc>wing fold up/down</desc>
+			</key>
+			<key>
+				<name>Ctrl-F</name>
+				<desc>emergency flap lowering</desc>
+			</key>
+			<key>
+				<name>L</name>
+				<desc>launch-bar engage</desc>
+			</key>
+			<key>
+				<name>o/O</name>
+				<desc>hook up/down</desc>
+			</key>
+			<key>
+				<name>u/U</name>
+				<desc>seat up/down</desc>
+			</key>
+			<key>
+				<name>Ctrl-U</name>
+				<desc>seat default</desc>
+			</key>
+		</help>
+		<flaps>
+			<setting>0.00</setting>
+			<setting>0.3</setting>
+			<setting>1.00</setting>
+		</flaps>
+		<consumables>
+			<fuel>
+				<tank n="0">
+					<name type="string">Fwd</name>
+					<level-gal_us>300</level-gal_us>
+					<selected type="bool">1</selected>
+				</tank>
+				<tank n="1">
+					<name type="string">Aft</name>
+					<level-gal_us>300</level-gal_us>
+					<selected type="bool">1</selected>
+				</tank>
+				<tank n="2">
+					<name type="string">Saddle</name>
+					<level-gal_us>180</level-gal_us>
+					<selected type="bool">0</selected>
+				</tank>
+			</fuel>
+		</consumables>
+	</sim>
+
+	<!--
  <autopilot>
    <config>
 
@@ -112,418 +141,231 @@ Hawker Sea Hawk simulation config.
 
    </config>
  </autopilot>
--->
-    <!-- *************** set properties **********************-->
-    <!--parking brake ON -->
-    <!-- nosewheel lock OFF -->
-	 <instrumentation>    
-	  <path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
-	  <tacan n="0">
-        <serviceable type="bool" archive="y">true</serviceable>
-        <switch-position type="int" archive="y">1</switch-position>
-      </tacan>
-	  <!-- hsi heading bug and source select-->
-      <heading-indicator> 
-        <heading-bug-deg type="double">95</heading-bug-deg>
-        <heading-source type="bool">true</heading-source>
-      </heading-indicator>
-    </instrumentation>
-    <controls> 
-      <gear> 
-        <brake-parking>1</brake-parking>
-        <tailwheel-lock>true</tailwheel-lock>
-      </gear>
-      <flight> 
-        <flaps-alternate-extension type="double">1</flaps-alternate-extension>
-        <speedbrake-lever type="bool">false</speedbrake-lever>
-        <flaps-lever type="double">0</flaps-lever>
-      </flight>
-    </controls>
-    <!-- hsi heading bug and source select-->
-    <instrumentation> 
-	  <path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
-      <heading-indicator> 
-        <heading-bug-deg type="double">95</heading-bug-deg>
-        <heading-source type="bool">true</heading-source>
-      </heading-indicator>
-    </instrumentation>
-    <!-- radio dme switch ON 
-    <radios> 
-      <dme> 
-        <switch-position>1</switch-position>
-      </dme>
-    </radios>-->
-    <!-- **************** map keyboard input ********************** -->
-    <input> 
-      <keyboard include="../../Input/Keyboard/carrier-bindings.xml">
-        <key n="2"> 
-          <name>Ctrl-B</name>
-          <desc>Toggle speedbrake.</desc>
-          <binding> 
-            <command>property-toggle</command>
-            <property>controls/flight/speedbrake-lever</property>
-          </binding>
-          <binding> 
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/speedbrake-lever</property>
-                  <value>true</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps</property>
-                  <value>0</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/speedbrake</property>
-            <value type="double">1</value>
-          </binding>
-          <binding> 
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/speedbrake-lever</property>
-                  <value>true</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps</property>
-                  <value>0</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps</property>
-            <value type="double">0.35</value>
-          </binding>
-          <binding> 
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/speedbrake-lever</property>
-                  <value>false</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/speedbrake</property>
-            <value type="bool">false</value>
-          </binding>
-          <binding> 
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/speedbrake-lever</property>
-                  <value>false</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps</property>
-            <value type="double">0</value>
-          </binding>
-        </key>
-        <!-- map keys for emergency flap lowering -->
-        <key n="6"> 
-          <name>Ctrl-F</name>
-          <desc>Emergency Flap Lowering.</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>controls/flight/flaps-alternate-extension</property>
-            <value type="double">0</value>
-          </binding>
-          <binding> 
-            <command>property-assign</command>
-            <property>controls/flight/flaps</property>
-            <value type="double">1</value>
-          </binding>
-        </key>
-        <!-- map keys for no action -->
-        <key n="72"> 
-          <name>H</name>
-          <desc>Null.</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>null</property>
-            <value type="double">0</value>
-          </binding>
-        </key>
-        <key n="104"> 
-          <name>h</name>
-          <desc>Null.</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>null</property>
-            <value type="double">0</value>
-          </binding>
-        </key>
-        <key n="107"> 
-          <name>k</name>
-          <desc>Null.</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>null</property>
-            <value type="double">0</value>
-          </binding>
-        </key>
-        <key n="108"> 
-          <name>l</name>
-          <desc>Null.</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>null</property>
-            <value type="double">0</value>
-          </binding>
-        </key>
-        <!-- map keys for seat vertical adjust -->
-        <key n="21"> 
-          <name>CTRL-U</name>
-          <desc>Seat Default.</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>/controls/seat/vertical-adjust</property>
-            <value type="double">0</value>
-          </binding>
-          <binding> 
-            <condition> 
-              <equals> 
-                <property>sim/current-view/view-number</property>
-                <value>0</value>
-              </equals>
-            </condition>
-            <command>property-assign</command>
-            <property>sim/current-view/y-offset-m</property>
-            <value type="double">0.7</value>
-          </binding>
-        </key>
-        <key n="85"> 
-          <name>U</name>
-          <desc>Seat Down.</desc>
-          <binding> 
-            <command>property-adjust</command>
-            <property>/controls/seat/vertical-adjust</property>
-            <step type="double">-0.01</step>
-            <min type="double">0</min>
-            <max type="double">0.1</max>
-          </binding>
-          <binding> 
-            <condition> 
-              <equals> 
-                <property>sim/current-view/view-number</property>
-                <value>0</value>
-              </equals>
-            </condition>
-            <command>property-adjust</command>
-            <property>sim/current-view/y-offset-m</property>
-            <step type="double">-0.01</step>
-            <min type="double">0.64</min>
-            <max type="double">0.74</max>
-          </binding>
-        </key>
-        <key n="117"> 
-          <name>u</name>
-          <desc>Seat Up.</desc>
-          <binding> 
-            <command>property-adjust</command>
-            <property>controls/seat/vertical-adjust</property>
-            <step type="double">0.01</step>
-            <min type="double">0</min>
-            <max type="double">0.1</max>
-          </binding>
-          <binding> 
-            <condition> 
-              <equals> 
-                <property>sim/current-view/view-number</property>
-                <value>0</value>
-              </equals>
-            </condition>
-            <command>property-adjust</command>
-            <property>sim/current-view/y-offset-m</property>
-            <step type="double">0.01</step>
-            <min type="double">0.64</min>
-            <max type="double">0.74</max>
-          </binding>
-        </key>
-        <!-- map keys for 3 flap detents up-T/O-Full -->
-        <key n="91"> 
-          <name>[</name>
-          <desc>Decrease flaps.</desc>
-          <binding> 
-            <!-- decrease lever from t/o to up -->
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/flaps-alternate-extension</property>
-                  <value>1</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0.35</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps-lever</property>
-            <value type="double">0</value>
-          </binding>
-          <binding> 
-            <!-- decrease lever from  full to t/o -->
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/flaps-alternate-extension</property>
-                  <value>1</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>1</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps-lever</property>
-            <value type="double">0.35</value>
-          </binding>
-          <binding> 
-            <!-- extend airbrake if airbrake lever is at extend -->
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/speedbrake-lever</property>
-                  <value>true</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/speedbrake</property>
-            <value type="double">1</value>
-          </binding>
-          <binding> 
-            <!-- decrease from flaps up to t/o flaps -->
-            <condition> 
-              <equals> 
-                <property>controls/flight/flaps-lever</property>
-                <value>0.35</value>
-              </equals>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps</property>
-            <value type="double">0.35</value>
-          </binding>
-          <binding> 
-            <!-- decrease from t/o to flaps flaps up -->
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/speedbrake-lever</property>
-                  <value>false</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps</property>
-            <value type="double">0</value>
-          </binding>
-        </key>
-        <key n="93"> 
-          <name>]</name>
-          <desc>Increase flaps.</desc>
-          <binding> 
-            <!-- increase lever from t/o to full -->
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/flaps-alternate-extension</property>
-                  <value>1</value>
-                </equals>
-                <equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0.35</value>
-                </equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps-lever</property>
-            <value type="double">1</value>
-          </binding>
-          <binding> 
-            <!-- increase from lever up to t/o flaps -->
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/flaps-alternate-extension</property>
-                  <value>1</value>
-                </equals>
-                <less-than-equals> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0</value>
-                </less-than-equals>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps-lever</property>
-            <value type="double">0.35</value>
-          </binding>
-          <binding> 
-            <!-- retract airbrake if flap lever is moved -->
-            <condition> 
-              <and> 
-                <equals> 
-                  <property>controls/flight/flaps-alternate-extension</property>
-                  <value>1</value>
-                </equals>
-                <greater-than> 
-                  <property>controls/flight/flaps-lever</property>
-                  <value>0</value>
-                </greater-than>
-              </and>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/speedbrake</property>
-            <value type="double">0</value>
-          </binding>
-          <binding> 
-            <!-- increase from flaps up to t/o flaps -->
-            <condition> 
-              <equals> 
-                <property>controls/flight/flaps-lever</property>
-                <value>0.35</value>
-              </equals>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps</property>
-            <value type="double">0.35</value>
-          </binding>
-          <binding> 
-            <!-- increase from flaps up to t/o flaps -->
-            <condition> 
-              <equals> 
-                <property>controls/flight/flaps-lever</property>
-                <value>1</value>
-              </equals>
-            </condition>
-            <command>property-assign</command>
-            <property>controls/flight/flaps</property>
-            <value type="double">1</value>
-          </binding>
-        </key>
-      </keyboard>
-    </input>
-  </PropertyList>
+ -->
+
+	<!-- *************** set properties **********************-->
+	<!--parking brake ON -->
+	<!-- nosewheel lock OFF -->
+	<controls>
+		<engines>
+			<engine n="0">
+				<fuel-cock>
+					<lever type="double">1</lever>
+				</fuel-cock>
+			</engine>
+		</engines>
+		<gear>
+			<brake-parking>1</brake-parking>
+			<tailwheel-lock>true</tailwheel-lock>
+		</gear>
+		<flight>
+			<flaps-alternate-extension type="double">1</flaps-alternate-extension>
+			<speedbrake-lever type="bool">false</speedbrake-lever>
+			<flaps-lever type="double">0</flaps-lever>
+		</flight>
+		<lighting>
+			<nav-lights>false</nav-lights>
+		</lighting>
+	</controls>
+
+	<!-- ************Instrumentation ************************* -->
+	<instrumentation>
+		<path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
+		<tacan n="0">
+			<serviceable type="bool" archive="y">true</serviceable>
+			<switch-position type="int" archive="y">1</switch-position>
+		</tacan>
+		<!-- hsi heading bug and source select-->
+		<heading-indicator>
+			<heading-bug-deg type="double">95</heading-bug-deg>
+			<heading-source type="bool">true</heading-source>
+		</heading-indicator>
+	</instrumentation>
+
+	<!-- **************** map keyboard input ********************** -->
+	<input>
+		<keyboard include="../../Input/Keyboard/carrier-bindings.xml">
+			<key n="2">
+				<name>Ctrl-B</name>
+				<desc>Toggle speedbrake.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						seahawk.toggleAirbrake();
+					</script>
+
+				</binding>
+			</key>
+
+			<!-- map keys for emergency flap lowering -->
+			<key n="6">
+				<name>Ctrl-F</name>
+				<desc>Emergency Flap Lowering.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/flight/flaps-alternate-extension</property>
+					<value type="double">0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/flight/flaps</property>
+					<value type="double">1</value>
+				</binding>
+			</key>
+
+			<!-- map keys for no action -->
+			<key n="72">
+				<name>H</name>
+				<desc>Null.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>null</property>
+					<value type="double">0</value>
+				</binding>
+			</key>
+			<key n="104">
+				<name>h</name>
+				<desc>Null.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>null</property>
+					<value type="double">0</value>
+				</binding>
+			</key>
+			<key n="107">
+				<name>k</name>
+				<desc>Null.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>null</property>
+					<value type="double">0</value>
+				</binding>
+			</key>
+			<key n="108">
+				<name>l</name>
+				<desc>Null.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>null</property>
+					<value type="double">0</value>
+				</binding>
+			</key>
+
+			<!-- map keys for seat vertical adjust -->
+			<key n="21">
+				<name>CTRL-U</name>
+				<desc>Seat Default.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/seat/vertical-adjust</property>
+					<value type="double">0</value>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-assign</command>
+					<property>sim/current-view/y-offset-m</property>
+					<value type="double">0.7</value>
+				</binding>
+			</key>
+			<key n="85">
+				<name>U</name>
+				<desc>Seat Down.</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>/controls/seat/vertical-adjust</property>
+					<step type="double">-0.01</step>
+					<min type="double">0</min>
+					<max type="double">0.1</max>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-adjust</command>
+					<property>sim/current-view/y-offset-m</property>
+					<step type="double">-0.01</step>
+					<min type="double">0.64</min>
+					<max type="double">0.74</max>
+				</binding>
+			</key>
+			<key n="117">
+				<name>u</name>
+				<desc>Seat Up.</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>controls/seat/vertical-adjust</property>
+					<step type="double">0.01</step>
+					<min type="double">0</min>
+					<max type="double">0.1</max>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-adjust</command>
+					<property>sim/current-view/y-offset-m</property>
+					<step type="double">0.01</step>
+					<min type="double">0.64</min>
+					<max type="double">0.74</max>
+				</binding>
+			</key>
+
+			<!-- map keys for flap lever -->
+			<key n="91">
+				<name>[</name>
+				<desc>Decrease flap lever.</desc>
+				<binding>
+					<condition>
+						<equals>
+							<property>controls/flight/flaps-alternate-extension</property>
+							<value>1</value>
+						</equals>
+					</condition>
+					<command>nasal</command>
+					<script>
+						seahawk.adjustFlaps(0);
+					</script>
+				</binding>
+			</key>
+			<key n="93">
+				<name>]</name>
+				<desc>Increase flap lever.</desc>
+				<binding>
+					<condition>
+						<equals>
+							<property>controls/flight/flaps-alternate-extension</property>
+							<value>1</value>
+						</equals>
+					</condition>
+					<command>nasal</command>
+					<script>
+						seahawk.adjustFlaps(1);
+					</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+	<nasal>
+		<seahawk>
+			<file>Aircraft/seahawk/Models/seahawk.nas</file>
+		</seahawk>
+		<!--<hurricane> 
+        <file>Aircraft/Hurricane/Models/hurricane.nas</file>
+      </hurricane>-->
+		<seahawk-fuel>
+			<module>fuel</module>
+			<file>Aircraft/seahawk/Models/fuel-cocks.nas</file>
+		</seahawk-fuel>
+	</nasal>
+</PropertyList>

@@ -1,7 +1,6 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0.702 0.2 0.2  spec 0.502 0.502 0.502  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.502 0.502 0.502  amb 0.753 0.753 0.753  emis 0 0 0  spec 1 1 1  shi 10  trans 0
 OBJECT world
 kids 4
 OBJECT poly
@@ -29,97 +28,97 @@ numvert 17
 0 1.21245 1.7598e-008
 numsurf 16
 SURF 0x0
-mat 2
+mat 0
 refs 3
 15 0.961937 0.215268
 0 1 0.348717
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 14 0.853551 0.102135
 15 0.961937 0.215268
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 13 0.69134 0.0265447
 14 0.853551 0.102135
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 12 0.5 0
 13 0.69134 0.0265447
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 11 0.308659 0.0265447
 12 0.5 0
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 10 0.146447 0.102135
 11 0.308659 0.0265447
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 9 0.0380616 0.215268
 10 0.146447 0.102135
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 8 0 0.348717
 9 0.0380616 0.215268
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 7 0.0380616 0.784731
 8 0 0.348717
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 6 0.146447 0.897861
 7 0.0380616 0.784731
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 5 0.308659 0.973456
 6 0.146447 0.897861
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 4 0.5 1
 5 0.308659 0.973456
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 3 0.69134 0.973456
 4 0.5 1
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 2 0.853551 0.897861
 3 0.69134 0.973456
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 1 0.961937 0.784731
 2 0.853551 0.897861
 16 0.5 0.348717
 SURF 0x0
-mat 2
+mat 0
 refs 3
 0 1 0.348717
 1 0.961937 0.784731
