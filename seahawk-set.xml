@@ -356,13 +356,18 @@ Hawker Sea Hawk simulation config.
 			</key>
 		</keyboard>
 	</input>
+
+  <!-- weights -->
+  <yasim>
+    <weights>
+      <pilot-lb type="double">200</pilot-lb>
+    </weights>
+  </yasim>
+  
 	<nasal>
 		<seahawk>
 			<file>Aircraft/seahawk/Models/seahawk.nas</file>
 		</seahawk>
-		<!--<hurricane> 
-        <file>Aircraft/Hurricane/Models/hurricane.nas</file>
-      </hurricane>-->
 		<seahawk-fuel>
 			<module>fuel</module>
 			<file>Aircraft/seahawk/Models/fuel-cocks.nas</file>
