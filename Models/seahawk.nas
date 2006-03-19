@@ -50,7 +50,7 @@ updateCasterAngle = func {
 
 # print(sprintf("caster_angle_damped in=%0.5f, out=%0.5f", angle, angle_damp));
         
-        settimer(updateCasterAngle, 0.1);
+		settimer(updateCasterAngle, 0.1);
 
 } #end func updateCasterAngle()
 
@@ -75,14 +75,11 @@ updateTailwheelLock = func {
 		
 		tailwheel_lock.setDoubleValue(lock);
 		
-# print("tail-wheel-lock " , lock , " state " , state);
+#print("tail-wheel-lock " , lock , " state " , state);
         
 } #end func updateTailwheelLock()
 
-setlistener( launchbar_state , updateTailwheelLock ());
-
-#setlistener("gear/launchbar/strop", func { print("New strop: " ~ cmdarg().getValue()) }); 
-
+setlistener( launchbar_state , updateTailwheelLock );
 
 # ======================================= end Gear stuff ============================
 
@@ -514,13 +511,5 @@ headShake = func {
 headShake();
 # ======================================= end Pilot G stuff ============================
 
-# ======================================= sound stuff ==================================
-
-#setlistener("/sim/messages/atc", func {
-#        var msg = cmdarg().getValue();
-#        setprop("/sim/sound/speech", msg);
-#        screen.log.write(msg);
-#        print("ATC: " ~ msg);
-#    });
 
 # end 
