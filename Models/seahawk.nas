@@ -552,15 +552,15 @@ ViewManager = {
 		m.pitch = ViewAxis.new("sim/current-view/goal-pitch-offset-deg");
 		m.roll = ViewAxis.new("sim/current-view/goal-roll-offset-deg");
 
-		m.heading.input = func { rollN.getValue() * -0.5 }
-		m.roll.input = func { rollN.getValue() * -0.4 }
+		m.heading.input = func { rollN.getValue() * -0.4 }
+		m.roll.input = func { rollN.getValue() * -0.3 }
 		m.pitch.input = func {
 			var pitch = pitchN.getValue();
 			var roll = rollN.getValue();
 			if (roll >= 0) {
-				return pitch * -0.6 + roll * 0.1;
+				return pitch * -0.5 + roll * 0.1;
 			} else {
-				return pitch * -0.6 + roll * -0.3;
+				return pitch * -0.5 + roll * -0.3;
 			}
 		}
 
