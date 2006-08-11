@@ -511,5 +511,86 @@ headShake = func {
 headShake();
 # ======================================= end Pilot G stuff ============================
 
+# ================================= view management ==============================
+
+var cockpit_view = nil;
+setlistener("/sim/current-view/view-number", func { cockpit_view = (cmdarg().getValue() == 0) }, 1);
+
+var managed_view = nil;
+setlistener("/sim/model/sea-vixen/managed-view", func { managed_view = cmdarg().getBoolValue() }, 1);
+
+var headingN = props.globals.getNode("orientation/heading-deg");
+var pitchN = props.globals.getNode("orientation/pitch-deg");
+var rollN = props.globals.getNode("orientation/roll-deg");
+
+
+ViewAxis = {
+	new : func(prop) {
+		var m = { parents : [ViewAxis] };
+		m.prop = props.globals.getNode(prop, 0);
+		m.reset();
+		return m;
+	},
+	reset : func {
+		me.applied_offset = 0;
+	},
+	input : func {
+		die("ViewAxis.input() is pure virtual");
+	},
+	apply : func {
+		var v = me.prop.getValue() - me.applied_offset;
+		me.applied_offset = me.input();
+		me.prop.setDoubleValue(v + me.applied_offset);
+	},
+};
+
+
+ViewManager = {
+	new : func {
+		var m = { parents : [ViewManager] };
+		m.heading = ViewAxis.new("sim/current-view/goal-heading-offset-deg");
+		m.pitch = ViewAxis.new("sim/current-view/goal-pitch-offset-deg");
+		m.roll = ViewAxis.new("sim/current-view/goal-roll-offset-deg");
+
+		m.heading.input = func { rollN.getValue() * -0.5 }
+		m.roll.input = func { rollN.getValue() * -0.4 }
+		m.pitch.input = func {
+			var pitch = pitchN.getValue();
+			var roll = rollN.getValue();
+			if (roll >= 0) {
+				return pitch * -0.6 + roll * 0.1;
+			} else {
+				return pitch * -0.6 + roll * -0.3;
+			}
+		}
+
+		m.reset();
+		return m;
+	},
+	reset : func {
+		me.heading.reset();
+		me.pitch.reset();
+		me.roll.reset();
+	},
+	apply : func {
+		me.heading.apply();
+		me.pitch.apply();
+		me.roll.apply();
+	},
+};
+
+main_loop = func {
+	
+	if (cockpit_view and managed_view){
+		view_manager.apply();
+	}
+	settimer(main_loop, 0);
+}
+
+var view_manager = nil;
+view_manager = ViewManager.new();
+main_loop();
+# ================================= view management ===============================
+
 
 # end 
