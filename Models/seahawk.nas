@@ -290,17 +290,17 @@ flapBlowin = func{
 # =============================== Pilot G stuff======================================
 
 pilot_g = props.globals.getNode("accelerations/pilot-g", 1);
-timeratio = props.globals.getNode("accelerations/timeratio", 1);
+g_timeratio = props.globals.getNode("accelerations/timeratio", 1);
 pilot_g_damped = props.globals.getNode("accelerations/pilot-g-damped", 1);
 
 pilot_g.setDoubleValue(0);
 pilot_g_damped.setDoubleValue(0); 
-timeratio.setDoubleValue(0.03); 
+g_timeratio.setDoubleValue(0.0075); 
 
 var g_damp = 0;
 
 updatePilotG = func {
-        var n = timeratio.getValue(); 
+  var n = g_timeratio.getValue(); 
 	var g = pilot_g.getValue() ;
 	
 	g_damp = ( g * n) + (g_damp * (1 - n));
@@ -309,7 +309,7 @@ updatePilotG = func {
 
 # print(sprintf("pilot_g_damped in=%0.5f, out=%0.5f", g, g_damp));
         
-        settimer(updatePilotG, 0.1);
+  settimer(updatePilotG, 0);
 
 } #end updatePilotG()
 
@@ -395,31 +395,31 @@ headShake = func {
     # We will be using the one for accelerations.
     var enabled = enabledNode.getValue();
     var view_number= view_number_Node.getValue();
-    var n = timeratio.getValue(); 
+    var n = g_timeratio.getValue(); 
     var seat_vertical_adjust = seat_vertical_adjust_Node.getValue();
     
 
     if ( (enabled) and ( view_number == 0)) {
     
-	var xConfig = xConfigNode.getValue();
-        var yConfig = yConfigNode.getValue();
-        var zConfig = zConfigNode.getValue();
-
-        var xMax = xMaxNode.getValue();
-        var xMin = xMinNode.getValue();
-        var yMax = yMaxNode.getValue();
-        var yMin = yMinNode.getValue();
-        var zMax = zMaxNode.getValue();
-        var zMin = zMinNode.getValue();
+				var xConfig = xConfigNode.getValue();
+				var yConfig = yConfigNode.getValue();
+				var zConfig = zConfigNode.getValue();
+				
+				var xMax = xMaxNode.getValue();
+				var xMin = xMinNode.getValue();
+				var yMax = yMaxNode.getValue();
+				var yMin = yMinNode.getValue();
+				var zMax = zMaxNode.getValue();
+				var zMin = zMinNode.getValue();
 
 	#work in G, not fps/s
         var xAccel = xAccelNode.getValue()/32;
         var yAccel = yAccelNode.getValue()/32;
         var zAccel = (zAccelNode.getValue() + 32)/32; # We aren't counting gravity
  
-	var xThreashold =  xThreasholdNode.getValue();
-	var yThreashold =  yThreasholdNode.getValue();
-	var zThreashold =  zThreasholdNode.getValue();
+				var xThreashold =  xThreasholdNode.getValue();
+				var yThreashold =  yThreasholdNode.getValue();
+				var zThreashold =  zThreasholdNode.getValue();
         
         # Set viewpoint divergence and clamp
         # Note that each dimension has it's own special ratio and +X is clamped at 1cm
@@ -430,8 +430,8 @@ headShake = func {
         } elsif (xAccel > 1) {
             xDivergence = ((( -0.0387 * xAccel ) + ( 0.4157 )) * xAccel - ( 0.8448 )) * xAccel + 0.475;
         }else {
-	    xDivergence = 0;
-	}
+						xDivergence = 0;
+				}
 #        setprop("/sim/current-view/z-offset-m", (xConfig + xDivergence));
 
         if (yAccel < -0.5) {
@@ -439,17 +439,17 @@ headShake = func {
             } elsif (yAccel > 0.5) {
             yDivergence = ((( -0.013 * yAccel ) + ( 0.125 )) * yAccel - (  0.1202 )) * yAccel + 0.0272;
         }else {
-	    yDivergence = 0;
+						yDivergence = 0;
 	}
 #        setprop("/sim/current-view/x-offset-m", (yConfig + yDivergence));
 
         if (zAccel < -1) {
-	    zDivergence = ((( -0.0506 * zAccel ) - ( 0.538 )) * zAccel - ( 0.9915 )) * zAccel - 0.52;
+						zDivergence = ((( -0.0506 * zAccel ) - ( 0.538 )) * zAccel - ( 0.9915 )) * zAccel - 0.52;
         } elsif (zAccel > 1) {
             zDivergence = ((( -0.0387 * zAccel ) + ( 0.4157 )) * zAccel - ( 0.8448 )) * zAccel + 0.475;
-	} else {
-	    zDivergence = 0;
-        }
+				} else {
+						zDivergence = 0;
+							}
           
        
 	xDivergence_total = ( xDivergence * 0.25 ) + ( zDivergence * 0.25 );
@@ -485,8 +485,8 @@ headShake = func {
 #print (sprintf("y=%0.5f, y total=%0.5f, y min=%0.5f, y div damped=%0.5f",yDivergence, yDivergence_total, yMin , yDivergence_damp));
 	
 	zDivergence_total =  xDivergence + zDivergence;
-        if (zDivergence_total >= zMax){zDivergence_total = zMax;}
-        if (zDivergence_total <= zMin){zDivergence_total = zMin;}
+	if (zDivergence_total >= zMax){zDivergence_total = zMax;}
+	if (zDivergence_total <= zMin){zDivergence_total = zMin;}
 
 	if (abs(last_zDivergence - zDivergence_total) <= zThreashold){ 
         	zDivergence_damp = ( zDivergence_total * n) + ( zDivergence_damp * (1 - n));
@@ -501,12 +501,13 @@ headShake = func {
 #print (sprintf("z total=%0.5f, z min=%0.5f, z div damped=%0.5f", zDivergence_total, zMin , zDivergence_damp));
 
 	setprop("/sim/current-view/z-offset-m", xConfig + xDivergence_damp );
-        setprop("/sim/current-view/x-offset-m", yConfig + yDivergence_damp );
+  setprop("/sim/current-view/x-offset-m", yConfig + yDivergence_damp );
 	setprop("/sim/current-view/y-offset-m", zConfig + zDivergence_damp + seat_vertical_adjust );
     }
-    settimer(headShake,0 );
+  
+	settimer(headShake,0 );
 
-}
+} #end func
 
 headShake();
 # ======================================= end Pilot G stuff ============================
@@ -522,7 +523,10 @@ setlistener("/sim/model/sea-vixen/managed-view", func { managed_view = cmdarg().
 var headingN = props.globals.getNode("orientation/heading-deg");
 var pitchN = props.globals.getNode("orientation/pitch-deg");
 var rollN = props.globals.getNode("orientation/roll-deg");
+var pilot_azN = props.globals.getNode("accelerations/pilot/z-accel-fps_sec");
 
+sin = func(a) { math.sin(a * math.pi / 180.0) }
+cos = func(a) { math.cos(a * math.pi / 180.0) }
 
 ViewAxis = {
 	new : func(prop) {
@@ -542,6 +546,10 @@ ViewAxis = {
 		me.applied_offset = me.input();
 		me.prop.setDoubleValue(v + me.applied_offset);
 	},
+ 	add_offset : func {
+   	me.prop.setValue(me.prop.getValue() + me.applied_offset);
+ 	},
+
 };
 
 
@@ -551,18 +559,12 @@ ViewManager = {
 		m.heading = ViewAxis.new("sim/current-view/goal-heading-offset-deg");
 		m.pitch = ViewAxis.new("sim/current-view/goal-pitch-offset-deg");
 		m.roll = ViewAxis.new("sim/current-view/goal-roll-offset-deg");
+		ViewAxis.pilot_az = pilot_azN.getValue();
 
-		m.heading.input = func { rollN.getValue() * -0.4 }
-		m.roll.input = func { rollN.getValue() * -0.3 }
-		m.pitch.input = func {
-			var pitch = pitchN.getValue();
-			var roll = rollN.getValue();
-			if (roll >= 0) {
-				return pitch * -0.5 + roll * 0.1;
-			} else {
-				return pitch * -0.5 + roll * -0.3;
-			}
-		}
+		m.heading.input = func { -15 * sin(me.roll) * cos(me.pitch) }
+		m.pitch.input = func { -10 * sin(me.pitch) - me.pilot_az * (me.pitch > 0 ? 0.2 : 0.08 ) }
+
+		m.roll.input = func { -20 * sin(me.roll) * cos(me.pitch) }
 
 		m.reset();
 		return m;
@@ -573,6 +575,10 @@ ViewManager = {
 		me.roll.reset();
 	},
 	apply : func {
+		ViewAxis.pitch = pitchN.getValue();
+		ViewAxis.roll = rollN.getValue();
+		ViewAxis.pilot_az = 0.1 * pilot_azN.getValue() + ViewAxis.pilot_az * 0.9;
+
 		me.heading.apply();
 		me.pitch.apply();
 		me.roll.apply();
@@ -580,8 +586,7 @@ ViewManager = {
 };
 
 main_loop = func {
-	
-	if (cockpit_view and managed_view){
+	if (cockpit_view and managed_view) {
 		view_manager.apply();
 	}
 	settimer(main_loop, 0);
