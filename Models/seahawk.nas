@@ -546,10 +546,9 @@ ViewAxis = {
 		me.applied_offset = me.input();
 		me.prop.setDoubleValue(v + me.applied_offset);
 	},
- 	add_offset : func {
-   	me.prop.setValue(me.prop.getValue() + me.applied_offset);
- 	},
-
+	add_offset : func {
+		me.prop.setValue(me.prop.getValue() + me.applied_offset);
+	},
 };
 
 
@@ -562,8 +561,7 @@ ViewManager = {
 		ViewAxis.pilot_az = pilot_azN.getValue();
 
 		m.heading.input = func { -15 * sin(me.roll) * cos(me.pitch) }
-		m.pitch.input = func { -10 * sin(me.pitch) - me.pilot_az * (me.pitch > 0 ? 0.2 : 0.08 ) }
-
+		m.pitch.input = func { -10 * sin(me.pitch) - me.pilot_az * 0.2 }
 		m.roll.input = func { -20 * sin(me.roll) * cos(me.pitch) }
 
 		m.reset();
@@ -583,7 +581,22 @@ ViewManager = {
 		me.pitch.apply();
 		me.roll.apply();
 	},
+	add_offsets : func {
+		me.heading.add_offset();
+		me.pitch.add_offset();
+		me.roll.add_offset();
+	},
 };
+
+
+var original_resetView = view.resetView;
+view.resetView = func {
+	original_resetView();
+	if (cockpit_view and managed_view) {
+		view_manager.add_offsets();
+	}
+}
+
 
 main_loop = func {
 	if (cockpit_view and managed_view) {
