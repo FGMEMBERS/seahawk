@@ -404,7 +404,6 @@
     <object-name>Wing-L</object-name>
     <object-name>Stub-Wing-R</object-name>
     <object-name>Stub-Wing-L</object-name>
-
     <object-name>noshadow.Markings</object-name>
     <condition>
       <greater-than-equals>
