@@ -433,6 +433,17 @@
     </condition>
   </animation>
 
+	<animation>
+		<type>select</type>
+		<object-name>noshadow.Exhausts</object-name>
+		<condition>
+			<equals>
+				<property>sim/ai/aircraft/exhaust</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
   <!-- Suppress Pilot Head in Cockpit View -->
   <animation>
     <type>select</type>

@@ -1,5 +1,5 @@
 
-# ==================================== timer stuff ===========================================
+# ==================================== timer stuff ===============================
 
 # set the update period
 
@@ -13,9 +13,9 @@ registerTimer = func {
 
 } # end function 
 
-# =============================== end timer stuff ===========================================
+# =============================== end timer stuff ===============================
 
-# =============================== Gear stuff======================================
+# =============================== Gear stuff ====================================
 
 caster_angle = props.globals.getNode("gear/gear/caster-angle-deg", 1);
 roll_speed = props.globals.getNode("gear/gear/rollspeed-ms", 1);
@@ -511,5 +511,37 @@ headShake = func {
 
 headShake();
 # ======================================= end Pilot G stuff ============================
+
+# ======================================= jet exhaust ========================
+
+speed_node = props.globals.getNode("velocities/uBody-fps", 1);
+exhaust_node = props.globals.getNode("sim/ai/aircraft/exhaust", 1);
+
+exhaust_node.setBoolValue(1) ;
+
+updateExhaustState = func {
+		var speed = speed_node.getValue(); 
+		var exhaust = exhaust_node.getValue() ;
+		
+		if (speed == nil) {return;}
+		if (speed >= 90) {   
+		  exhaust = 0;
+		} else {
+		  exhaust = 1;
+		}
+		
+		exhaust_node.setBoolValue(exhaust) ;
+		
+#        print("exhaust " , exhaust);
+        
+#        settimer(updateExhaustState, 0);
+        
+} #end func updateExhaustState()
+
+#settimer(updateExhaustState,0);
+
+# ================================== Steering =================================================
+
+aircraft.steering.init();
 
 # end 

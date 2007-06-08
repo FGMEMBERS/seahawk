@@ -40,206 +40,263 @@
       
 -->
 <PropertyList>
-  <submodel>
-    <name>Hispano MkV P Inner</name>
-    <model>Models/Geometry/tracer.ac</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>2755.9 </speed>
-    <repeat>true</repeat>
-    <delay>0.4</delay>
-    <count>40</count>
-    <x-offset>12.1391  </x-offset>
-    <y-offset>-0.6562  </y-offset>
-    <z-offset>-1.6732  </z-offset>
-    <yaw-offset>0</yaw-offset>
-    <pitch-offset>0</pitch-offset>
-    <wind>false</wind>
-    <cd>0.193</cd>
-    <weight>0.286600941 </weight>
-    <eda>0.00338158219 </eda>
-    <life>5</life>
-  </submodel>
-  <submodel>
-    <name>Hispano MkV P Inner smoke</name>
-    <model>Aircraft/seahawk/Models/smoke.xml</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>200</count>
-    <x-offset>12.1391  </x-offset>
-    <y-offset>-2.0  </y-offset>
-    <z-offset>-1.6732  </z-offset>
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-  <submodel>
-    <name>Hispano MkV S Inner</name>
-    <model>Models/Geometry/tracer.ac</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>2755.9 </speed>
-    <repeat>true</repeat>
-    <delay>0.4</delay>
-    <count>40</count>
-    <x-offset>12.1391  </x-offset>
-    <y-offset>0.6562  </y-offset>
-    <z-offset>-1.6732  </z-offset>
-    <yaw-offset>0</yaw-offset>
-    <pitch-offset>0</pitch-offset>
-    <wind>false</wind>
-    <cd>0.193</cd>
-    <weight>0.286600941 </weight>
-    <eda>0.00338158219 </eda>
-    <life>5</life>
-  </submodel>
-  <submodel>
-    <name>Hispano MkV S Inner smoke</name>
-    <model>Aircraft/seahawk/Models/smoke.xml</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>200</count>
-    <x-offset>12.1391  </x-offset>
-    <y-offset>2.0  </y-offset>
-    <z-offset>-1.6732  </z-offset>
-    <yaw-offset>60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-  <submodel>
-    <name>Hispano MkV P Outer</name>
-    <model>Models/Geometry/tracer.ac</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>2755.9 </speed>
-    <repeat>true</repeat>
-    <delay>0.4</delay>
-    <count>40</count>
-    <x-offset>12.0079  </x-offset>
-    <y-offset>-1.2795  </y-offset>
-    <z-offset>-1.3451  </z-offset>
-    <yaw-offset>0</yaw-offset>
-    <pitch-offset>0</pitch-offset>
-    <wind>false</wind>
-    <cd>0.193</cd>
-    <weight>0.286600941 </weight>
-    <eda>0.00338158219 </eda>
-    <life>5</life>
-  </submodel>
-  <submodel>
-    <name>Hispano MkV P Outer smoke</name>
-    <model>Aircraft/seahawk/Models/smoke.xml</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>200</count>
-    <x-offset>12.0079  </x-offset>
-    <y-offset>-2.5 </y-offset>
-    <z-offset>-1.3451  </z-offset>
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-  <submodel>
-    <name>Hispano MkV S Outer</name>
-    <model>Models/Geometry/tracer.ac</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>2755.9 </speed>
-    <repeat>true</repeat>
-    <delay>0.4</delay>
-    <count>40</count>
-    <x-offset>12.0079  </x-offset>
-    <y-offset>1.2795  </y-offset>
-    <z-offset>-1.3451  </z-offset>
-    <yaw-offset>0</yaw-offset>
-    <pitch-offset>0</pitch-offset>
-    <wind>false</wind>
-    <cd>0.193</cd>
-    <weight>0.286600941 </weight>
-    <eda>0.00338158219 </eda>
-    <life>5</life>
-  </submodel>
-  <submodel>
-    <name>Hispano MkV S Outer smoke</name>
-    <model>Aircraft/seahawk/Models/smoke.xml</model>
-    <trigger>ai/submodels/trigger</trigger>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>200</count>
-    <x-offset>12.0079  </x-offset>
-    <y-offset>2.5  </y-offset>
-    <z-offset>-1.3451  </z-offset>
-    <yaw-offset>60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-  <!--<submodel> 
-      <name>exhaust smoke r</name>
-      <model>Aircraft/Hurricane/Models/exhaust.xml</model>
-      <trigger>engines/engine/cranking</trigger>
-      <speed>50</speed>
-      <repeat>false</repeat>
-      <delay>0.001</delay>
-      <count>-1</count>
-      <x-offset>-4</x-offset>
-      <y-offset>2.8</y-offset>
-      <z-offset>0.5</z-offset>
-      <yaw-offset>-160</yaw-offset>
-      <pitch-offset>0.0</pitch-offset>
-      <eda>10</eda>
-      <life>1</life>
-      <buoyancy>34</buoyancy>
-      <wind>true</wind>
-    </submodel>
-    <submodel> 
-      <name>exhaust smoke l</name>
-      <model>Aircraft/Hurricane/Models/exhaust.xml</model>
-      <trigger>engines/engine/cranking</trigger>
-      <speed>50</speed>
-      <repeat>false</repeat>
-      <delay>0.001</delay>
-      <count>-1</count>
-      <x-offset>-4</x-offset>
-      <y-offset>-2.8</y-offset>
-      <z-offset>0.5</z-offset>
-      <yaw-offset>160</yaw-offset>
-      <pitch-offset>0.0</pitch-offset>
-      <eda>10</eda>
-      <life>1</life>
-      <buoyancy>34</buoyancy>
-      <wind>true</wind>
-    </submodel>-->
-  <submodel>
-    <name>strop</name>
-    <model>Aircraft/seahawk/Models/strop.ac</model>
-    <trigger>gear/launchbar/strop</trigger>
-    <speed>0</speed>
-    <repeat>false</repeat>
-    <count>-1</count>
-    <x-offset>7.185</x-offset>
-    <y-offset>0</y-offset>
-    <z-offset>-2.559</z-offset>
-    <yaw-offset>0</yaw-offset>
-    <pitch-offset>0</pitch-offset>
-    <wind>false</wind>
-    <eda>0.05</eda>
-    <weight>30</weight>
-    <cd>0.5</cd>
-    <aero-stabilised>true</aero-stabilised>
-  </submodel>
+
+	<cannon>
+		<model>Models/Geometry/tracer.xml</model>
+		<speed>2755.9</speed>
+		<cd>0.193</cd>
+		<weight>0.286600941</weight>
+		<eda>0.00338158219</eda>
+		<pitch-offset>0</pitch-offset>
+		<fuse-range>0</fuse-range>
+		<life>20</life>
+	</cannon>
+
+	<submodel>
+		<name>Hispano MkV P Inner</name>
+		<model alias="../../cannon/model"/>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed alias="../../cannon/speed"/>
+		<cd alias="../../cannon/cd"/>
+		<eda alias="../../cannon/eda"/>
+		<fuse-range alias="../../cannon/fuse-range"/>
+		<weight alias="../../cannon/weight"/>
+		<life alias="../../cannon/life"/>
+		<repeat>true</repeat>
+		<delay>0.41</delay>
+		<count>50</count>
+		<x-offset>12.1391  </x-offset>
+		<y-offset>-0.6562  </y-offset>
+		<z-offset>-1.6732  </z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<wind>false</wind>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
+	</submodel>
+
+	<submodel>
+		<name>Hispano MkV P Inner smoke</name>
+		<model>Aircraft/seahawk/Models/smoke.xml</model>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed>200</speed>
+		<repeat>true</repeat>
+		<delay>0.08</delay>
+		<count>200</count>
+		<x-offset>12.1391  </x-offset>
+		<y-offset>-2.0     </y-offset>
+		<z-offset>-1.6732  </z-offset>
+		<yaw-offset>-60</yaw-offset>
+		<pitch-offset>-60</pitch-offset>
+		<eda>10</eda>
+		<wind>true</wind>
+		<buoyancy>33</buoyancy>
+		<life>5</life>
+	</submodel>
+
+	<submodel>
+		<name>Hispano MkV S Inner</name>
+		<model alias="../../cannon/model"/>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed alias="../../cannon/speed"/>
+		<cd alias="../../cannon/cd"/>
+		<eda alias="../../cannon/eda"/>
+		<fuse-range alias="../../cannon/fuse-range"/>
+		<weight alias="../../cannon/weight"/>
+		<life alias="../../cannon/life"/>
+		<repeat>true</repeat>
+		<delay>0.39</delay>
+		<count>50</count>
+		<x-offset>12.1391  </x-offset>
+		<y-offset>0.6562  </y-offset>
+		<z-offset>-1.6732  </z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<wind>false</wind>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
+	</submodel>
+
+	<submodel>
+		<name>Hispano MkV S Inner smoke</name>
+		<model>Aircraft/seahawk/Models/smoke.xml</model>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed>200</speed>
+		<repeat>true</repeat>
+		<delay>0.08</delay>
+		<count>200</count>
+		<x-offset>12.1391  </x-offset>
+		<y-offset>2.0  </y-offset>
+		<z-offset>-1.6732  </z-offset>
+		<yaw-offset>60</yaw-offset>
+		<pitch-offset>-60</pitch-offset>
+		<eda>10</eda>
+		<wind>true</wind>
+		<buoyancy>33</buoyancy>
+		<life>5</life>
+	</submodel>
+
+	<submodel>
+		<name>Hispano MkV P Outer</name>
+		<model alias="../../cannon/model"/>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed alias="../../cannon/speed"/>
+		<cd alias="../../cannon/cd"/>
+		<eda alias="../../cannon/eda"/>
+		<fuse-range alias="../../cannon/fuse-range"/>
+		<weight alias="../../cannon/weight"/>
+		<life alias="../../cannon/life"/>
+		<repeat>true</repeat>
+		<delay>0.38</delay>
+		<count>50</count>
+		<x-offset>12.0079  </x-offset>
+		<y-offset>-1.2795  </y-offset>
+		<z-offset>-1.3451  </z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<wind>false</wind>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+		<fuse-range alias="../../cannon/fuse-range"/>
+		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
+	</submodel>
+
+	<submodel>
+		<name>Hispano MkV P Outer smoke</name>
+		<model>Aircraft/seahawk/Models/smoke.xml</model>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed>200</speed>
+		<repeat>true</repeat>
+		<delay>0.08</delay>
+		<count>200</count>
+		<x-offset>12.0079</x-offset>
+		<y-offset>-2.5   </y-offset>
+		<z-offset>-1.3451</z-offset>
+		<yaw-offset>-60</yaw-offset>
+		<pitch-offset>-60</pitch-offset>
+		<eda>10</eda>
+		<wind>true</wind>
+		<buoyancy>33</buoyancy>
+		<life>5</life>
+	</submodel>
+
+	<submodel>
+		<name>Hispano MkV S Outer</name>
+		<model alias="../../cannon/model"/>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed alias="../../cannon/speed"/>
+		<cd alias="../../cannon/cd"/>
+		<eda alias="../../cannon/eda"/>
+		<fuse-range alias="../../cannon/fuse-range"/>
+		<weight alias="../../cannon/weight"/>
+		<life alias="../../cannon/life"/>
+		<delay>0.42</delay>
+		<count>50</count>
+		<x-offset>12.0079  </x-offset>
+		<y-offset>1.2795  </y-offset>
+		<z-offset>-1.3451  </z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<wind>false</wind>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
+	</submodel>
+
+	<submodel>
+		<name>Hispano MkV S Outer smoke</name>
+		<model>Aircraft/seahawk/Models/smoke.xml</model>
+		<trigger>ai/submodels/trigger</trigger>
+		<speed>200</speed>
+		<repeat>true</repeat>
+		<delay>0.08</delay>
+		<count>200</count>
+		<x-offset>12.0079  </x-offset>
+		<y-offset>2.5  </y-offset>
+		<z-offset>-1.3451  </z-offset>
+		<yaw-offset>60</yaw-offset>
+		<pitch-offset>-60</pitch-offset>
+		<eda>10</eda>
+		<wind>true</wind>
+		<buoyancy>33</buoyancy>
+		<life>5</life>
+	</submodel>
+
+	<!--<submodel>
+		<name>engine exhaust r</name>
+		<model>Aircraft/seahawk/Models/exhaust_s.xml</model>
+		<trigger>sim/ai/aircraft/exhaust</trigger>
+		<speed-node>engines/engine/n1</speed-node>
+		<speed>10</speed>
+		<repeat>true</repeat>
+		<delay>0.1</delay>
+		<count>-1</count>
+		<x-offset>-3.5</x-offset>
+		<y-offset>2.6768</y-offset>
+		<z-offset>-0.3937</z-offset>
+		<yaw-offset>170</yaw-offset> 
+		<pitch-offset>90</pitch-offset>
+		<life>10</life>
+		<buoyancy>128</buoyancy>
+		<aero-stabilised>0</aero-stabilised>
+		<wind>true</wind>
+		<eda>1</eda>
+		<cd>0.95</cd>
+		<weight>1</weight>
+		<random>1</random>
+	</submodel>-->
+
+	<!--<submodel>
+		<name>engine exhaust l</name>
+		<model>Aircraft/seahawk/Models/exhaust_p.xml</model>
+		<trigger>sim/ai/aircraft/exhaust</trigger>
+		<speed-node>engines/engine/n1</speed-node>
+		<speed>10</speed>
+		<repeat>true</repeat>
+		<delay>0.1</delay>
+		<count>-1</count>
+		<x-offset>-3.5</x-offset>
+		<y-offset>-2.6768</y-offset>
+		<z-offset>-0.3937</z-offset>
+		<yaw-offset>-170</yaw-offset>
+		<pitch-offset>90</pitch-offset>
+		<life>10</life>
+		<buoyancy>128</buoyancy>
+		<aero-stabilised>0</aero-stabilised>
+		<wind>true</wind>
+		<eda>1</eda>
+		<cd>0.95</cd>
+		<weight>1</weight>
+		<random>1</random>
+	</submodel>-->
+
+	<submodel>
+		<name>strop</name>
+		<model>Aircraft/seahawk/Models/strop.ac</model>
+		<trigger>gear/launchbar/strop</trigger>
+		<speed>0</speed>
+		<repeat>false</repeat>
+		<count>-1</count>
+		<x-offset>7.185</x-offset>
+		<y-offset>0</y-offset>
+		<z-offset>-2.559</z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<wind>false</wind>
+		<eda>0.05</eda>
+		<weight>30</weight>
+		<cd>0.5</cd>
+		<aero-stabilised>true</aero-stabilised>
+	</submodel>
+
 </PropertyList>
