@@ -13,7 +13,6 @@
 		<object-name>disk</object-name>
 		<use-personality>true</use-personality>
 		<factor>0.001</factor>
-		<offset>0</offset>
 		<center>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
@@ -26,7 +25,6 @@
 		<object-name>puff</object-name>
 		<use-personality>true</use-personality>
 		<property>sim/time/elapsed-sec</property>
-		<offset>0.3</offset>
 		<x-min>0.3</x-min>
 		<y-min>0.3</y-min>
 		<z-min>0.3</z-min>
