@@ -298,7 +298,7 @@
 		<cd>0.8</cd>
 		<aero-stabilised>true</aero-stabilised>
 		<impact>true</impact>
-		<impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+		<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
 		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels2.xml</submodel-path>
 	</submodel>
 
