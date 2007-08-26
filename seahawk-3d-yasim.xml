@@ -19,20 +19,25 @@
 	<approach speed="110"
 						aoa="8.0">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
-										 value="0.4"/>
+										 value="0.6"/>
 		<control-setting axis="/controls/flight/flaps"
 										 value="1.0"/>
 		<control-setting axis="/controls/gear/gear-down"
 										 value="1"/>
 		<solve-weight idx="0"
 									weight="200"/>
+		<solve-weight idx="1"
+									weight="170"/>
+		<solve-weight idx="2"
+									weight="170"/>
 	</approach>
 
 	<!-- Cruise configuration.
      Max speed at sea level is 599 mph = 521 knots.  The same source
-     also quoted 587 mph at 'altitude'.
+     also quoted 587 mph at 'altitude'. Here with droptanks, I assume 
+		 a speed reduction to 500 kts
 -->
-	<cruise speed="521"
+	<cruise speed="500"
 					alt="0">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
 										 value="1.0"/>
@@ -42,6 +47,10 @@
 										 value="0"/>
 		<solve-weight idx="0"
 									weight="200"/>
+		<solve-weight idx="1"
+									weight="170"/>
+		<solve-weight idx="2"
+									weight="170"/>
 	</cruise>
 
 	<cockpit x="3.0"
@@ -90,7 +99,7 @@
 						 end="0.4"
 						 lift="0.0"
 						 drag="1.6"/>
-		<control-input axis="/controls/flight/flaps"
+		<control-input axis="/controls/flight/flaps-pos-norm"
 									 control="FLAP0"/>
 		<control-input axis="/controls/flight/aileron"
 									 control="FLAP1"
@@ -98,8 +107,8 @@
 		<control-input axis="/controls/flight/aileron-trim"
 									 control="FLAP1"
 									 split="true"/>
-		<control-input axis="/controls/flight/speedbrake"
-									 control="SPOILER" />
+		<control-input axis="/controls/flight/speedbrake-pos-norm"
+									 control="SPOILER"/>
 		<control-output control="FLAP0"
 										prop="/surface-positions/flap-pos-norm"/>
 		<control-output control="FLAP1"
@@ -228,6 +237,16 @@
 				z="0.5"
 				jet="true"
 				capacity="1200"/>
+	<tank x="-0.7094"
+				y="-1.6900"
+				z="-0.5715"
+				jet="true"
+				capacity="800"/>
+	<tank x="-0.7094"
+				y="1.6900"
+				z="-0.5715"
+				jet="true"
+				capacity="800"/>
 
 	<!-- Undercarriage -->
 	<!-- nose  -->
@@ -336,8 +355,8 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 						z="0.4"
 						vx="-1"
 						vy="0"
-						vz="1"
-						thrust="5000">
+						vz="0.3"
+						thrust="4000">
 		<control-input axis="/sim/ai/recoil"
 									 control="THROTTLE"
 									 src0="0"
@@ -351,8 +370,8 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 						z="0.4"
 						vx="1"
 						vy="0"
-						vz="-1"
-						thrust="5000">
+						vz="-0.3"
+						thrust="4000">
 		<control-input axis="/sim/ai/runout"
 									 control="THROTTLE"
 									 src0="0"
@@ -360,7 +379,7 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 									 dst0="0"
 									 dst1="1"/>
 	</thruster>
-
+	
 	<!-- Ballast & Weights-->
 	<ballast x="3.0"
 					 y="0"
@@ -382,4 +401,16 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 					z="-0.04"
 					mass-prop="/yasim/weights/pilot-lb"/>
 	<!-- Pilot -->
+	<weight x="-0.7094"
+					y="1.6900"
+					z="-0.5715"
+					size="0.5"
+					mass-prop="/yasim/weights/tank-100gal-lbs[0]"/>
+	<!-- port droptank - dry wt -->
+	<weight x="-0.7094"
+					y="-1.6900"
+					z="-0.5715"
+					size="0.5"
+					mass-prop="/yasim/weights/tank-100gal-lbs[1]"/>
+	<!-- stbd droptank - dry wt -->
 </airplane>

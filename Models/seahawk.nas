@@ -18,6 +18,7 @@ registerTimer = func {
 
 controls.trigger = func(v) setprop("/ai/submodels/trigger", v);
 
+
 # =============================== Gear stuff ====================================
 
 caster_angle = props.globals.getNode("gear/gear/caster-angle-deg", 1);
@@ -139,22 +140,50 @@ adjustCock=func{
 
 fuelTrans = func {
 	
-	amount = 0;
+	 var amount = 0;
+	 var maxFlowRate = 1;
 
 	if(getprop("/sim/freeze/fuel")) { return registerTimer(fuelTrans); }
 	
 	capacityFwd = getprop("consumables/fuel/tank[0]/capacity-gal_us");
 	if(capacityFwd == nil) { capacityFwd = 0; }
 
-	levelFwd = getprop("consumables/fuel/tank[0]/level-gal_us");
+	var levelFwd = getprop("consumables/fuel/tank[0]/level-gal_us");
 	if(levelFwd == nil) { levelFwd = 0; }
 
-	levelSaddle = getprop("consumables/fuel/tank[2]/level-gal_us");
+	var levelSaddle = getprop("consumables/fuel/tank[2]/level-gal_us");
 	if(levelSaddle == nil) { levelSaddle = 0; }
+	
+	var levelDropStbd = getprop("consumables/fuel/tank[3]/level-gal_us");
+	if(levelDropStbd == nil) { levelDropStbd = 0; }
+	
+	var levelDropPort = getprop("consumables/fuel/tank[4]/level-gal_us");
+	if(levelDropPort == nil) { levelDropPort = 0; }	
+	
+	if ( capacityFwd > levelFwd and levelDropStbd > 0){
+		amount = capacityFwd - levelFwd;
+		if (amount > levelDropStbd) {
+			amount = levelDropStbd;
+		}
+		if (amount > maxFlowRate) {
+			amount = maxFlowRate;
+		}
+		levelDropStbd = levelDropStbd - amount/2;
+		levelDropPort = levelDropPort - amount/2;
+		levelFwd = levelFwd + amount;
+		setprop( "consumables/fuel/tank[3]/level-gal_us",levelDropStbd);
+		setprop( "consumables/fuel/tank[4]/level-gal_us",levelDropPort);
+		setprop( "consumables/fuel/tank[0]/level-gal_us",levelFwd);
+	}
 
 	if ( capacityFwd > levelFwd and levelSaddle > 0){
 		amount = capacityFwd - levelFwd;
-		if (amount > levelSaddle) {amount = levelSaddle;}
+		if (amount > levelSaddle) {
+			amount = levelSaddle;
+		}
+				if (amount > maxFlowRate) {
+			amount = maxFlowRate;
+		}
 		levelSaddle = levelSaddle - amount;
 		levelFwd = levelFwd + amount;
 		setprop( "consumables/fuel/tank[2]/level-gal_us",levelSaddle);
@@ -177,84 +206,65 @@ registerTimer(fuelTrans);
 
 # =========================== hydraulic stuff =========================================
 
-toggleAirbrake = func{             #toggles the lever up-down
+toggleAirbrakeLever = func{             #toggles the lever up-down
 	
-	lever=[0,1];
+	var lever = getprop("controls/flight/speedbrake-lever[0]"); 
+
+	lever = !lever;
+	setprop("controls/flight/speedbrake-lever",lever);
 	
-	lever[0]= getprop("controls/flight/speedbrake-lever[0]"); 
-	lever[1]= getprop("controls/flight/flaps-lever[0]"); 
-		
-#	print ("lever in: ", lever[0], lever[1]);
+	adjustFlaps();
 	
-	lever[0] = !lever[0];
-  
-	setprop("controls/flight/speedbrake-lever[0]",lever[0]);
-	
-	#print ("lever out: ", lever[0],lever[1]);	
-			
 } # end function 
 
-adjustFlaps = func{             #adjusts the lever up-down
+setFlapLever = func{             #adjusts the lever up-down
 	
-	up = arg[0];
-	lever=[0,1];
+	var input = getprop("/controls/flight/flaps");
+	var lever = getprop("controls/flight/flaps-lever[0]");
 	
-	lever[0]= getprop("controls/flight/speedbrake-lever[0]"); 
-	lever[1]= getprop("controls/flight/flaps-lever[0]"); 
-		
-#print ("lever in: ", up, lever[0],lever[1]);
+	setprop("controls/flight/flaps-lever[0]",input);
 	
-	if (up){
-		if (lever[1] == 0){
-			lever[1] = 0.3;
-		}	elsif (lever[1] == 0.3){
-			lever[1] = 1;
-			}
-		} elsif (!up){
-			if (lever[1] == 1){
-				lever[1] = 0.3;
-			} elsif (lever[1] == 0.3){
-					lever[1] = 0;
-				}
-			}
+	adjustFlaps();
 	
-	setprop("controls/flight/flaps-lever[0]",lever[1]);
-#print ("lever out: ", lever[0],lever[1]);	
-	registerTimer (flapBlowin);
-			
 } # end function 
+
+setlistener( "controls/flight/flaps", setFlapLever);
+
+adjustFlaps = func{
+
+	var speedbrakelever = getprop("controls/flight/speedbrake-lever[0]");
+	var flaplever = getprop("controls/flight/flaps-lever[0]");
 	
+	if (speedbrakelever == 1 and flaplever == 0) {
+		setprop("/controls/flight/speedbrake-pos-norm",1);
+		setprop("/controls/flight/flaps-pos-norm",0.36);
+		return;
+	} elsif (flaplever > 0){
+		setprop("/controls/flight/speedbrake-pos-norm",0);
+		setprop("/controls/flight/flaps-pos-norm", flaplever);
+		return registerTimer(flapBlowin); 
+	} elsif (speedbrakelever == 0 and flaplever == 0){
+		setprop("/controls/flight/speedbrake-pos-norm",0);
+		setprop("/controls/flight/flaps-pos-norm",0);
+	}
 	
-#	if (lever[0] == 1 and lever[1] == 0) 
-#	 	{ registerTimer (flapBlowin)}   # run the timer 
-#		
-#	if (lever[0] == -1 and lever[1] != 0) 
-#	 	{ registerTimer (wheelsMove)}   # run the timer                    
-		
+} # end function 
+
 
 flapBlowin = func{
+
+return;
   
-	flap = 0;
-	lever=[0,1];
+	var flap = 0;
 	
-  lever[0] = getprop("controls/flight/speedbrake-lever[0]");
+	lever[0] = getprop("controls/flight/speedbrake-lever[0]");
 	lever[1] = getprop("controls/flight/flaps-lever[0]");
 	airspeed = getprop("velocities/airspeed-kt");
 	flap_pos = getprop("surface-positions/flap-pos-norm");
 	 
 	# print("lever: " , lever[0] , " " , lever[1] ," airspeed (kts): " , airspeed , " flap pos: " , flap_pos);
 	 
-	if (lever[0] == 1 and lever[1] == 0) {
-			setprop("/controls/flight/speedbrake",1);
-			setprop( "/controls/flight/flaps",0.3);
-			return registerTimer(flapBlowin); 
-		} elsif (lever[0] == 0 and lever[1] == 0){
-			setprop("/controls/flight/speedbrake",0);
-			setprop( "/controls/flight/flaps",0);
-			return registerTimer(flapBlowin); 
-		} elsif (lever[1] > 0){
-			setprop("/controls/flight/speedbrake",0);
-		}
+	
 			
 		if (lever[1] == 0.3){
 			setprop("controls/flight/flaps", 0.3);
@@ -545,5 +555,27 @@ updateExhaustState = func {
 # ================================== Steering =================================================
 
 aircraft.steering.init();
+
+#================================== Droptanks ================================
+print("droptanks starting");
+var droptank_node = props.globals.getNode("sim/ai/aircraft/impact/droptank", 1);
+
+droptanks = func {
+	var droptank = droptank_node.getValue();
+			var node = props.globals.getNode(cmdarg().getValue(), 1);
+print (" droptank ", droptank, " lon " , node.getNode("impact/longitude-deg").getValue(),);
+			geo.put_model("Aircraft/seahawk/Models/droptank.xml",
+					node.getNode("impact/latitude-deg").getValue(),
+					node.getNode("impact/longitude-deg").getValue(),
+					node.getNode("impact/elevation-m").getValue()+ 0.25,
+					node.getNode("impact/heading-deg").getValue(),
+						0,
+						0
+						);
+	}
+
+setlistener( "sim/ai/aircraft/impact/droptank", droptanks);
+
+print("droptanks running");
 
 # end 
