@@ -259,7 +259,7 @@ flapBlowin = func{
 	var airspeed = getprop("velocities/airspeed-kt");
 	var flap_pos = getprop("surface-positions/flap-pos-norm");
 	
-	print("lever: " , flaplever );
+	#print("lever: " , flaplever );
 	
 	if (flaplever <= 0.36){
 			setprop("controls/flight/flaps-pos-norm", flaplever);
