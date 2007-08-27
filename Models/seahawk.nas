@@ -241,7 +241,7 @@ adjustFlaps = func{
 		return;
 	} elsif (flaplever > 0){
 		setprop("/controls/flight/speedbrake-pos-norm",0);
-		setprop("/controls/flight/flaps-pos-norm", flaplever);
+		#setprop("/controls/flight/flaps-pos-norm", flaplever);
 		return registerTimer(flapBlowin); 
 	} elsif (speedbrakelever == 0 and flaplever == 0){
 		setprop("/controls/flight/speedbrake-pos-norm",0);
@@ -253,47 +253,42 @@ adjustFlaps = func{
 
 flapBlowin = func{
 
-return;
-  
 	var flap = 0;
 	
-	lever[0] = getprop("controls/flight/speedbrake-lever[0]");
-	lever[1] = getprop("controls/flight/flaps-lever[0]");
-	airspeed = getprop("velocities/airspeed-kt");
-	flap_pos = getprop("surface-positions/flap-pos-norm");
-	 
-	# print("lever: " , lever[0] , " " , lever[1] ," airspeed (kts): " , airspeed , " flap pos: " , flap_pos);
-	 
+	var flaplever = getprop("controls/flight/flaps-lever");
+	var airspeed = getprop("velocities/airspeed-kt");
+	var flap_pos = getprop("surface-positions/flap-pos-norm");
 	
-			
-		if (lever[1] == 0.3){
-			setprop("controls/flight/flaps", 0.3);
-			return registerTimer(flapBlowin);      
-		} elsif (lever[1] == 1 and airspeed < 250) { 
-			setprop("controls/flight/flaps" , 1);    # increase the flap
-			return registerTimer(flapBlowin);                     # run the timer                
-		} elsif (lever[1] == 1 and airspeed >= 250 and airspeed <= 350) {
-			flap = -0.007 * airspeed + 2.75;
+	print("lever: " , flaplever );
+	
+	if (flaplever <= 0.36){
+			setprop("controls/flight/flaps-pos-norm", flaplever);
+			return;      
+	} elsif (airspeed < 250) { 
+			setprop("controls/flight/flaps-pos-norm" , flaplever);    # increase the flap
+			return registerTimer(flapBlowin);                         # run the timer                
+	} elsif (airspeed >= 250 and airspeed <= 350) {
+			flap = -0.0064 * airspeed + 2.6;
 			#print ("flap: ", flap); 
 			if(flap_pos < (flap - 0.05)){
-				setprop("controls/flight/flaps" , flap_pos + 0.05); # flap partially blown in
+				setprop("controls/flight/flaps-pos-norm" , flap_pos + 0.05); # flap partially blown in
 			} 
 			if(flap_pos > (flap + 0.05)){
-				setprop("controls/flight/flaps" , flap_pos - 0.05); # flap partially blown in 
+				setprop("controls/flight/flaps-pos-norm" , flap_pos - 0.05); # flap partially blown in 
 			}
 			return registerTimer(flapBlowin);					# run the timer
-		} elsif (lever[1] == 1 and airspeed > 350) {
-			flap = 0.3;
+	} elsif (airspeed > 350) {
+			flap = 0.36;
 			if(flap_pos > flap){
-				setprop("controls/flight/flaps" , flap_pos - 0.05); # flap fully blown in 
+				setprop("controls/flight/flaps-pos-norm" , flap_pos - 0.05); # flap fully blown in 
 			} 
 			return registerTimer(flapBlowin);                  # run timer
-		} elsif ( lever[0] == 0 and lever[1] == 0) {
-			setprop("controls/flight/flaps" , 0);
-		}
-		
-		
-} # end function
+	} elsif ( lever[0] == 0 ) {
+			setprop("controls/flight/flaps-pos-norm" , 0);
+	}
+	
+	
+	} # end function
 
 # =============================== end flap stuff =========================================
 
