@@ -7,7 +7,7 @@ var runout_node = props.globals.getNode("/sim/ai/runout", 1);
 var recoil_norm = 0;
 var runout_norm = 1;
 
-updateRecoil = func {
+var updateRecoil = func {
 
     if (trigger_node.getValue()) {
         recoil_norm =!recoil_norm;
