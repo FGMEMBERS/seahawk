@@ -2335,6 +2335,7 @@
 	<animation>
 		<type>shader</type>
 		<shader>heat-haze</shader>
+		<nopreview/>
 		<object-name>Exhausts</object-name>
 		<factor>0.12</factor>
 		<speed-prop>engines/engine/n1</speed-prop>
@@ -2362,6 +2363,7 @@
 
 	<animation>
 		<type>scale</type>
+		
 		<object-name>Exhaust</object-name>
 		<property>engines/engine/n1</property>
 		<x-factor>0.01</x-factor>
@@ -2422,6 +2424,7 @@
 	<!-- lower/raise holdback -->
 	<animation>
 		<type>rotate</type>
+		<nopreview/>
 		<object-name>Holdback</object-name>
 		<property>gear/launchbar/holdback-position-norm</property>
 		<interpolation>

@@ -16,7 +16,7 @@ var registerTimer = func {
 # =============================== end timer stuff ===============================
 # =============================== armament stuff ================================
 
-var controls.trigger = func(v) setprop("/ai/submodels/trigger", v);
+controls.trigger = func(v) setprop("/ai/submodels/trigger", v);
 
 
 # =============================== Gear stuff ====================================
@@ -64,8 +64,8 @@ updateCasterAngle();
 var tailwheel_lock = props.globals.getNode("/controls/gear/tailwheel-lock", 1);
 var launchbar_state = props.globals.getNode("/gear/launchbar/state", 1);
 
-var tailwheel_lock.setDoubleValue(1);
-var launchbar_state.setValue("Disengaged");  
+tailwheel_lock.setDoubleValue(1);
+launchbar_state.setValue("Disengaged");  
 
 var updateTailwheelLock = func {
 	var lock = tailwheel_lock.getValue(); 
