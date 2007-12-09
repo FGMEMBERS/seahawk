@@ -5,7 +5,7 @@
 <!-- additions Vivian Meazza 2004/1/15 vivian.meazza.lineone.net 
      to provide a 3d cockpit
    
-   Ver 0.1.0
+   Ver 0.1.1
 
 -->
 
@@ -235,7 +235,7 @@
 			<heading-deg>-15</heading-deg>
 		</offsets>
 	</model>
-	<!-- -->
+
 	<model>
 		<path>Aircraft/seahawk/Models/sig.xml</path>
 		<offsets>
@@ -400,7 +400,7 @@
 		<object-name>Flap-Inner-2-L</object-name>
 		<object-name>Flap-Inner-2-R</object-name>
 		<object-name>Tailplane-R</object-name>
-		<object-name>noshadow.Exhausts</object-name>
+		<object-name>Exhausts</object-name>
 		<condition>
 			<not>
 				<equals>
@@ -424,7 +424,7 @@
 		<object-name>Wing-L</object-name>
 		<object-name>Stub-Wing-R</object-name>
 		<object-name>Stub-Wing-L</object-name>
-		<object-name>noshadow.Markings</object-name>
+		<object-name>Markings</object-name>
 	</animation>
 
 	<animation>
@@ -437,12 +437,12 @@
 		<object-name>Tail-Lt-Cover</object-name>
 		<object-name>Canopy</object-name>
 		<object-name>Blackout</object-name>
-		<object-name>noshadow.Exhausts</object-name>
+		<object-name>Exhausts</object-name>
 	</animation>
 
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.Exhausts</object-name>
+		<object-name>Exhausts</object-name>
 		<condition>
 			<equals>
 				<property>sim/ai/aircraft/exhaust</property>
@@ -1160,7 +1160,7 @@
 	<!-- Canopy -->
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.MCanopy</object-name>
+		<object-name>MCanopy</object-name>
 		<object-name>Canopy-Frame</object-name>
 		<property>canopy/position-norm</property>
 		<factor>0.55</factor>
@@ -1177,8 +1177,8 @@
 		<object-name>Port-Light</object-name>
 		<object-name>Wing-L</object-name>
 		<object-name>Flap-L</object-name>
-		<object-name>noshadow.MK-L-Wing-T</object-name>
-		<object-name>noshadow.MK-L-Wing-B</object-name>
+		<object-name>MK-L-Wing-T</object-name>
+		<object-name>MK-L-Wing-B</object-name>
 		<property>canopy/position-norm</property>
 		<factor>-108</factor>
 		<center>
@@ -1199,8 +1199,8 @@
 		<object-name>Stbd-Light</object-name>
 		<object-name>Wing-R</object-name>
 		<object-name>Flap-R</object-name>
-		<object-name>noshadow.MK-R-Wing-T</object-name>
-		<object-name>noshadow.MK-R-Wing-B</object-name>
+		<object-name>MK-R-Wing-T</object-name>
+		<object-name>MK-R-Wing-B</object-name>
 		<property>canopy/position-norm</property>
 		<factor>108</factor>
 		<center>
@@ -1224,8 +1224,8 @@
 		<object-name>Tail-Lt-Fairing</object-name>
 		<object-name>Tail-Light</object-name>
 		<object-name>Tail-Lt-Cover</object-name>Tail-Lt-Fairing
-		<object-name>noshadow.MK-L-Rudder</object-name>
-		<object-name>noshadow.MK-R-Rudder</object-name>
+		<object-name>MK-L-Rudder</object-name>
+		<object-name>MK-R-Rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-30</factor>
 		<center>
@@ -1499,7 +1499,7 @@
 		<type>rotate</type>
 		<object-name>UC-F-FDoor-OS</object-name>
 		<object-name>UC-F-FDoor-IS</object-name>
-		<object-name>noshadow.MK-UC-F-FD-SN</object-name>
+		<object-name>MK-UC-F-FD-SN</object-name>
 		<property>gear/gear/position-norm</property>
 		<interpolation>
 			<entry>
@@ -2335,7 +2335,7 @@
 	<animation>
 		<type>shader</type>
 		<shader>heat-haze</shader>
-		<object-name>noshadow.Exhausts</object-name>
+		<object-name>Exhausts</object-name>
 		<factor>0.12</factor>
 		<speed-prop>engines/engine/n1</speed-prop>
 	</animation>
@@ -2343,7 +2343,7 @@
 
 	<animation>
 		<type>blend</type>
-		<object-name>noshadow.Exhaust3</object-name>
+		<object-name>Exhaust3</object-name>
 		<property>engines/engine/n1</property>
 		<factor>.01</factor>
 		<offset>0.45</offset>
@@ -2352,7 +2352,7 @@
 
 	<animation>
 		<type>blend</type>
-		<object-name>noshadow.Exhaust</object-name>
+		<object-name>Exhaust</object-name>
 		<property>engines/engine/n1</property>
 		<factor>-0.01</factor>
 		<offset>1</offset>
@@ -2362,7 +2362,7 @@
 
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.Exhaust</object-name>
+		<object-name>Exhaust</object-name>
 		<property>engines/engine/n1</property>
 		<x-factor>0.01</x-factor>
 		<x-offset>0.5</x-offset>
@@ -2376,7 +2376,7 @@
 
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.Exhaust3</object-name>
+		<object-name>Exhaust3</object-name>
 		<property>engines/engine/n1</property>
 		<factor>-0.005</factor>
 		<offset-m>0</offset-m>
@@ -2390,7 +2390,7 @@
 
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.Exhaust3</object-name>
+		<object-name>Exhaust3</object-name>
 		<property>engines/engine/n1</property>
 		<x-factor>0.01</x-factor>
 		<x-offset>0.5</x-offset>
@@ -2408,7 +2408,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.Exhaust3</object-name>
+		<object-name>Exhaust3</object-name>
 		<condition>
 			<less-than>
 				<property>velocities/airspeed-kt</property>
@@ -2508,5 +2508,22 @@
 				</equals>
 			</not>
 		</condition>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>Exhausts</object-name>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>Markings</object-name>
+	</animation>
+
+	<!-- *** LoD for the whole model *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
 	</animation>
 </PropertyList>

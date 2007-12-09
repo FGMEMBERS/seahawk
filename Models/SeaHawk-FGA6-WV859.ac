@@ -77568,7 +77568,7 @@ refs 3
 5 0.0683053 0.868665
 kids 0
 OBJECT poly
-name "noshadow.FCanopy"
+name "FCanopy"
 loc 4.76837e-006 4.76837e-007 0
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -77866,7 +77866,7 @@ refs 4
 6 0.0789877 0.946842
 kids 0
 OBJECT poly
-name "noshadow.MCanopy"
+name "MCanopy"
 loc 4.76837e-006 4.76837e-007 0
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78292,11 +78292,11 @@ refs 4
 7 0.0981497 0.947473
 kids 0
 OBJECT group
-name "noshadow.Markings"
+name "Markings"
 loc 0.277579 0.0117351 0.000154576
 kids 21
 OBJECT poly
-name "noshadow.MK-L-F188"
+name "MK-L-F188"
 loc 3.11849 -0.0718423 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78392,7 +78392,7 @@ refs 3
 2 0.429707 0.185059
 kids 0
 OBJECT poly
-name "noshadow.MK-R-F188"
+name "MK-R-F188"
 loc 3.11849 -0.0718423 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78488,7 +78488,7 @@ refs 3
 0 0.407903 0.185059
 kids 0
 OBJECT poly
-name "noshadow.MK-Steps"
+name "MK-Steps"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-00-1.rgb"
 crease 61.000000
@@ -78654,7 +78654,7 @@ refs 3
 6 0.400096 0.48315
 kids 0
 OBJECT poly
-name "noshadow.MK-L-Warn"
+name "MK-L-Warn"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78678,7 +78678,7 @@ refs 3
 0 0.628281 0.390752
 kids 0
 OBJECT poly
-name "noshadow.MK-R-Warn"
+name "MK-R-Warn"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78702,7 +78702,7 @@ refs 3
 2 0.625986 0.629447
 kids 0
 OBJECT poly
-name "noshadow.MK-L-NS"
+name "MK-L-NS"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78726,7 +78726,7 @@ refs 3
 0 0.129074 0.545451
 kids 0
 OBJECT poly
-name "noshadow.MK-R-NS"
+name "MK-R-NS"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78750,7 +78750,7 @@ refs 3
 3 0.118844 0.35067
 kids 0
 OBJECT poly
-name "noshadow.MK-L-H-Rnd"
+name "MK-L-H-Rnd"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78821,7 +78821,7 @@ refs 4
 1 0.149096 0.719656
 kids 0
 OBJECT poly
-name "noshadow.MK-R-H-Rnd"
+name "MK-R-H-Rnd"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -78892,7 +78892,7 @@ refs 4
 0 0.318122 0.719656
 kids 0
 OBJECT poly
-name "noshadow.MK-L-RN"
+name "MK-L-RN"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79039,7 +79039,7 @@ refs 4
 7 0.068218 0.0484322
 kids 0
 OBJECT poly
-name "noshadow.MK-R-RN"
+name "MK-R-RN"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79186,7 +79186,7 @@ refs 4
 6 0.911625 0.0484322
 kids 0
 OBJECT poly
-name "noshadow.MK-L-TF"
+name "MK-L-TF"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79426,7 +79426,7 @@ refs 5
 12 0.626564 0.171818
 kids 0
 OBJECT poly
-name "noshadow.MK-R-TF"
+name "MK-R-TF"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79666,7 +79666,7 @@ refs 5
 10 0.754096 0.171818
 kids 0
 OBJECT poly
-name "noshadow.MK-L-Rudder"
+name "MK-L-Rudder"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79728,7 +79728,7 @@ refs 4
 0 0.476219 0.416197
 kids 0
 OBJECT poly
-name "noshadow.MK-R-Rudder"
+name "MK-R-Rudder"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79790,7 +79790,7 @@ refs 4
 2 0.473506 0.42196
 kids 0
 OBJECT poly
-name "noshadow.MK-UC-F-FD-SN"
+name "MK-UC-F-FD-SN"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79836,7 +79836,7 @@ refs 4
 5 0.427695 0.158565
 kids 0
 OBJECT poly
-name "noshadow.MK-L-Wing-T"
+name "MK-L-Wing-T"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79915,7 +79915,7 @@ refs 4
 2 0.337432 0.701321
 kids 0
 OBJECT poly
-name "noshadow.MK-R-Wing-T"
+name "MK-R-Wing-T"
 loc -0.277579 -0.0117351 -0.00120696
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -79994,7 +79994,7 @@ refs 4
 0 0.325337 0.779215
 kids 0
 OBJECT poly
-name "noshadow.MK-L-Wing-B"
+name "MK-L-Wing-B"
 loc -0.277579 -0.0117351 -0.000154576
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -80103,7 +80103,7 @@ refs 4
 2 0.440491 0.665934
 kids 0
 OBJECT poly
-name "noshadow.MK-R-Wing-B"
+name "MK-R-Wing-B"
 loc -0.277579 -0.0159213 0.00158385
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -80212,7 +80212,7 @@ refs 4
 0 0.215416 0.583101
 kids 0
 OBJECT poly
-name "noshadow.MK-Hull-Sqn-Logo"
+name "MK-Hull-Sqn-Logo"
 loc -0.130244 0.401857 0.00370982
 texture "seahawk-tx-01-1.rgb"
 crease 61.000000
@@ -80278,12 +80278,12 @@ refs 4
 13 0.631018 0.710027
 kids 0
 OBJECT group
-name "noshadow.Exhausts"
+name "Exhausts"
 loc 7.20842 -0.673151 -0.824548
 texture "hh-noise3.rgb"
 kids 2
 OBJECT poly
-name "noshadow.Exhaust"
+name "Exhaust"
 loc -0.720942 0.556753 0
 texture "hh-noise3.rgb"
 crease 61.000000
@@ -80683,7 +80683,7 @@ refs 3
 47 35.8037 0.241092
 kids 0
 OBJECT poly
-name "noshadow.Exhaust3"
+name "Exhaust3"
 loc -0.500614 -1.11471 0
 texture "hh-noise3.rgb"
 crease 61.000000
