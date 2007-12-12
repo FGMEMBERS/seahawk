@@ -32,8 +32,8 @@
 						<y2>1.0</y2>
 					</texture>
 				</layer>
-				 
-	<!-- 	<layer>
+
+				<!-- 	<layer>
 					<name>grid</name>
 					<texture>
 						<path>Aircraft/seahawk/Models/hotspotgrid.rgb</path>
@@ -49,92 +49,6 @@
 			<!-- define hotspot actions below -->
 
 			<actions>
-
-				<!-- attitude indicator -->
-				<!--
-  <action>
-   <name></name>
-   <button>0</button>
-   <x>95</x>
-   <y>100</y>
-   <w>60</w>
-   <h>52</h>
-   <binding>
-    <command>property-toggle</command>
-    <property>/instrumentation/attitude-indicator/serviceable</property>
-   </binding>
-  </action>
-  -->
-				<!-- gyro compass hotspots -->
-				<!--
-  <action>
-   <name></name>
-   <button>0</button>
-   <x>-190</x>
-   <y>125</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>-1</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>true</wrap>
-   </binding>
-  </action>
-  
-  <action>
-   <name></name>
-   <button>1</button>
-   <x>-190</x>
-   <y>125</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>-5</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>1</wrap>
-   </binding>
-  </action>
-
-  <action>
-   <name></name>
-   <button>0</button>
-   <x>-170</x>
-   <y>125</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>1</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>true</wrap>
-   </binding>
-  </action>
-  
-  <action>
-   <name></name>
-   <button>1</button>
-   <x>-170</x>
-   <y>125</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>5</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>1</wrap>
-   </binding>
-  </action>
--->
 
 				<!-- ************** hsi hotspots ************** -->
 
@@ -291,46 +205,7 @@
 					</binding>
 				</action>
 
-				<!-- ingition switch hotspots -->
-				<!--
-  <action>
-   <name>switch up</name>
-   <button>0</button>
-   <x>-254</x>
-   <y>-230</y>
-   <w>64</w>
-   <h>81</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls/engines/engine[0]/magnetos</property>
-    <step>1</step>
-    <min>0</min>
-    <max>3</max>
-    <wrap>0</wrap>
-   </binding>
-  </action>
-
-  <action>
-   <name>switch down</name>
-   <button>0</button>
-   <x>-190</x>
-   <y>-230</y>
-   <w>64</w>
-   <h>81</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls/engines/engine[0]/magnetos</property>
-    <step>-1</step>
-    <min>0</min>
-    <max>3</max>
-    <wrap>0</wrap>
-   </binding>
-  </action>
-
--->
-
 				<!-- gear control -->
-
 				<action>
 					<name>extend</name>
 					<button>0</button>
@@ -339,12 +214,6 @@
 					<w>40</w>
 					<h>40</h>
 					<binding>
-<!--     <condition> disable normal gear control if emgy lowering used 
-	    <equals>
-          <property>controls/gear/gear-alternate-extension</property>
-	      <value>1</value>
-       </equals>
-      </condition> -->
 						<command>property-assign</command>
 						<property>/controls/gear/gear-down</property>
 						<value type="double">1.0</value>
@@ -359,88 +228,11 @@
 					<w>40</w>
 					<h>40</h>
 					<binding>
-						<!--    <condition> disable normal gear control if emgy lowering used 
-	    <equals>
-          <property>controls/gear/gear-alternate-extension</property>
-	      <value>1</value>
-       </equals>
-      </condition> -->
 						<command>property-assign</command>
 						<property>/controls/gear/gear-down</property>
 						<value type="double">0</value>
 					</binding>
 				</action>
-
-				<!-- emergency flap lowering 
-
-  <action>
-   <name>emergy flap lowering</name>
-   <button>0</button>
-   <x>-530</x>
-   <y>250</y>
-   <w>30</w>
-   <h>40</h>
-   <binding>
-     <command>property-assign</command>
-     <property>controls/flight/flaps-alternate-extension</property>
-     <value type="double">0</value>
-   </binding>
-   <binding>
-     <command>property-assign</command>
-     <property>/controls/flight/flaps</property>
-	 <value type="double">1</value>
-   </binding>
-  </action>
--->
-
-				<!-- flaps control 
-
-  <action>
-   <name>extend</name>
-   <button>0</button>
-   <x>-500</x>
-   <y>100</y>
-   <w>30</w>
-   <h>80</h>
-   <binding>-->
-				<!--    <condition> disable normal flap control if emgy lowering used 
-	    <equals>
-          <property>controls/flight/flaps-alternate-extension</property>
-	      <value>1</value>
-       </equals>
-      </condition> 
-    <command>property-adjust</command>
-    <property>controls/flight/flaps</property>
-    <step>0.10</step>
-    <min>0.0</min>
-    <max>1.0</max>
-    <wrap>false</wrap>
-   </binding>
-  </action>
-
-  <action>
-   <name>retract</name>
-   <button>0</button>
-   <x>-500</x>
-   <y>200</y>
-   <w>30</w>
-   <h>50</h>
-   <binding>
-     <condition>-->
-				<!-- disable normal flap control if emgy lowering used 
-	    <equals>
-          <property>controls/flight/flaps-alternate-extension</property>
-	      <value>1</value>
-       </equals>
-      </condition> 
-    <command>property-adjust</command>
-    <property>controls/flight/flaps</property>
-    <step>-0.10</step>
-    <min>0.0</min>
-    <max>1.0</max>
-    <wrap>false</wrap>
-   </binding>
-  </action>-->
 
 				<!-- hook control -->
 				<action>
@@ -451,12 +243,6 @@
 					<w>40</w>
 					<h>40</h>
 					<binding>
-						<!--     <condition> disable normal hook control if emgy lowering used 
-	    <equals>
-          <property>controls/gear/tailhook-alternate-extension</property>
-	      <value>1</value>
-       </equals>
-      </condition> -->
 						<command>property-assign</command>
 						<property>/controls/gear/tailhook</property>
 						<value type="double">1.0</value>
@@ -471,12 +257,6 @@
 					<w>40</w>
 					<h>40</h>
 					<binding>
-						<!--    <condition> disable normal gear control if emgy lowering used 
-	    <equals>
-          <property>controls/gear/gear-alternate-extension</property>
-	      <value>1</value>
-       </equals>
-      </condition> -->
 						<command>property-assign</command>
 						<property>/controls/gear/tailhook</property>
 						<value type="double">0</value>
@@ -527,8 +307,8 @@
 					<h>30</h>
 					<binding>
 						<command>property-assign</command>
-						<property>/controls/lighting/nav-lights</property>
-						<value type="bool">1</value>
+						<property>controls/lighting/nav-lights</property>
+						<value type="float">1</value>
 					</binding>
 				</action>
 				<action>
@@ -540,8 +320,8 @@
 					<h>30</h>
 					<binding>
 						<command>property-assign</command>
-						<property>/controls/lighting/nav-lights</property>
-						<value type="bool">0</value>
+						<property>controls/lighting/nav-lights</property>
+						<value type="float">0</value>
 					</binding>
 				</action>
 

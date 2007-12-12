@@ -121,6 +121,12 @@ Hawker Sea Hawk simulation config.
 			<setting>1.00</setting>
 		</flaps>
 
+		<multiplay>
+			<generic>
+				<int n="0"
+						 type="int">0</int>
+			</generic>
+		</multiplay>
 	</sim>
 
 	<consumables>
@@ -200,7 +206,7 @@ Hawker Sea Hawk simulation config.
 			<flaps-lever type="double">0</flaps-lever>
 		</flight>
 		<lighting>
-			<nav-lights>false</nav-lights>
+			<nav-lights type="bool">false</nav-lights>
 		</lighting>
 	</controls>
 
@@ -231,7 +237,6 @@ Hawker Sea Hawk simulation config.
 					<script>
 						seahawk.toggleAirbrakeLever();
 					</script>
-
 				</binding>
 			</key>
 
@@ -435,9 +440,6 @@ Hawker Sea Hawk simulation config.
 		<seahawk>
 			<file>Aircraft/seahawk/Models/seahawk.nas</file>
 		</seahawk>
-		<!--<seahawk>
-			<file>Aircraft/seahawk/Models/droptanks.nas</file>
-		</seahawk>-->
 		<seahawk-fuel>
 			<module>fuel</module>
 			<file>Aircraft/seahawk/Models/fuel-cocks.nas</file>
