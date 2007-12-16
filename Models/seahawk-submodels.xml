@@ -199,6 +199,7 @@
 		<weight alias="../../cannon/weight"/>
 		<life alias="../../cannon/life"/>
 		<delay>0.42</delay>
+		<repeat>true</repeat>
 		<count>41</count>
 		<x-offset>12.0079  </x-offset>
 		<y-offset>1.2795  </y-offset>
