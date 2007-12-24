@@ -379,6 +379,36 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 									 dst0="0"
 									 dst1="1"/>
 	</thruster>
+
+	<thruster x="0.93157"
+						y="1.70211"
+						z="-0.024736"
+						vx="0"
+						vy="1"
+						vz="0"
+						thrust="1000">
+		<control-input axis="/sim/ai/ballistic/force/force-norm"
+									 control="THROTTLE"
+									 src0="0"
+									 src1="1"
+									 dst0="0"
+									 dst1="1"/>
+	</thruster>
+	
+	<thruster x="0.93157"
+						y="-1.70211"
+						z="-0.024736"
+						vx="0"
+						vy="1"
+						vz="0"
+						thrust="1000">
+		<control-input axis="/sim/ai/ballistic/force[1]/force-norm"
+									 control="THROTTLE"
+									 src0="0"
+									 src1="1"
+									 dst0="0"
+									 dst1="1"/>
+	</thruster>
 	
 	<!-- Ballast & Weights-->
 	<ballast x="3.0"

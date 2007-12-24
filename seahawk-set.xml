@@ -35,7 +35,7 @@ Hawker Sea Hawk simulation config.
 				<exhaust type="bool">false</exhaust>
 			</aircraft>
 			<submodels>
-				<contrails type="bool">true</contrails>
+				<contrails type="bool">false</contrails>
 			</submodels>
 		</ai>
 
@@ -54,10 +54,10 @@ Hawker Sea Hawk simulation config.
 		</panel>
 
 		<!-- no HUD -->
-		<hud>
+		<!--<hud>
 			<path>Huds/Default/default.xml</path>
 			<visibility>false</visibility>
-		</hud>
+		</hud>-->
 
 		<model>
 			<path>Aircraft/seahawk/Models/seahawk-3d-model.xml</path>
@@ -74,8 +74,42 @@ Hawker Sea Hawk simulation config.
 				<default-field-of-view-deg>60</default-field-of-view-deg>
 			</config>
 		</view>
-		<chase-distance-m type="double"
-											archive="y">-30.0</chase-distance-m>
+		<view n="1">
+			<config>
+				<target-z-offset-m archive="y"
+													 type="double">0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="2">
+			<config>
+				<target-z-offset-m archive="y"
+													 type="double">0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y"
+													 type="double">0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="4">
+			<config>
+				<target-z-offset-m archive="y"
+													 type="double">0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y"
+													 type="double">0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y"
+													 type="double">0</target-z-offset-m>
+			</config>
+		</view>
 		<help>
 			<key>
 				<name>Ctrl-B</name>
@@ -127,6 +161,7 @@ Hawker Sea Hawk simulation config.
 						 type="int">0</int>
 			</generic>
 		</multiplay>
+
 	</sim>
 
 	<consumables>
@@ -206,7 +241,7 @@ Hawker Sea Hawk simulation config.
 			<flaps-lever type="double">0</flaps-lever>
 		</flight>
 		<lighting>
-			<nav-lights type="bool">false</nav-lights>
+			<nav-lights type="bool">true</nav-lights>
 		</lighting>
 	</controls>
 

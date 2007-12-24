@@ -563,6 +563,19 @@ aircraft.steering.init();
 #================================== Droptanks ================================
 print("droptanks starting");
 var droptank_node = props.globals.getNode("sim/ai/aircraft/impact/droptank", 1);
+var ext_force_stbd_node = props.globals.getNode("sim/ai/ballistic/force", 1);
+ext_force_stbd_node.getChild("force-lb", 0, 1).setDoubleValue(0);
+ext_force_stbd_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(0);
+ext_force_stbd_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(0);
+ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(0);
+
+var ext_force_port_node = props.globals.getNode("sim/ai/ballistic/force[1]", 1);
+ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(0);
+ext_force_port_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(0);
+ext_force_port_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(0);
+
+var pitch_node = props.globals.getNode("orientation/pitch-deg", 1);
+var hdg_node = props.globals.getNode("orientation/heading-deg", 1);
 
 var droptanks = func {
 	var droptank = droptank_node.getValue();
@@ -578,8 +591,43 @@ var droptanks = func {
 		);
 }
 
-setlistener( "sim/ai/aircraft/impact/droptank", droptanks);
+setlistener("sim/ai/aircraft/impact/droptank", droptanks);
+
+var ext_force_stbd = func {
+    if(ext_force_stbd_node.getChild("force-lb", 0, 1).getValue() != 0){
+       ext_force_stbd_node.getChild("force-lb", 0, 1).setDoubleValue(0);
+       ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(0);
+       return;
+    } else {
+        ext_force_stbd_node.getChild("force-lb", 0, 1).setDoubleValue(1000);
+        ext_force_stbd_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(hdg_node.getValue());
+        ext_force_stbd_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(pitch_node.getValue()-90);
+        ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(1);
+        settimer(ext_force_stbd,0.75);
+    }
+}
+
+setlistener( "controls/armament/station[0]/jettison-all", ext_force_stbd);
+
+var ext_force_port = func {
+if(ext_force_port_node.getChild("force-lb", 0, 1).getValue() != 0){
+       ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(0);
+       ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(0);
+       return;
+    } else {
+        ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(1);
+        ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(1000);
+        ext_force_port_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(hdg_node.getValue());
+        ext_force_port_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(pitch_node.getValue()-90);
+        ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(1);
+        settimer(ext_force_port,0.75);
+    }
+}
+
+setlistener( "controls/armament/station[0]/jettison-all", ext_force_port);
 
 print("droptanks running");
+
+
 
 # end 

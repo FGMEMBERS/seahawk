@@ -32,11 +32,18 @@
                      neutral (contrails),  > 32 exhaust gas, smoke. 
       <wind>	   		 If true, Submodel is affected by local wind. Defaults to false.
       <cd>           The Coeffient of Drag. Varies with submodel shape - 0.295 for a bullet, 
-                 0.045 for an airfoil. Enter an appropriate value. Defaults to 0.295.
+                     0.045 for an airfoil. Enter an appropriate value. Defaults to 0.295.
       <eda>          Effective drag area (sq ft). Usually the cross-sectional area of the 
                      submodel normal to the airflow.
       <weight>       The weight of the submodel (lbs). Defaults to 0.25	
       <aero-stabilised> If true, the submodel aligns with the local airflow. Defaults to true
+			<external-force> If true the submodel is subjected to an external force
+		  <force-path>   A string describing the property where the magnitude, azimuth and elevation 
+										of the external force is to be found. The following child properties are 
+										instantiated 
+															~/force-lb"
+        											~/force-azimuth-deg
+															~/force-elevation-deg
       
 -->
 <PropertyList>
@@ -310,9 +317,6 @@
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<count>1</count>
-		<!--x="-0.7094"
-		y="-1.6900"
-		z="-0.5715"-->
 		<x-offset>2.3225</x-offset>
 		<y-offset>5.5446</y-offset>
 		<z-offset>-1.875</z-offset>
@@ -321,10 +325,12 @@
 		<wind>false</wind>
 		<eda>2.11348887</eda>
 		<weight>170</weight>
-		<cd>0.035</cd>
+		<cd>0.2</cd>
 		<contents>consumables/fuel/tank[3]</contents>
 		<impact>true</impact>
 		<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+		<external-force>true</external-force>
+		<force-path>sim/ai/ballistic/force[0]</force-path>
 	</submodel>
 
 	<submodel>
@@ -342,10 +348,12 @@
 		<wind>false</wind>
 		<eda>2.11348887</eda>
 		<weight>170</weight>
-		<cd>0.035</cd>
+		<cd>0.2</cd>
 		<contents>consumables/fuel/tank[4]</contents>
 		<impact>true</impact>
 		<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+		<external-force>true</external-force>
+		<force-path>sim/ai/ballistic/force[1]</force-path>
 	</submodel>
 
 
