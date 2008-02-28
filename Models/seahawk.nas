@@ -574,6 +574,11 @@ ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(0);
 ext_force_port_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(0);
 ext_force_port_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(0);
 
+var ext_force_extra_node = props.globals.getNode("sim/ai/ballistic/force[2]", 1);
+ext_force_extra_node.getChild("force-lb", 0, 1).setDoubleValue(0);
+ext_force_extra_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(0);
+ext_force_extra_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(90);
+
 var pitch_node = props.globals.getNode("orientation/pitch-deg", 1);
 var hdg_node = props.globals.getNode("orientation/heading-deg", 1);
 
@@ -599,10 +604,11 @@ var ext_force_stbd = func {
        ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(0);
        return;
     } else {
-        ext_force_stbd_node.getChild("force-lb", 0, 1).setDoubleValue(1000);
+        ext_force_stbd_node.getChild("force-lb", 0, 1).setDoubleValue(10000);
         ext_force_stbd_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(hdg_node.getValue());
         ext_force_stbd_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(pitch_node.getValue()-90);
         ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(1);
+        setprop("ai/models/ballistic[1]/controls/slave-to-ac",0);
         settimer(ext_force_stbd,0.75);
     }
 }
@@ -610,16 +616,18 @@ var ext_force_stbd = func {
 setlistener( "controls/armament/station[0]/jettison-all", ext_force_stbd);
 
 var ext_force_port = func {
-if(ext_force_port_node.getChild("force-lb", 0, 1).getValue() != 0){
+    if(ext_force_port_node.getChild("force-lb", 0, 1).getValue() != 0){
        ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(0);
        ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(0);
        return;
     } else {
         ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(1);
-        ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(1000);
+        ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(10000);
         ext_force_port_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(hdg_node.getValue());
         ext_force_port_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(pitch_node.getValue()-90);
         ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(1);
+#        print ("elevation ", ext_force_port_node.getChild("force-elevation-deg", 0, 1).getValue());
+        setprop("ai/models/ballistic[0]/controls/slave-to-ac",0);
         settimer(ext_force_port,0.75);
     }
 }
