@@ -2466,7 +2466,7 @@
 	</animation>
 
 	<!-- drop tanks -->
-	<model>
+	<!--<model>
 		<path>Aircraft/seahawk/Models/droptank.xml</path>
 		<name>Drop-Tank-Port</name>
 		<offsets>
@@ -2512,8 +2512,13 @@
 				</equals>
 			</not>
 		</condition>
-	</animation>
+	</animation>-->
 
+<animation>
+		<type>select</type>
+		<object-name>Pylons</object-name>
+</animation>
+	
 	<animation>
 		<type>noshadow</type>
 		<object-name>Exhausts</object-name>
@@ -2523,6 +2528,10 @@
 		<type>noshadow</type>
 		<object-name>Markings</object-name>
 	</animation>
+
+		<nopreview>
+			<object-name>Pylons</object-name>
+		</nopreview>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>

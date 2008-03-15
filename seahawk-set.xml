@@ -15,8 +15,7 @@ Hawker Sea Hawk simulation config.
 		<description type="string">Hawker Seahawk FGA6</description>
 		<status type="string">early-production</status>
 		<flight-model>yasim</flight-model>
-		<aero>seahawk-3d-yasim</aero>
-		<fuel-fraction>0.99</fuel-fraction>
+		<aero>seahawk-3d-2t-yasim</aero>
 		<systems>
 			<autopilot>
 				<path>Aircraft/seahawk/Systems/seahawk-autopilot.xml</path>
@@ -181,16 +180,16 @@ Hawker Sea Hawk simulation config.
 				<level-gal_us>180</level-gal_us>
 				<selected type="bool">0</selected>
 			</tank>
-			<tank n="3">
+			<!--<tank n="3">
 				<name type="string">Droptank Stbd</name>
-				<level-gal_us>120</level-gal_us>
+				<level-gal_us>0</level-gal_us>
 				<selected type="bool">0</selected>
 			</tank>
 			<tank n="4">
 				<name type="string">Droptank Port</name>
-				<level-gal_us>120</level-gal_us>
+				<level-gal_us>0</level-gal_us>
 				<selected type="bool">0</selected>
-			</tank>
+			</tank>-->
 		</fuel>
 	</consumables>
 	<!--
@@ -466,8 +465,8 @@ Hawker Sea Hawk simulation config.
 	<yasim>
 		<weights>
 			<pilot-lb type="double">200</pilot-lb>
-			<tank-100gal-lbs type="double">170</tank-100gal-lbs>
-			<tank-100gal-lbs type="double">170</tank-100gal-lbs>
+			<tank-100gal-lbs type="double">0</tank-100gal-lbs>
+			<tank-100gal-lbs type="double">0</tank-100gal-lbs>
 		</weights>
 	</yasim>
 

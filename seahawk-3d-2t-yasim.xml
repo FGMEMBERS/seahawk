@@ -26,10 +26,10 @@
 										 value="1"/>
 		<solve-weight idx="0"
 									weight="200"/>
-		<!--<solve-weight idx="1"
+		<solve-weight idx="1"
 									weight="/yasim/weights/tank-100gal-lbs[0]"/>
 		<solve-weight idx="2"
-									weight="/yasim/weights/tank-100gal-lbs[0]"/>-->
+									weight="/yasim/weights/tank-100gal-lbs[0]"/>
 	</approach>
 
 	<!-- Cruise configuration.
@@ -431,16 +431,16 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 					z="-0.04"
 					mass-prop="/yasim/weights/pilot-lb"/>
 	<!-- Pilot -->
-	<!--<weight x="-0.7094"
+	<weight x="-0.7094"
 					y="1.6900"
 					z="-0.5715"
 					size="0.5"
 					mass-prop="/yasim/weights/tank-100gal-lbs[0]"/>
-	--><!-- port droptank - dry wt --><!--
+	<!-- port droptank - dry wt -->
 	<weight x="-0.7094"
 					y="-1.6900"
 					z="-0.5715"
 					size="0.5"
 					mass-prop="/yasim/weights/tank-100gal-lbs[1]"/>
-	--><!-- stbd droptank - dry wt -->
+	<!-- stbd droptank - dry wt -->
 </airplane>
