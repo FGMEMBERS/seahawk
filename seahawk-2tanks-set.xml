@@ -474,15 +474,18 @@ Hawker Sea Hawk simulation config.
 
 	<nasal>
 		<seahawk>
-			<file>Aircraft/seahawk/Models/seahawk.nas</file>
+			<file>Aircraft/seahawk/Nasal/seahawk.nas</file>
 		</seahawk>
 		<seahawk-fuel>
 			<module>fuel</module>
-			<file>Aircraft/seahawk/Models/fuel-cocks.nas</file>
+			<file>Aircraft/seahawk/Nasal/fuel-cocks.nas</file>
 		</seahawk-fuel>
 		<recoil>
-			<file>Aircraft/seahawk/Models/recoil.nas</file>
+			<file>Aircraft/seahawk/Nasal/recoil.nas</file>
 		</recoil>
+		<view-limiter>
+			<file>Aircraft/seahawk/Nasal/view-limiter.nas</file>
+		</view-limiter>
 	</nasal>
 
 	<environment>
