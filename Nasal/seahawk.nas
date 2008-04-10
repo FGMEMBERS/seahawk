@@ -403,6 +403,7 @@ yAccelNode.setDoubleValue( 0 );
 zAccelNode = props.globals.getNode("/accelerations/pilot/z-accel-fps_sec",1);
 zAccelNode.setDoubleValue(-32 );
 
+xViewAxisNode = props.globals.getNode("/sim/current-view/x-offset-m", 1);
 
 headShake = func {
 
@@ -419,7 +420,7 @@ headShake = func {
 
 		var xConfig = xConfigNode.getValue();
 #       var yConfig = yConfigNode.getValue();
-		var yConfig = me.xViewAxisN.getValue();
+		var yConfig = xViewAxisNode.getValue();
 		var zConfig = zConfigNode.getValue();
 
 		var xMax = xMaxNode.getValue();
@@ -434,7 +435,7 @@ headShake = func {
 		var yAccel = yAccelNode.getValue()/32;
 		var zAccel = (zAccelNode.getValue() + 32)/32; # We aren't counting gravity
 
-			var xThreashold =  xThreasholdNode.getValue();
+		var xThreashold =  xThreasholdNode.getValue();
 		var yThreashold =  yThreasholdNode.getValue();
 		var zThreashold =  zThreasholdNode.getValue();
 
