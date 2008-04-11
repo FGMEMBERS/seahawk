@@ -333,15 +333,9 @@ updatePilotG();
 #============================== head movement stuff =============================
 # headshake - this is a modification of the original work by Josh Babcock
 
+print("Head movement starting ...");
+
 # Define some stuff with global scope
-
-xConfigNode = '';
-yConfigNode = '';
-zConfigNode = '';
-
-xAccelNode = '';
-yAccelNode = '';
-zAccelNode = '';
 
 var xDivergence_damp = 0;
 var yDivergence_damp = 0;
@@ -350,6 +344,10 @@ var zDivergence_damp = 0;
 var last_xDivergence = 0;
 var last_yDivergence = 0;
 var last_zDivergence = 0;
+
+var old_xDivergence_damp = 0;
+var old_yDivergence_damp = 0;
+var old_zDivergence_damp = 0;
 
 # Make sure that some vital data exists and set some default values
 enabledNode = props.globals.getNode("/sim/headshake/enabled", 1);
@@ -392,10 +390,6 @@ zThreasholdNode = props.globals.getNode("/sim/headshake/z-threashold-g",1);
 zThreasholdNode.setDoubleValue( 0.5 );
 
 # We will use these later
-xConfigNode = props.globals.getNode("/sim/view/config/z-offset-m");
-yConfigNode = props.globals.getNode("/sim/view/config/x-offset-m");
-zConfigNode = props.globals.getNode("/sim/view/config/y-offset-m");
-
 xAccelNode = props.globals.getNode("/accelerations/pilot/x-accel-fps_sec",1);
 xAccelNode.setDoubleValue( 0 );
 yAccelNode = props.globals.getNode("/accelerations/pilot/y-accel-fps_sec",1);
@@ -403,26 +397,22 @@ yAccelNode.setDoubleValue( 0 );
 zAccelNode = props.globals.getNode("/accelerations/pilot/z-accel-fps_sec",1);
 zAccelNode.setDoubleValue(-32 );
 
-xViewAxisNode = props.globals.getNode("/sim/current-view/x-offset-m", 1);
+xViewAxisNode = props.globals.getNode("/sim/current-view/z-offset-m");
+yViewAxisNode = props.globals.getNode("/sim/current-view/x-offset-m");
+zViewAxisNode = props.globals.getNode("/sim/current-view/y-offset-m");
 
-headShake = func {
+var headShake = func {
 
 # First, we don't shake outside the vehicle. Inside, we boogie down.
 # There are two coordinate systems here, one used for accelerations, and one used for the viewpoint.
 # We will be using the one for accelerations.
+
 	var enabled = enabledNode.getValue();
 	var view_number= view_number_Node.getValue();
 	var n = g_timeratio.getValue(); 
 	var seat_vertical_adjust = seat_vertical_adjust_Node.getValue();
 
-
-	if ( (enabled) and ( view_number == 0)) {
-
-		var xConfig = xConfigNode.getValue();
-#       var yConfig = yConfigNode.getValue();
-		var yConfig = xViewAxisNode.getValue();
-		var zConfig = zConfigNode.getValue();
-
+	if ( (enabled) and (view_number == 0)) {
 		var xMax = xMaxNode.getValue();
 		var xMin = xMinNode.getValue();
 		var yMax = yMaxNode.getValue();
@@ -450,7 +440,6 @@ headShake = func {
 		}else {
 			xDivergence = 0;
 		}
-#        setprop("/sim/current-view/z-offset-m", (xConfig + xDivergence));
 
 		if (yAccel < -0.5) {
 			yDivergence = ((( -0.013 * yAccel ) - ( 0.125 )) * yAccel - (  0.1202 )) * yAccel - 0.0272;
@@ -459,7 +448,6 @@ headShake = func {
 		}else {
 			yDivergence = 0;
 		}
-#        setprop("/sim/current-view/x-offset-m", (yConfig + yDivergence));
 
 		if (zAccel < -1) {
 			zDivergence = ((( -0.0506 * zAccel ) - ( 0.538 )) * zAccel - ( 0.9915 )) * zAccel - 0.52;
@@ -468,7 +456,6 @@ headShake = func {
 		} else {
 			zDivergence = 0;
 		}
-
 
 		xDivergence_total = ( xDivergence * 0.25 ) + ( zDivergence * 0.25 );
 		if (xDivergence_total > xMax){xDivergence_total = xMax;}
@@ -518,16 +505,29 @@ headShake = func {
 
 #print (sprintf("z total=%0.5f, z min=%0.5f, z div damped=%0.5f", zDivergence_total, zMin , zDivergence_damp));
 
-		setprop("/sim/current-view/z-offset-m", xConfig + xDivergence_damp );
-		setprop("/sim/current-view/x-offset-m", yConfig + yDivergence_damp );
-		setprop("/sim/current-view/y-offset-m", zConfig + zDivergence_damp + seat_vertical_adjust );
+# Now apply the divergence to the curent viewpoint
+		
+		var origin_z = xViewAxisNode.getValue() - old_xDivergence_damp;
+		var origin_x = yViewAxisNode.getValue() - old_yDivergence_damp;
+		var origin_y = zViewAxisNode.getValue() - old_zDivergence_damp;
+
+		xViewAxisNode.setDoubleValue(origin_z + xDivergence_damp );
+		yViewAxisNode.setDoubleValue(origin_x + yDivergence_damp );
+		zViewAxisNode.setDoubleValue(origin_y + zDivergence_damp + seat_vertical_adjust );
+
+		old_xDivergence_damp = xDivergence_damp;
+		old_yDivergence_damp = yDivergence_damp;
+		old_zDivergence_damp = zDivergence_damp + seat_vertical_adjust;
 	}
 
 	settimer(headShake,0 );
 
 } #end func
 
-headShake();
+setlistener("/sim/signals/fdm-initialized", func {
+	headShake();
+	}
+);
 # ======================================= end Pilot G stuff ============================
 
 # ======================================= jet exhaust ========================
@@ -637,78 +637,5 @@ var ext_force_port = func {
 setlistener( "controls/armament/station[0]/jettison-all", ext_force_port);
 
 print("droptanks running");
-
-
-# Cockpit view: translate view along x axis when look far right or far left.
-var xAxisViewLowpass = aircraft.lowpass.new(0.15);
-xAxisViewLowpass.set(0.0);
-
-var pilot_view_limiter = {
-	init : func {
-		me.hdgN = props.globals.getNode("/sim/current-view/heading-offset-deg", 1);
-		me.xViewAxisN = props.globals.getNode("/sim/current-view/x-offset-m", 1);
-		me.currViewNumbN = props.globals.getNode("sim/current-view/view-number", 1);
-	},
-	update : func {
-		var hdg = view.normdeg(me.hdgN.getValue());
-		var xAxisVal = me.xViewAxisN.getValue();
-		var currViewNumb = me.currViewNumbN.getValue();
-		var updateHdg = 0;
-		var updateXaxis = 0;
-		# set a min/max heading view degree.
-		var headingMax = getprop("sim/view["~currViewNumb~"]/config/heading-normdeg-max");
-		var headingMin = getprop("sim/view["~currViewNumb~"]/config/heading-normdeg-min");
-		if((headingMax != nil) and (hdg > headingMax)) {
-			hdg = headingMax;
-			updateHdg = 1;
-		} elsif((headingMin != nil) and (hdg < headingMin)) {
-			hdg = headingMin;
-			updateHdg = 1;
-		}
-		if(updateHdg)
-			me.hdgN.setDoubleValue(hdg);
-		# translate view on X axis to look far right or far left.
-		var xAxisTranslate = getprop("sim/view["~currViewNumb~"]/config/x-trans-m");
-		var xAxisHeadingMax = getprop("sim/view["~currViewNumb~"]/config/x-trans-heading-normdeg-max");
-		var xAxisHeadingMin = getprop("sim/view["~currViewNumb~"]/config/x-trans-heading-normdeg-min");
-		if((xAxisTranslate != nil) and (xAxisHeadingMax != nil) and (xAxisHeadingMin != nil)) {
-			if((hdg <= xAxisHeadingMin) and (xAxisVal != xAxisTranslate)) {
-				updateXaxis = 1;
-				xAxisVal = xAxisTranslate;
-			} elsif((hdg >= xAxisHeadingMax) and (xAxisVal != (xAxisTranslate * -1))) {
-				updateXaxis = 1;
-				xAxisVal = xAxisTranslate * -1;
-			} elsif((hdg > xAxisHeadingMin) and (hdg < xAxisHeadingMax) and (xAxisVal != 0.0)) {
-				updateXaxis = 1;
-				xAxisVal = 0.0;
-			}
-		}
-		if(updateXaxis) {
-			xAxisVal = xAxisViewLowpass.filter(xAxisVal);
-			if((xAxisVal > -0.05) and (xAxisVal < 0.05)) { xAxisVal = 0.0; }
-			me.xViewAxisN.setDoubleValue(xAxisVal);
-		}
-		return 0;
-	},
-};
-
-view.panViewDir = func(step) {
-	if(getprop("/sim/freeze/master"))
-		var prop = "/sim/current-view/heading-offset-deg";
-	else
-		var prop = "/sim/current-view/goal-heading-offset-deg";
-	var viewVal = getprop(prop);
-	var delta = step * view.VIEW_PAN_RATE * getprop("/sim/time/delta-realtime-sec");
-	var viewValSlew = viewVal + delta;
-	viewValSlew = view.normdeg(viewValSlew);
-	var currViewNumb = getprop("sim/current-view/view-number");
-	var headingMax = getprop("sim/view["~currViewNumb~"]/config/heading-normdeg-max");
-	var headingMin = getprop("sim/view["~currViewNumb~"]/config/heading-normdeg-min");
-	if((headingMax != nil) and (viewValSlew > headingMax))
-		viewValSlew = headingMax;
-	elsif((headingMin != nil) and (viewValSlew < headingMin))
-		viewValSlew = headingMin;
-	setprop(prop, viewValSlew);
-}
 
 # end 
