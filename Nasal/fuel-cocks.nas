@@ -103,7 +103,7 @@ var init_double_prop = func(node, prop, val) {
 		var level = t.getNode("level-gal_us").getValue();
 		var density = t.getNode("density-ppg").getValue();
 		t.getNode("level-lbs").setDoubleValue(level * density);
-		print (t , " level " , level, " density " , density, " lbs ", level * density);
+#		print (t , " level " , level, " density " , density, " lbs ", level * density);
 #lbs += t.getNode("level-lbs").getValue();
 #		gals += level;
 #		cap += t.getNode("capacity-gal_us").getValue();
