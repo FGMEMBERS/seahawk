@@ -73,6 +73,9 @@ Hawker Sea Hawk simulation config.
 				<z-offset-m archive="y">-3.1675</z-offset-m>
 				<pitch-offset-deg>-15</pitch-offset-deg>
 				<default-field-of-view-deg>60</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+				</limits>
 			</config>
 		</view>
 		<view n="1">

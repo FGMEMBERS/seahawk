@@ -62,7 +62,6 @@ Hawker Sea Hawk simulation config.
 			<path>Aircraft/seahawk/Models/seahawk-3d-model.xml</path>
 		</model>
 
-		<!-- x="3.0" y="0.0" z="0.7" -->
 		<view n="0">
 			<internal archive="y">true</internal>
 			<config>
@@ -71,11 +70,9 @@ Hawker Sea Hawk simulation config.
 				<z-offset-m archive="y">-3.1675</z-offset-m>
 				<pitch-offset-deg>-15</pitch-offset-deg>
 				<default-field-of-view-deg>60</default-field-of-view-deg>
-				<x-trans-m type="double">0.15</x-trans-m>
-				<x-trans-heading-normdeg-min type="double">-65</x-trans-heading-normdeg-min>
-				<x-trans-heading-normdeg-max type="double">65</x-trans-heading-normdeg-max>
-				<heading-normdeg-min type="double">-140</heading-normdeg-min>
-				<heading-normdeg-max type="double">140</heading-normdeg-max>
+				<limits>
+					<enabled type="bool">true</enabled>
+				</limits>
 			</config>
 		</view>
 		<view n="1">
@@ -486,9 +483,6 @@ Hawker Sea Hawk simulation config.
 		<recoil>
 			<file>Aircraft/seahawk/Nasal/recoil.nas</file>
 		</recoil>
-		<view-limiter>
-			<file>Aircraft/seahawk/Nasal/view-limiter.nas</file>
-		</view-limiter>
 	</nasal>
 
 	<environment>
