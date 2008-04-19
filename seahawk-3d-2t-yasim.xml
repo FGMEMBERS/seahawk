@@ -237,7 +237,7 @@
 				z="0.5"
 				jet="true"
 				capacity="1200"/>
-	<!--<tank x="-0.7094"
+	<tank x="-0.7094"
 				y="-1.6900"
 				z="-0.5715"
 				jet="true"
@@ -246,7 +246,7 @@
 				y="1.6900"
 				z="-0.5715"
 				jet="true"
-				capacity="800"/>-->
+				capacity="800"/>
 
 	<!-- Undercarriage -->
 	<!-- nose  -->
