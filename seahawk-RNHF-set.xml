@@ -12,7 +12,7 @@ Hawker Sea Hawk simulation config.
 <PropertyList>
 	<sim>
 		<author type="string">Lee Elliott, Vivian Meazza</author>
-		<description type="string">Hawker Seahawk FGA6</description>
+		<description type="string">Hawker Seahawk FGA6 RNHF</description>
 		<status type="string">early-production</status>
 		<flight-model>yasim</flight-model>
 		<aero>seahawk-3d-yasim</aero>
@@ -59,7 +59,7 @@ Hawker Sea Hawk simulation config.
 		</hud>-->
 
 		<model>
-			<path>Aircraft/seahawk/Models/seahawk-3d-model.xml</path>
+			<path>Aircraft/seahawk/Models/seahawk-3d-model-RNHF.xml</path>
 		</model>
 
 		<view n="0">

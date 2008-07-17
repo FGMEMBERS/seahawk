@@ -10,7 +10,7 @@
 -->
 
 <PropertyList>
-	<path>SeaHawk-FGA6-WV859.ac</path>
+	<path>SeaHawk-FGA6-WV908.ac</path>
 
 	<offsets>
 		<z-m>0.0</z-m>
@@ -1180,6 +1180,7 @@
 		<object-name>Flap-L</object-name>
 		<object-name>MK-L-Wing-T</object-name>
 		<object-name>MK-L-Wing-B</object-name>
+		<object-name>MK-L-Wing-B-Rndl</object-name>
 		<property>canopy/position-norm</property>
 		<factor>-108</factor>
 		<center>
@@ -1202,6 +1203,7 @@
 		<object-name>Flap-R</object-name>
 		<object-name>MK-R-Wing-T</object-name>
 		<object-name>MK-R-Wing-B</object-name>
+		<object-name>MK-R-Wing-B-Rndl</object-name>
 		<property>canopy/position-norm</property>
 		<factor>108</factor>
 		<center>
@@ -2364,7 +2366,7 @@
 
 	<animation>
 		<type>scale</type>
-		
+
 		<object-name>Exhaust</object-name>
 		<property>engines/engine/n1</property>
 		<x-factor>0.01</x-factor>
@@ -2475,9 +2477,9 @@
 			<z-m>-0.5715</z-m>
 			<pitch-deg>-2.0</pitch-deg>
 		</offsets>
-	</model>-->
+	</model>
 
-	<!--<model>
+	<model>
 		<path>Aircraft/seahawk/Models/droptank.xml</path>
 		<name>Drop-Tank-Stbd</name>
 		<offsets>
@@ -2486,9 +2488,9 @@
 			<z-m>-0.5715</z-m>
 			<pitch-deg>-2.0</pitch-deg>
 		</offsets>
-	</model>-->
+	</model>
 
-	<!--<animation>
+	<animation>
 		<type>select</type>
 		<object-name>Drop-Tank-Port</object-name>
 		<condition>
@@ -2499,9 +2501,9 @@
 				</equals>
 			</not>
 		</condition>
-	</animation>-->
+	</animation>
 
-	<!--<animation>
+	<animation>
 		<type>select</type>
 		<object-name>Drop-Tank-Stbd</object-name>
 		<condition>
@@ -2515,6 +2517,11 @@
 	</animation>-->
 
 	<animation>
+		<type>select</type>
+		<object-name>Pylons</object-name>
+	</animation>
+
+	<animation>
 		<type>noshadow</type>
 		<object-name>Exhausts</object-name>
 	</animation>
@@ -2523,6 +2530,10 @@
 		<type>noshadow</type>
 		<object-name>Markings</object-name>
 	</animation>
+
+	<nopreview>
+		<object-name>Pylons</object-name>
+	</nopreview>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>

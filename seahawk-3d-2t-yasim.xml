@@ -17,7 +17,7 @@
      The airbrakes are modelled as spoilers
 -->
 	<approach speed="110"
-						aoa="8.0">
+						aoa="5.0">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
 										 value="0.6"/>
 		<control-setting axis="/controls/flight/flaps"
@@ -29,7 +29,7 @@
 		<solve-weight idx="1"
 									weight="/yasim/weights/tank-100gal-lbs[0]"/>
 		<solve-weight idx="2"
-									weight="/yasim/weights/tank-100gal-lbs[0]"/>
+									weight="/yasim/weights/tank-100gal-lbs[1]"/>
 	</approach>
 
 	<!-- Cruise configuration.
@@ -77,8 +77,8 @@
 		y="1.66"
 		z="0.0"
 		taper="0.456"
-		incidence="2"
-		twist="-2"
+		incidence="2.0"
+		twist="-2.0"
 		length="4.31"
 		chord="2.368"
 		sweep="-3.0"
@@ -157,7 +157,7 @@
 		y="0.10"
 		z="0.76"
 		taper="0.3"
-		effectiveness="1.5"
+		effectiveness="3.0"
 		length="1.7"
 		chord="1.2"
 		sweep="0.0"
@@ -167,8 +167,8 @@
 					 peak="1.5"/>
 		<flap0 start="0"
 					 end="1"
-					 lift="1.5"
-					 drag="1.5"/>
+					 lift="1.4"
+					 drag="1.4"/>
 		<control-input axis="/controls/flight/elevator"
 									 control="FLAP0"/>
 		<control-input axis="/controls/flight/elevator-trim"
@@ -176,7 +176,7 @@
 		<control-output control="FLAP0"
 										prop="/surface-positions/elevator-pos-norm"/>
 		<control-speed control="FLAP0"
-									 transition-time="0.75"/>
+									 transition-time="1.0"/>
 	</hstab>
 
 	<vstab x="-5.2"
