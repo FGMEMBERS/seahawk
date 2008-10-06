@@ -32,23 +32,6 @@ setlistener( "controls/lighting/nav-lights", func {
 	}
 ); 
 
-setlistener("controls/flight/BLC", func {
-	var blc = getprop("controls/flight/BLC");
-#		static = 0;
-
-	if ( !blc  ){ 
-		# effectiveness_Node.setValue(1);
-		wing_blowing_Node.setValue(0);
-		blc_control_valve_Node.setValue(0);
-	} else {
-		# effectiveness_Node.setValue(2);
-		wing_blowing_Node.setValue(1.8);
-		blc_control_valve_Node.setValue(1)
-	}
-
-},
-1);
-
 setlistener("gear/gear[0]/position-norm", func {
 	var gear = getprop("gear/gear[0]/position-norm");
 	
