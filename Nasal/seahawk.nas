@@ -691,8 +691,8 @@ print("droptanks running");
 
 var tyresmoke = func {
 
-print ("run_tyresmoke ",run_tyresmoke0);
-	
+#print ("run_tyresmoke ",run_tyresmoke0);
+
 	if (run_tyresmoke0)
 		tyresmoke_0.update();
 
