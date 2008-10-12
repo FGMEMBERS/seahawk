@@ -633,9 +633,9 @@ ext_force_extra_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(90);
 var pitch_node = props.globals.getNode("orientation/pitch-deg", 1);
 var hdg_node = props.globals.getNode("orientation/heading-deg", 1);
 
-var droptanks = func {
+var droptanks = func(n) {
 	var droptank = droptank_node.getValue();
-	var node = props.globals.getNode(cmdarg().getValue(), 1);
+	var node = props.globals.getNode(n.getValue(), 1);
 	print (" droptank ", droptank, " lon " , node.getNode("impact/longitude-deg").getValue(),);
 	geo.put_model("Aircraft/seahawk/Models/droptank.xml",
 		node.getNode("impact/latitude-deg").getValue(),
