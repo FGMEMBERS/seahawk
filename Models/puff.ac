@@ -5,7 +5,7 @@ kids 2
 OBJECT poly
 name "puff"
 loc 0 -3.35276e-009 0
-texture "puff.rgb"
+texture "puff.png"
 crease 61.000000
 numvert 13
 0.225 0 0
@@ -98,7 +98,7 @@ kids 0
 OBJECT poly
 name "puff"
 loc 1.49012e-008 -7.45058e-009 0
-texture "puff.rgb"
+texture "puff.png"
 crease 61.000000
 numvert 4
 -0.25 -0.25 0
