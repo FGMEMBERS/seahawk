@@ -85621,7 +85621,7 @@ kids 11
 OBJECT poly
 name "Pedal-L"
 loc 3.60423 0.231266 0.034818
-texture "seahawk-tx-01-1a.png"
+texture "hunter-large-bezel.png"
 crease 61.000000
 numvert 8
 -7.5722 -0.202307 0.0339819
@@ -85673,7 +85673,7 @@ kids 0
 OBJECT poly
 name "Pedal-R"
 loc 3.60423 0.231266 0.000266202
-texture "seahawk-tx-01-1a.png"
+texture "hunter-large-bezel.png"
 crease 61.000000
 numvert 8
 -7.5722 -0.202307 -0.276984
@@ -86280,7 +86280,6 @@ kids 0
 OBJECT poly
 name "Throttle"
 loc -0.0225039 0.206586 -0.0625852
-texture "hunter-large-bezel.rgb"
 crease 61.000000
 kids 3
 OBJECT poly
@@ -86650,7 +86649,7 @@ kids 0
 OBJECT poly
 name "Hull"
 loc -3.37109 0.684893 -0.0620086
-texture "seahawk-tx-01-RNHFa.png"
+texture "hunter-large-bezel.png"
 crease 61.000000
 numvert 21
 -0.629575 -0.0464737 -0.226734
