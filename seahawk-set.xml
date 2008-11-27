@@ -483,6 +483,9 @@ Hawker Sea Hawk simulation config.
 		<recoil>
 			<file>Aircraft/seahawk/Nasal/recoil.nas</file>
 		</recoil>
+		<rain>
+			<file>Aircraft/seahawk/Nasal/rain.nas</file>
+		</rain>
 	</nasal>
 
 	<environment>

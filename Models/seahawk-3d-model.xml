@@ -410,25 +410,80 @@
 
 	<animation>
 		<object-name>Turn</object-name>
-		<object-name>Gunsight</object-name>
+		
 		<object-name>Undercarriage-Control</object-name>
 		<object-name>Gear-Indicator</object-name>
 		<object-name>Nav-Light-Cover-Port</object-name>
 		<object-name>Nav-Light-Cover-Stbd</object-name>
 		<object-name>Tail-Lt-Cover</object-name>
 		<object-name>Canopy</object-name>
-		<object-name>Blackout</object-name>
+		<object-name>Gunsight</object-name>
 		<object-name>Exhausts</object-name>
 	</animation>
 
 	<animation>
 		<type>select</type>
-		<object-name>Exhausts</object-name>
+		<object-name>FCanopy-Rain</object-name>
 		<condition>
-			<equals>
-				<property>sim/ai/aircraft/exhaust</property>
-				<value>0</value>
-			</equals>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>FCanopy</object-name>
+		<condition>
+			<less-than-equals>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MCanopy-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MCanopy</object-name>
+		<condition>
+			<less-than-equals>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</less-than-equals>
 		</condition>
 	</animation>
 
@@ -2504,6 +2559,88 @@
 			<z-m>-1.43238</z-m>
 		</offsets>
 	</model>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>FCanopy-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<offset>0.33</offset>
+		<axis>
+			<x>-1</x>
+			<y>-0.5</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<offset>0.66</offset>
+		<axis>
+			<x>-1</x>
+			<y>0.5</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>MCanopy-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>FCanopy-Rain</object-name>
+		<object-name>MCanopy-Rain</object-name>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<transparency>
+			<alpha-prop>velocities/airspeed-kt</alpha-prop>
+			<factor>-0.00333</factor>
+			<offset>1</offset>
+			<max>0.3</max>
+			<min>0.0075</min>
+		</transparency>
+		<!--<threshold>0.001</threshold>-->
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>FCanopy-Rain</object-name>
+		<object-name>MCanopy-Rain</object-name>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<transparency>
+			<alpha-prop>sim/model/rain/raining</alpha-prop>
+			<factor>0.7</factor>
+			<offset>0</offset>
+			<max>0.3</max>
+			<min>0.0075</min>
+		</transparency>
+		<!--<threshold>0.001</threshold>-->
+	</animation>
 	
 	
 	<!-- *** LoD for the whole model *** -->
