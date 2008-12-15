@@ -21,6 +21,10 @@ var tyresmoke_0 = aircraft.tyresmoke.new(0);
 var tyresmoke_1 = aircraft.tyresmoke.new(1);
 var tyresmoke_2 = aircraft.tyresmoke.new(2);
 
+var flow = aircraft.rain.init();
+
+
+
 # =============================== listeners ===============================
 #
 
@@ -141,7 +145,7 @@ var updateTailwheelLock = func {
 
 } #end func updateTailwheelLock()
 
-setlistener( launchbar_state , updateTailwheelLock );
+setlistener( launchbar_state , updateTailwheelLock,0,0 );
 
 # ======================================= end Gear stuff ============================
 
@@ -708,5 +712,17 @@ var tyresmoke = func {
 # == fire it up ===
 
 tyresmoke();
+
+
+#============================ Rain ===================================
+
+
+var rain = func {
+	aircraft.rain.update();
+	settimer(rain, 0);
+}
+
+# == fire it up ===
+rain()
 
 # end 
