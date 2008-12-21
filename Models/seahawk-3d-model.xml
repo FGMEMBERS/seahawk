@@ -423,6 +423,7 @@
 
 	<animation>
 		<type>select</type>
+		<nopreview/>
 		<object-name>FCanopy-Rain</object-name>
 		<condition>
 			<greater-than>
@@ -445,6 +446,7 @@
 
 	<animation>
 		<type>select</type>
+		<nopreview/>
 		<object-name>SCanopy-Stbd-Rain</object-name>
 		<condition>
 			<greater-than>
@@ -456,6 +458,7 @@
 
 	<animation>
 		<type>select</type>
+		<nopreview/>
 		<object-name>SCanopy-Port-Rain</object-name>
 		<condition>
 			<greater-than>
@@ -467,6 +470,7 @@
 
 	<animation>
 		<type>select</type>
+		<nopreview/>
 		<object-name>MCanopy-Rain</object-name>
 		<condition>
 			<greater-than>
@@ -1259,7 +1263,7 @@
 		<object-name>Rudder-C</object-name>
 		<object-name>Tail-Lt-Fairing</object-name>
 		<object-name>Tail-Light</object-name>
-		<object-name>Tail-Lt-Cover</object-name>Tail-Lt-Fairing
+		<object-name>Tail-Lt-Cover</object-name>
 		<object-name>MK-L-Rudder</object-name>
 		<object-name>MK-R-Rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>

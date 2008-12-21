@@ -443,6 +443,72 @@
 
 	<animation>
 		<type>select</type>
+		<object-name>FCanopy-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>FCanopy</object-name>
+		<condition>
+			<less-than-equals>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MCanopy-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MCanopy</object-name>
+		<condition>
+			<less-than-equals>
+				<property>sim/model/rain/raining</property>
+				<value>0.01</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+
+	<!--<animation>
+		<type>select</type>
 		<object-name>Exhausts</object-name>
 		<condition>
 			<equals>
@@ -450,7 +516,7 @@
 				<value>0</value>
 			</equals>
 		</condition>
-	</animation>
+	</animation>-->
 
 	<!-- Suppress Pilot Head in Cockpit View -->
 	<animation>
@@ -1224,7 +1290,7 @@
 		<object-name>Rudder-C</object-name>
 		<object-name>Tail-Lt-Fairing</object-name>
 		<object-name>Tail-Light</object-name>
-		<object-name>Tail-Lt-Cover</object-name>Tail-Lt-Fairing
+		<object-name>Tail-Lt-Cover</object-name>
 		<object-name>MK-L-Rudder</object-name>
 		<object-name>MK-R-Rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
@@ -2364,7 +2430,7 @@
 
 	<animation>
 		<type>scale</type>
-		
+
 		<object-name>Exhaust</object-name>
 		<property>engines/engine/n1</property>
 		<x-factor>0.01</x-factor>
@@ -2593,6 +2659,88 @@
 			<z-m>-1.43238</z-m>
 		</offsets>
 	</model>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>FCanopy-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<offset>0.33</offset>
+		<axis>
+			<x>-1</x>
+			<y>-0.5</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<offset>0.66</offset>
+		<axis>
+			<x>-1</x>
+			<y>0.5</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>MCanopy-Rain</object-name>
+		<property>sim/model/rain/flow</property>
+		<factor>1</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>FCanopy-Rain</object-name>
+		<object-name>MCanopy-Rain</object-name>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<transparency>
+			<alpha-prop>velocities/airspeed-kt</alpha-prop>
+			<factor>-0.00333</factor>
+			<offset>1</offset>
+			<max>0.3</max>
+			<min>0.0075</min>
+		</transparency>
+		<!--<threshold>0.001</threshold>-->
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>FCanopy-Rain</object-name>
+		<object-name>MCanopy-Rain</object-name>
+		<object-name>SCanopy-Port-Rain</object-name>
+		<object-name>SCanopy-Stbd-Rain</object-name>
+		<transparency>
+			<alpha-prop>sim/model/rain/raining</alpha-prop>
+			<factor>0.7</factor>
+			<offset>0</offset>
+			<max>0.3</max>
+			<min>0.0075</min>
+		</transparency>
+		<!--<threshold>0.001</threshold>-->
+	</animation>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>
