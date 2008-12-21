@@ -1290,7 +1290,7 @@
 		<object-name>Rudder-C</object-name>
 		<object-name>Tail-Lt-Fairing</object-name>
 		<object-name>Tail-Light</object-name>
-		<object-name>Tail-Lt-Cover</object-name>
+		<object-name>Tail-Lt-Cover</object-name>Tail-Lt-Fairing
 		<object-name>MK-L-Rudder</object-name>
 		<object-name>MK-R-Rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>

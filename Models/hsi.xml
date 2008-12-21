@@ -43,7 +43,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>Face-m</object-name>
-		<object-name>Needle1-m</object-name>-->
+		<object-name>Needle1-m</object-name>
 		<condition>
 			<property>instrumentation/heading-indicator/heading-source</property>
 		</condition>
