@@ -1287,7 +1287,7 @@
 		<object-name>L-Elevator-B</object-name>
 		<object-name>L-Elevator-C</object-name>
 		<property>surface-positions/elevator-pos-norm</property>
-		<factor>30</factor>
+		<factor>15</factor>
 		<center>
 			<x-m>5.39</x-m>
 			<y-m>0.0</y-m>
@@ -1306,7 +1306,7 @@
 		<object-name>R-Elevator-B</object-name>
 		<object-name>R-Elevator-C</object-name>
 		<property>surface-positions/elevator-pos-norm</property>
-		<factor>30</factor>
+		<factor>15</factor>
 		<center>
 			<x-m>5.39</x-m>
 			<y-m>0.0</y-m>
@@ -2363,7 +2363,7 @@
 		<object-name>Panel-Lower</object-name>
 		<object-name>Panel-L</object-name>
 		<emission>
-			<factor-prop>/controls/lighting/panel-norm</factor-prop>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
 			<red>0.6</red>
 			<green>0.20</green>
 			<blue>0.20</blue>
@@ -2645,8 +2645,17 @@
 		</transparency>
 		<!--<threshold>0.001</threshold>-->
 	</animation>
-	
-	
+
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+		<object-name>MCanopy</object-name>
+		<object-name>FCanopy</object-name>
+		<object-name>SCanopy-Port</object-name>
+		<object-name>SCanopy-Stbd</object-name>
+	</animation>
+
 	<!-- *** LoD for the whole model *** -->
 	<animation>
 		<type>range</type>

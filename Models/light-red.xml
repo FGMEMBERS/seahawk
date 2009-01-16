@@ -17,6 +17,19 @@
 	</animation>
 
 	<animation>
+		<type>scale</type>
+		<object-name>Red-Light-Flare</object-name>
+		<property>sim/time/sun-angle-rad</property>
+		<offset>-1.4</offset>
+		<x-min>1</x-min>
+		<y-min>1</y-min>
+		<z-min>1</z-min>
+		<x-factor>2</x-factor>
+		<y-factor>2</y-factor>
+		<z-factor>2</z-factor>
+	</animation>
+	
+	<animation>
 		<type>select</type>
 		<object-name>Red-Light-Flare</object-name>
 		<condition>
@@ -31,19 +44,6 @@
 				</equals>
 			</or>
 		</condition>
-	</animation>
-
-	<animation>
-		<type>scale</type>
-		<object-name>Red-Light-Flare</object-name>
-		<property>/sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>2</x-factor>
-		<y-factor>2</y-factor>
-		<z-factor>2</z-factor>
 	</animation>
 
 	<!--    *** LoD *** 

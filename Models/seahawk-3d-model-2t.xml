@@ -400,7 +400,6 @@
 		<object-name>Flap-Inner-2-L</object-name>
 		<object-name>Flap-Inner-2-R</object-name>
 		<object-name>Tailplane-R</object-name>
-		<object-name>Exhausts</object-name>
 		<condition>
 			<not>
 				<equals>
@@ -437,8 +436,6 @@
 		<object-name>Nav-Light-Cover-Stbd</object-name>
 		<object-name>Tail-Lt-Cover</object-name>
 		<object-name>Canopy</object-name>
-		<!--<object-name>Blackout</object-name>-->
-		<object-name>Exhausts</object-name>
 	</animation>
 
 	<animation>
@@ -506,17 +503,6 @@
 			</less-than-equals>
 		</condition>
 	</animation>
-
-	<!--<animation>
-		<type>select</type>
-		<object-name>Exhausts</object-name>
-		<condition>
-			<equals>
-				<property>sim/ai/aircraft/exhaust</property>
-				<value>0</value>
-			</equals>
-		</condition>
-	</animation>-->
 
 	<!-- Suppress Pilot Head in Cockpit View -->
 	<animation>
@@ -1290,7 +1276,7 @@
 		<object-name>Rudder-C</object-name>
 		<object-name>Tail-Lt-Fairing</object-name>
 		<object-name>Tail-Light</object-name>
-		<object-name>Tail-Lt-Cover</object-name>Tail-Lt-Fairing
+		<object-name>Tail-Lt-Cover</object-name>
 		<object-name>MK-L-Rudder</object-name>
 		<object-name>MK-R-Rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
@@ -1314,7 +1300,7 @@
 		<object-name>L-Elevator-B</object-name>
 		<object-name>L-Elevator-C</object-name>
 		<property>surface-positions/elevator-pos-norm</property>
-		<factor>30</factor>
+		<factor>15</factor>
 		<center>
 			<x-m>5.39</x-m>
 			<y-m>0.0</y-m>
@@ -1333,7 +1319,7 @@
 		<object-name>R-Elevator-B</object-name>
 		<object-name>R-Elevator-C</object-name>
 		<property>surface-positions/elevator-pos-norm</property>
-		<factor>30</factor>
+		<factor>15</factor>
 		<center>
 			<x-m>5.39</x-m>
 			<y-m>0.0</y-m>
@@ -2390,7 +2376,7 @@
 		<object-name>Panel-Lower</object-name>
 		<object-name>Panel-L</object-name>
 		<emission>
-			<factor-prop>/controls/lighting/panel-norm</factor-prop>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
 			<red>0.6</red>
 			<green>0.20</green>
 			<blue>0.20</blue>
@@ -2398,7 +2384,7 @@
 	</animation>
 
 	<!-- ********************** Exhaust ******************* -->
-	<!-- -->
+	<!-- 
 	<animation>
 		<type>shader</type>
 		<shader>heat-haze</shader>
@@ -2485,6 +2471,8 @@
 			</less-than>
 		</condition>
 	</animation>
+	
+	-->
 
 	<!-- ********** launchbar stuff ************* -->
 
@@ -2740,6 +2728,16 @@
 			<min>0.0075</min>
 		</transparency>
 		<!--<threshold>0.001</threshold>-->
+	</animation>
+
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+		<object-name>MCanopy</object-name>
+		<object-name>FCanopy</object-name>
+		<object-name>SCanopy-Port</object-name>
+		<object-name>SCanopy-Stbd</object-name>
 	</animation>
 
 	<!-- *** LoD for the whole model *** -->

@@ -17,6 +17,34 @@
 	</animation>
 
 	<animation>
+		<type>scale</type>
+		<object-name>White-Light-Flare</object-name>
+		<property>sim/time/sun-angle-rad</property>
+		<offset>-1.4</offset>
+		<x-min>1</x-min>
+		<y-min>1</y-min>
+		<z-min>1</z-min>
+		<x-factor>2</x-factor>
+		<y-factor>2</y-factor>
+		<z-factor>2</z-factor>
+	</animation>
+	
+	<!--<animation>
+		<type>dist-scale</type>
+		<object-name>White-Light-Flare</object-name>
+		<interpolation>
+			<entry>
+				<ind>0.001</ind>
+				<dep>2</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>100</dep>
+			</entry>
+		</interpolation>
+	</animation>-->
+
+	<animation>
 		<type>select</type>
 		<object-name>White-Light-Flare</object-name>
 		<condition>
@@ -33,23 +61,11 @@
 		</condition>
 	</animation>
 
-	<animation>
-		<type>scale</type>
-		<object-name>White-Light-Flare</object-name>
-		<property>/sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>2</x-factor>
-		<y-factor>2</y-factor>
-		<z-factor>2</z-factor>
-	</animation>
 
 	<!--    *** LoD *** 
     <animation> 
       <type>range</type>
-      <object-name>Green-Flare</object-name>
+      <object-name>White-Flare</object-name>
       <min-m>0</min-m>
       <max-m>5000</max-m>
     </animation>-->
