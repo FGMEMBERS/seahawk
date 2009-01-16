@@ -242,7 +242,7 @@ Hawker Sea Hawk simulation config.
 			<flaps-lever type="double">0</flaps-lever>
 		</flight>
 		<lighting>
-			<nav-lights type="bool">true</nav-lights>
+			<nav-lights type="bool">false</nav-lights>
 		</lighting>
 	</controls>
 
@@ -336,7 +336,7 @@ Hawker Sea Hawk simulation config.
 				<desc>Seat Default.</desc>
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/seat/vertical-adjust</property>
+					<property>controls/seat/vertical-adjust</property>
 					<value type="double">0</value>
 				</binding>
 				<binding>
@@ -356,7 +356,7 @@ Hawker Sea Hawk simulation config.
 				<desc>Seat Down.</desc>
 				<binding>
 					<command>property-adjust</command>
-					<property>/controls/seat/vertical-adjust</property>
+					<property>controls/seat/vertical-adjust</property>
 					<step type="double">-0.01</step>
 					<min type="double">-0.1</min>
 					<max type="double">0.1</max>
@@ -441,12 +441,12 @@ Hawker Sea Hawk simulation config.
 				<!-- port inner -->
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/armament/station[0]/jettison-all</property>
+					<property>controls/armament/station[0]/jettison-all</property>
 					<value type="bool">1</value>
 				</binding>
 				<binding>
 					<command>property-assign</command>
-					<property>/yasim/weights/tank-100gal-lbs[0]</property>
+					<property>yasim/weights/tank-100gal-lbs[0]</property>
 					<value type="double">0.0</value>
 				</binding>
 				<binding>
@@ -456,7 +456,7 @@ Hawker Sea Hawk simulation config.
 				</binding>
 				<binding>
 					<command>property-assign</command>
-					<property>/yasim/weights/tank-100gal-lbs[1]</property>
+					<property>yasim/weights/tank-100gal-lbs[1]</property>
 					<value type="double">0.0</value>
 				</binding>
 			</key>
@@ -483,6 +483,9 @@ Hawker Sea Hawk simulation config.
 		<recoil>
 			<file>Aircraft/seahawk/Nasal/recoil.nas</file>
 		</recoil>
+		<rain>
+			<file>Aircraft/seahawk/Nasal/rain.nas</file>
+		</rain>
 	</nasal>
 
 	<environment>

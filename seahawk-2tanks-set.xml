@@ -10,6 +10,68 @@ Hawker Sea Hawk simulation config.
 ************************************************************************
 -->
 <PropertyList>
+
+	<!-- *************** set properties **********************-->
+	<!--parking brake ON -->
+	<!-- nosewheel lock OFF -->
+	<controls>
+		<engines>
+			<engine n="0">
+				<fuel-cock>
+					<lever type="double">1</lever>
+				</fuel-cock>
+			</engine>
+		</engines>
+		<gear>
+			<brake-parking>1</brake-parking>
+			<tailwheel-lock>true</tailwheel-lock>
+		</gear>
+		<flight>
+			<flaps-alternate-extension type="double">1</flaps-alternate-extension>
+			<speedbrake-lever type="bool">false</speedbrake-lever>
+			<flaps-lever type="double">0</flaps-lever>
+		</flight>
+		<lighting>
+			<nav-lights type="bool">false</nav-lights>
+		</lighting>
+		<armament>
+			<station n="0">
+				<jettison-all type="bool">false</jettison-all>
+			</station>
+		</armament>
+	</controls>
+
+	<gear>
+		<gear n="0">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<spray type="int">0</spray>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+		<gear n="1">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<spray type="int">0</spray>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+		<gear n="2">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<spray type="int">0</spray>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+	</gear>
+
+	<engines>
+		<engine n="0">
+			<running type="bool">0</running>
+		</engine>
+	</engines>
+
+	<position>
+		<altitude-agl-ft type="double">0</altitude-agl-ft>
+	</position>/"
+
 	<sim>
 		<author type="string">Lee Elliott, Vivian Meazza</author>
 		<description type="string">Hawker Seahawk FGA6 (2 Tanks)</description>
@@ -159,10 +221,46 @@ Hawker Sea Hawk simulation config.
 			<setting>1.00</setting>
 		</flaps>
 
-		<multiplay>
+		<!--<multiplay>
 			<generic>
 				<int n="0"
 						 type="int">0</int>
+			</generic>
+		</multiplay>-->
+
+		<multiplay>
+			<generic>
+				<string n="0"/>
+				<int n="0"
+							 alias="/engines/engine[0]/running"/>
+				<int n="1"
+							 alias="/gear/gear[0]/tyre-smoke"/>
+				<int n="2"
+							 alias="/gear/gear[1]/tyre-smoke"/>
+				<int n="3"
+							 alias="/gear/gear[2]/tyre-smoke"/>
+				<int n="4"
+							 alias="/gear/gear[0]/spray"/>
+				<int n="5"
+							 alias="/gear/gear[1]/spray"/>
+				<int n="6"
+							 alias="/gear/gear[2]/spray"/>
+				<float n="0"
+							 alias="/gear/gear[0]/sprayspeed-ms"/>
+				<float n="1"
+							 alias="/gear/gear[1]/sprayspeed-ms"/>
+				<float n="2"
+							 alias="/gear/gear[2]/sprayspeed-ms"/>
+				<float n="3"
+							 alias="/gear/gear[0]/spray-density"/>
+				<float n="4"
+							 alias="/gear/gear[1]/spray-density"/>
+				<float n="5"
+							 alias="/gear/gear[2]/spray-density"/>
+				<float n="6"
+							 alias="/environment/metar/rain-norm"/>
+				<float n="7"
+							 alias="/position/altitude-agl-ft"/>
 			</generic>
 		</multiplay>
 
@@ -224,30 +322,7 @@ Hawker Sea Hawk simulation config.
  </autopilot>
  -->
 
-	<!-- *************** set properties **********************-->
-	<!--parking brake ON -->
-	<!-- nosewheel lock OFF -->
-	<controls>
-		<engines>
-			<engine n="0">
-				<fuel-cock>
-					<lever type="double">1</lever>
-				</fuel-cock>
-			</engine>
-		</engines>
-		<gear>
-			<brake-parking>1</brake-parking>
-			<tailwheel-lock>true</tailwheel-lock>
-		</gear>
-		<flight>
-			<flaps-alternate-extension type="double">1</flaps-alternate-extension>
-			<speedbrake-lever type="bool">false</speedbrake-lever>
-			<flaps-lever type="double">0</flaps-lever>
-		</flight>
-		<lighting>
-			<nav-lights type="bool">true</nav-lights>
-		</lighting>
-	</controls>
+
 
 	<!-- ************Instrumentation ************************* -->
 	<instrumentation>
@@ -339,7 +414,7 @@ Hawker Sea Hawk simulation config.
 				<desc>Seat Default.</desc>
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/seat/vertical-adjust</property>
+					<property>controls/seat/vertical-adjust</property>
 					<value type="double">0</value>
 				</binding>
 				<binding>
@@ -359,7 +434,7 @@ Hawker Sea Hawk simulation config.
 				<desc>Seat Down.</desc>
 				<binding>
 					<command>property-adjust</command>
-					<property>/controls/seat/vertical-adjust</property>
+					<property>controls/seat/vertical-adjust</property>
 					<step type="double">-0.01</step>
 					<min type="double">-0.1</min>
 					<max type="double">0.1</max>
@@ -444,12 +519,12 @@ Hawker Sea Hawk simulation config.
 				<!-- port inner -->
 				<binding>
 					<command>property-assign</command>
-					<property>/controls/armament/station[0]/jettison-all</property>
+					<property>controls/armament/station[0]/jettison-all</property>
 					<value type="bool">1</value>
 				</binding>
 				<binding>
 					<command>property-assign</command>
-					<property>/yasim/weights/tank-100gal-lbs[0]</property>
+					<property>yasim/weights/tank-100gal-lbs[0]</property>
 					<value type="double">0.0</value>
 				</binding>
 				<binding>
@@ -459,7 +534,7 @@ Hawker Sea Hawk simulation config.
 				</binding>
 				<binding>
 					<command>property-assign</command>
-					<property>/yasim/weights/tank-100gal-lbs[1]</property>
+					<property>yasim/weights/tank-100gal-lbs[1]</property>
 					<value type="double">0.0</value>
 				</binding>
 			</key>
@@ -486,6 +561,9 @@ Hawker Sea Hawk simulation config.
 		<recoil>
 			<file>Aircraft/seahawk/Nasal/recoil.nas</file>
 		</recoil>
+		<!--<rain>
+			<file>Aircraft/seahawk/Nasal/rain.nas</file>
+		</rain>-->
 	</nasal>
 
 	<environment>
