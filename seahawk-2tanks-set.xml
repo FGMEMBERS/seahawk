@@ -70,7 +70,7 @@ Hawker Sea Hawk simulation config.
 
 	<position>
 		<altitude-agl-ft type="double">0</altitude-agl-ft>
-	</position>/"
+	</position>
 
 	<sim>
 		<author type="string">Lee Elliott, Vivian Meazza</author>
