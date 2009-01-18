@@ -20,6 +20,7 @@ Hawker Sea Hawk simulation config.
 				<fuel-cock>
 					<lever type="double">1</lever>
 				</fuel-cock>
+				<throttle>0</throttle>
 			</engine>
 		</engines>
 		<gear>
@@ -31,8 +32,9 @@ Hawker Sea Hawk simulation config.
 			<speedbrake-lever type="bool">false</speedbrake-lever>
 			<flaps-lever type="double">0</flaps-lever>
 		</flight>
-		<lighting>
-			<nav-lights type="bool">false</nav-lights>
+		<lighting n="0">
+			<nav-lights n="0"
+									type="bool">true</nav-lights>
 		</lighting>
 		<armament>
 			<station n="0">
@@ -44,22 +46,23 @@ Hawker Sea Hawk simulation config.
 	<gear>
 		<gear n="0">
 			<tyre-smoke type="int">0</tyre-smoke>
-			<spray type="int">0</spray>
 			<sprayspeed-ms type="double">0</sprayspeed-ms>
 			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
 		</gear>
 		<gear n="1">
 			<tyre-smoke type="int">0</tyre-smoke>
-			<spray type="int">0</spray>
 			<sprayspeed-ms type="double">0</sprayspeed-ms>
 			<spray-density type="double">0</spray-density>
 		</gear>
 		<gear n="2">
 			<tyre-smoke type="int">0</tyre-smoke>
-			<spray type="int">0</spray>
 			<sprayspeed-ms type="double">0</sprayspeed-ms>
 			<spray-density type="double">0</spray-density>
 		</gear>
+		<!--<tailhook>
+			<position-norm type="double">0</position-norm>
+		</tailhook>-->
 	</gear>
 
 	<engines>
@@ -231,20 +234,18 @@ Hawker Sea Hawk simulation config.
 		<multiplay>
 			<generic>
 				<string n="0"/>
+
 				<int n="0"
-							 alias="/engines/engine[0]/running"/>
+						 alias="/engines/engine[0]/running"/>
 				<int n="1"
-							 alias="/gear/gear[0]/tyre-smoke"/>
+						 alias="/gear/gear[0]/tyre-smoke"/>
 				<int n="2"
-							 alias="/gear/gear[1]/tyre-smoke"/>
+						 alias="/gear/gear[1]/tyre-smoke"/>
 				<int n="3"
-							 alias="/gear/gear[2]/tyre-smoke"/>
+						 alias="/gear/gear[2]/tyre-smoke"/>
 				<int n="4"
-							 alias="/gear/gear[0]/spray"/>
-				<int n="5"
-							 alias="/gear/gear[1]/spray"/>
-				<int n="6"
-							 alias="/gear/gear[2]/spray"/>
+						 alias="/controls/lighting/nav-lights"/>
+
 				<float n="0"
 							 alias="/gear/gear[0]/sprayspeed-ms"/>
 				<float n="1"
@@ -258,9 +259,11 @@ Hawker Sea Hawk simulation config.
 				<float n="5"
 							 alias="/gear/gear[2]/spray-density"/>
 				<float n="6"
-							 alias="/environment/metar/rain-norm"/>
-				<float n="7"
 							 alias="/position/altitude-agl-ft"/>
+				<float n="7"
+							 alias="/gear/gear/caster-angle-deg-damped"/>
+				<float n="8"
+							 alias="/controls/engines/engine[0]/throttle"/>
 			</generic>
 		</multiplay>
 
