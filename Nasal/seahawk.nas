@@ -716,7 +716,6 @@ tyresmoke();
 
 
 #============================ Rain ===================================
-
 aircraft.rain.init();
 
 var rain = func {
