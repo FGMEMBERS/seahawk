@@ -443,7 +443,7 @@
 		<object-name>FCanopy-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -454,7 +454,7 @@
 		<object-name>FCanopy</object-name>
 		<condition>
 			<less-than-equals>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</less-than-equals>
 		</condition>
@@ -465,7 +465,7 @@
 		<object-name>SCanopy-Stbd-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -476,7 +476,7 @@
 		<object-name>SCanopy-Port-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -487,7 +487,7 @@
 		<object-name>MCanopy-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -498,7 +498,7 @@
 		<object-name>MCanopy</object-name>
 		<condition>
 			<less-than-equals>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</less-than-equals>
 		</condition>
@@ -2651,7 +2651,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>FCanopy-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -2663,7 +2663,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>SCanopy-Stbd-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<offset>0.33</offset>
 		<axis>
@@ -2676,7 +2676,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>SCanopy-Port-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<offset>0.66</offset>
 		<axis>
@@ -2689,7 +2689,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>MCanopy-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<axis>
 			<x>-1</x>
@@ -2721,7 +2721,7 @@
 		<object-name>SCanopy-Port-Rain</object-name>
 		<object-name>SCanopy-Stbd-Rain</object-name>
 		<transparency>
-			<alpha-prop>sim/model/rain/raining</alpha-prop>
+			<alpha-prop>sim/model/rain/raining-norm</alpha-prop>
 			<factor>0.7</factor>
 			<offset>0</offset>
 			<max>0.3</max>

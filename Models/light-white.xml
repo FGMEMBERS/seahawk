@@ -54,7 +54,7 @@
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>sim/multiplay/generic/int</property>
+					<property>controls/lighting/nav-lights[1]</property>
 					<value>1</value>
 				</equals>
 			</or>

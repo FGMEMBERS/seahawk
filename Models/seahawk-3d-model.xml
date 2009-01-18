@@ -300,7 +300,7 @@
 		</offsets>
 	</model>
 
-<!--<model>
+	<!--<model>
 		<path>Aircraft/seahawk/Models/ejection-seat.xml</path>
 		<name>Ejection Seat</name>
 		<offsets>
@@ -410,7 +410,7 @@
 
 	<animation>
 		<object-name>Turn</object-name>
-		
+
 		<object-name>Undercarriage-Control</object-name>
 		<object-name>Gear-Indicator</object-name>
 		<object-name>Nav-Light-Cover-Port</object-name>
@@ -418,7 +418,6 @@
 		<object-name>Tail-Lt-Cover</object-name>
 		<object-name>Canopy</object-name>
 		<object-name>Gunsight</object-name>
-		<object-name>Exhausts</object-name>
 	</animation>
 
 	<animation>
@@ -427,7 +426,7 @@
 		<object-name>FCanopy-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -438,7 +437,7 @@
 		<object-name>FCanopy</object-name>
 		<condition>
 			<less-than-equals>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</less-than-equals>
 		</condition>
@@ -450,7 +449,7 @@
 		<object-name>SCanopy-Stbd-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -462,7 +461,7 @@
 		<object-name>SCanopy-Port-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -474,7 +473,7 @@
 		<object-name>MCanopy-Rain</object-name>
 		<condition>
 			<greater-than>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -485,7 +484,7 @@
 		<object-name>MCanopy</object-name>
 		<condition>
 			<less-than-equals>
-				<property>sim/model/rain/raining</property>
+				<property>sim/model/rain/raining-norm</property>
 				<value>0.01</value>
 			</less-than-equals>
 		</condition>
@@ -2475,11 +2474,11 @@
 		</condition>
 	</animation>-->
 
-<animation>
+	<animation>
 		<type>select</type>
 		<object-name>Pylons</object-name>
-</animation>
-	
+	</animation>
+
 	<animation>
 		<type>noshadow</type>
 		<object-name>Exhausts</object-name>
@@ -2490,9 +2489,9 @@
 		<object-name>Markings</object-name>
 	</animation>
 
-		<nopreview>
-			<object-name>Pylons</object-name>
-		</nopreview>
+	<nopreview>
+		<object-name>Pylons</object-name>
+	</nopreview>
 
 	<model>
 		<path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
@@ -2567,7 +2566,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>FCanopy-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -2579,7 +2578,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>SCanopy-Stbd-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<offset>0.33</offset>
 		<axis>
@@ -2592,7 +2591,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>SCanopy-Port-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<offset>0.66</offset>
 		<axis>
@@ -2605,7 +2604,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>MCanopy-Rain</object-name>
-		<property>sim/model/rain/flow</property>
+		<property>sim/model/rain/flow-mps</property>
 		<factor>1</factor>
 		<axis>
 			<x>-1</x>
@@ -2637,7 +2636,7 @@
 		<object-name>SCanopy-Port-Rain</object-name>
 		<object-name>SCanopy-Stbd-Rain</object-name>
 		<transparency>
-			<alpha-prop>sim/model/rain/raining</alpha-prop>
+			<alpha-prop>sim/model/rain/raining-norm</alpha-prop>
 			<factor>0.7</factor>
 			<offset>0</offset>
 			<max>0.3</max>

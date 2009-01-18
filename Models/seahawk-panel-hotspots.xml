@@ -308,7 +308,7 @@
 					<binding>
 						<command>property-assign</command>
 						<property>controls/lighting/nav-lights</property>
-						<value type="float">1</value>
+						<value type="bool">1</value>
 					</binding>
 				</action>
 				<action>
@@ -321,7 +321,7 @@
 					<binding>
 						<command>property-assign</command>
 						<property>controls/lighting/nav-lights</property>
-						<value type="float">0</value>
+						<value type="bool">0</value>
 					</binding>
 				</action>
 
