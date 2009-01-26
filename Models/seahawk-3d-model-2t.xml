@@ -504,6 +504,29 @@
 		</condition>
 	</animation>
 
+
+	<!-- **************************** Pilot ******************************* -->
+
+	<animation>
+		<type>select</type>
+		<object-name>Pilot</object-name>
+		<object-name>Seat-Harness</object-name>
+		<object-name>Parachute-Harness</object-name>
+		<condition>
+			<or>
+				<not>
+					<property>sim/model/seahawk/show-pilot</property>
+				</not>
+				<not>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>0</value>
+					</equals>
+				</not>
+			</or>
+		</condition>
+	</animation>
+	
 	<!-- Suppress Pilot Head in Cockpit View -->
 	<animation>
 		<type>select</type>
