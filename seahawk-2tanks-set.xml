@@ -267,6 +267,26 @@ Hawker Sea Hawk simulation config.
 			</generic>
 		</multiplay>
 
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Seahawk</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Toggle pilot model</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/seahawk/show-pilot</property>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+		<seahawk>
+			<show-pilot archive="y"
+									type="bool">true</show-pilot>
+		</seahawk>
+
 	</sim>
 
 	<consumables>
