@@ -387,7 +387,7 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 						vy="1"
 						vz="0"
 						thrust="1000">
-		<control-input axis="/sim/ai/ballistic/force/force-norm"
+		<control-input axis="/sim/ai/load/force/force-norm"
 									 control="THROTTLE"
 									 src0="0"
 									 src1="1"
@@ -402,7 +402,7 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 						vy="1"
 						vz="0"
 						thrust="1000">
-		<control-input axis="/sim/ai/ballistic/force[1]/force-norm"
+		<control-input axis="/sim/ai/load/force[1]/force-norm"
 									 control="THROTTLE"
 									 src0="0"
 									 src1="1"

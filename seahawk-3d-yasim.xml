@@ -347,6 +347,8 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 									 control="LEXTEND"/>
 		<control-speed control="LEXTEND"
 									 transition-time="1"/>
+		<control-input axis="/controls/gear/launchbar/acceleration-norm"
+									 control="LACCEL"/>
 	</launchbar>
 
 	<!-- simulate cannon recoil -->
