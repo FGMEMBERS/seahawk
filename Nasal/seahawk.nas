@@ -22,9 +22,6 @@ var tyresmoke_1 = aircraft.tyresmoke.new(1);
 var tyresmoke_2 = aircraft.tyresmoke.new(2);
 
 
-
-
-
 # =============================== listeners ===============================
 #
 
@@ -76,10 +73,9 @@ setlistener("gear/gear[2]/position-norm", func {
 	1,
 	0);
 
+# =============================== Armament stuff ================================
 
-# =============================== armament stuff ================================
-
-controls.trigger = func(v) setprop("/ai/submodels/trigger", v);
+#controls.trigger = func(v) setprop("/ai/submodels/trigger", v);
 
 
 # =============================== Gear stuff ====================================
@@ -435,13 +431,13 @@ seat_vertical_adjust_Node = props.globals.getNode("/controls/seat/vertical-adjus
 seat_vertical_adjust_Node.setDoubleValue( 0 );
 
 xThreasholdNode = props.globals.getNode("/sim/headshake/x-threashold-g",1);
-xThreasholdNode.setDoubleValue( 0.5 );
+xThreasholdNode.setDoubleValue( 1.0 );
 
 yThreasholdNode = props.globals.getNode("/sim/headshake/y-threashold-g",1);
-yThreasholdNode.setDoubleValue( 0.5 );
+yThreasholdNode.setDoubleValue( 1.0 );
 
 zThreasholdNode = props.globals.getNode("/sim/headshake/z-threashold-g",1);
-zThreasholdNode.setDoubleValue( 0.5 );
+zThreasholdNode.setDoubleValue( 1.0 );
 
 # We will use these later
 xAccelNode = props.globals.getNode("/accelerations/pilot/x-accel-fps_sec",1);
@@ -458,7 +454,8 @@ zViewAxisNode = props.globals.getNode("/sim/current-view/y-offset-m");
 var headShake = func {
 
 # First, we don't shake outside the vehicle. Inside, we boogie down.
-# There are two coordinate systems here, one used for accelerations, and one used for the viewpoint.
+# There are two coordinate systems here, one used for accelerations, 
+# and one used for the viewpoint.
 # We will be using the one for accelerations.
 
 	var enabled = enabledNode.getValue();
@@ -724,6 +721,25 @@ var rain = func {
 }
 
 # == fire it up ===
-rain()
+rain();
+
+#============================ Sight ===================================
+
+
+var update_sight = func {
+
+    var in_offset_y = getprop("sim/current-view/y-offset-m");
+    var out_offset_y = -1200*in_offset_y + 788.28;
+    var range = getprop("/sim/aim/range-yds");
+    var range_correction = -4E-06 * range * range + 0.00248 * range - 0.1996;
+  
+#print ("offset_y ", in_offset_y, " ", out_offset_y, " ", range_correction);
+
+    setprop("/sim/aim/offsets/y", out_offset_y + range_correction);
+
+}
+
+setlistener("sim/current-view/y-offset-m", update_sight,0,0 );
+setlistener("/sim/aim/range-yds", update_sight,0,0 );
 
 # end 

@@ -1,6 +1,6 @@
 #=========================== recoil ==============================
 print("recoil running");
-var trigger_node = props.globals.getNode("/ai/submodels/trigger", 1);
+var trigger_node = props.globals.getNode("/controls/armament/trigger", 1);
 var recoil_node = props.globals.getNode("/sim/ai/recoil", 1);
 var runout_node = props.globals.getNode("/sim/ai/runout", 1);
 
