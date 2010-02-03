@@ -207,7 +207,7 @@
 										min="1"
 										max="-1"/>
 		<control-speed control="FLAP0"
-									 transition-time="0.75"/>
+									 transition-time="1.0"/>
 	</vstab>
 
 	<!-- Engine 1 x Roll-Royce Nene 103.  Wt - 1700 lbs -->
@@ -405,6 +405,22 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 						vz="0"
 						thrust="1000">
 		<control-input axis="/sim/ai/ballistic/force[1]/force-norm"
+									 control="THROTTLE"
+									 src0="0"
+									 src1="1"
+									 dst0="0"
+									 dst1="1"/>
+	</thruster>
+
+<!-- Simulate lashing the aircraft down -->
+	<thruster x="-1.99074"
+						y="0"
+						z="-0.759429"
+						vx="0"
+						vy="0"
+						vz="1"
+						thrust="1000">
+		<control-input axis="/controls/gear/lashings"
 									 control="THROTTLE"
 									 src0="0"
 									 src1="1"

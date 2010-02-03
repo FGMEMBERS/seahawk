@@ -83,9 +83,9 @@ Hawker Sea Hawk simulation config.
 		<aero>seahawk-3d-2t-yasim</aero>
 		<fuel-fraction>0.99</fuel-fraction>
 		<systems>
-			<autopilot>
+			<!--<autopilot>
 				<path>Aircraft/seahawk/Systems/seahawk-autopilot.xml</path>
-			</autopilot>
+			</autopilot>-->
 			<electrical>
 				<path>Aircraft/seahawk/Systems/seahawk-electrical.xml</path>
 			</electrical>
@@ -94,6 +94,14 @@ Hawker Sea Hawk simulation config.
 		<instrumentation>
 			<path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
 		</instrumentation>
+
+		<hud>
+			<path n="1">Aircraft/seahawk/Systems/seahawk-sight.xml</path>
+			<visibility n="1">true</visibility>
+			<font>
+				<size type="float">10.0</size>
+			</font>
+		</hud>
 
 		<ai>
 			<aircraft>
@@ -119,17 +127,10 @@ Hawker Sea Hawk simulation config.
 			<visibility archive="n">false</visibility>
 		</panel>
 
-		<!-- no HUD -->
-		<!--<hud>
-			<path>Huds/Default/default.xml</path>
-			<visibility>false</visibility>
-		</hud>-->
-
 		<model>
 			<path>Aircraft/seahawk/Models/seahawk-3d-model-2t.xml</path>
 		</model>
 
-		<!-- x="3.0" y="0.0" z="0.7" -->
 		<view n="0">
 			<internal archive="y">true</internal>
 			<config>
@@ -224,13 +225,6 @@ Hawker Sea Hawk simulation config.
 			<setting>1.00</setting>
 		</flaps>
 
-		<!--<multiplay>
-			<generic>
-				<int n="0"
-						 type="int">0</int>
-			</generic>
-		</multiplay>-->
-
 		<multiplay>
 			<generic>
 				<string n="0"/>
@@ -286,6 +280,24 @@ Hawker Sea Hawk simulation config.
 			<show-pilot archive="y"
 									type="bool">true</show-pilot>
 		</seahawk>
+
+		<aim>
+			<active type="bool">false</active>
+			<tachy type="bool">true</tachy>
+			<align type="bool">false</align>
+			<radius type="float">1</radius>
+			<speed-fps type="float">2755.9</speed-fps>
+			<range-yds type="float">550</range-yds>
+			<arc>
+				<start-deg type="float">10</start-deg>
+				<stop-deg type="float">270</stop-deg>
+			</arc>
+			<offsets>
+				<x type="float">0</x>
+				<y type="float">0</y>
+			</offsets>
+			<compression type ="float">2</compression>
+		</aim>
 
 	</sim>
 

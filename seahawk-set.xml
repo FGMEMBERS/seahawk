@@ -14,8 +14,11 @@ Hawker Sea Hawk simulation config.
 	<!-- *************** set properties **********************-->
 	<!--parking brake ON -->
 	<!-- nosewheel lock OFF -->
-	<controls>
-		<engines>
+		<controls>
+			<armament>
+				<trigger type="bool">0</trigger>
+			</armament>
+			<engines>
 			<engine n="0">
 				<fuel-cock>
 					<lever type="double">1</lever>
@@ -27,8 +30,9 @@ Hawker Sea Hawk simulation config.
 			<brake-parking>1</brake-parking>
 			<tailwheel-lock>true</tailwheel-lock>
 			<launchbar>
-				<acceleration-norm type="float">0.5</acceleration-norm>
+				<acceleration-norm type="float">0.4</acceleration-norm>
 			</launchbar>
+			<lashings type ="bool">false</lashings>
 		</gear>
 		<flight>
 			<flaps-alternate-extension type="double">1</flaps-alternate-extension>
@@ -84,9 +88,9 @@ Hawker Sea Hawk simulation config.
 		<flight-model>yasim</flight-model>
 		<aero>seahawk-3d-yasim</aero>
 		<systems>
-			<autopilot>
+			<!--<autopilot>
 				<path>Aircraft/seahawk/Systems/seahawk-autopilot.xml</path>
-			</autopilot>
+			</autopilot>-->
 			<electrical>
 				<path>Aircraft/seahawk/Systems/seahawk-electrical.xml</path>
 			</electrical>
@@ -96,6 +100,14 @@ Hawker Sea Hawk simulation config.
 			<path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
 		</instrumentation>
 
+		<hud>
+			<path n="1">Aircraft/seahawk/Systems/seahawk-sight.xml</path>
+			<visibility n="1">true</visibility>
+			<font>
+				<size type="float">10.0</size>
+			</font>
+		</hud>
+
 		<ai>
 			<aircraft>
 				<exhaust type="bool">false</exhaust>
@@ -103,11 +115,16 @@ Hawker Sea Hawk simulation config.
 			<submodels>
 				<contrails type="bool">false</contrails>
 			</submodels>
+			<!--<ballistic>
+				<force-lb type="double">3000</force-lb>
+				<force-azimuth-deg>0</force-azimuth-deg>
+				<force-elevation-deg>45</force-elevation-deg>
+			</ballistic>-->
 		</ai>
 
 		<submodels>
 			<serviceable type="bool">true</serviceable>
-			<path>Aircraft/seahawk/Models/seahawk-submodels.xml</path>
+			<path type="string">Aircraft/seahawk/Models/seahawk-submodels.xml</path>
 		</submodels>
 
 		<sound>
@@ -225,7 +242,8 @@ Hawker Sea Hawk simulation config.
 
 		<multiplay>
 			<generic>
-				<string n="0"/>
+				<string n="0"
+								alias="/sim/submodels/path"/>
 				<int n="0"
 						 alias="/engines/engine[0]/running"/>
 				<int n="1"
@@ -236,6 +254,8 @@ Hawker Sea Hawk simulation config.
 						 alias="/gear/gear[2]/tyre-smoke"/>
 				<int n="4"
 						 alias="/controls/lighting/nav-lights"/>
+				<int n="5"
+						 alias="/controls/armament/trigger"/>
 				<float n="0"
 							 alias="/gear/gear[0]/sprayspeed-ms"/>
 				<float n="1"
@@ -276,6 +296,24 @@ Hawker Sea Hawk simulation config.
 			<show-pilot archive="y"
 									type="bool">true</show-pilot>
 		</seahawk>
+
+		<aim>
+			<active type="bool">false</active>
+			<tachy type="bool">true</tachy>
+			<align type="bool">false</align>
+			<radius type="float">1</radius>
+			<speed-fps type="float">2755.9</speed-fps>
+			<range-yds type="float">550</range-yds>
+			<arc>
+				<start-deg type="float">10</start-deg>
+				<stop-deg type="float">270</stop-deg>
+			</arc>
+			<offsets>
+				<x type="float">0</x>
+				<y type="float">0</y>
+			</offsets>
+			<compression type ="float">2</compression>
+		</aim>
 
 	</sim>
 
@@ -428,6 +466,11 @@ Hawker Sea Hawk simulation config.
 				<binding>
 					<command>property-assign</command>
 					<property>controls/seat/vertical-adjust</property>
+					<value type="double">0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/aim/offsets/y</property>
 					<value type="double">0</value>
 				</binding>
 				<binding>
