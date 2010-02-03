@@ -6,6 +6,7 @@ kids 10
 OBJECT poly
 name "disk"
 loc -7.51664 -2.38419e-007 93.4214
+texture "flash.png"
 crease 61.000000
 numvert 13
 0 0 0
@@ -122,6 +123,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc -4.50998 -2.38419e-007 71.4512
+texture "flash.png"
 crease 61.000000
 numvert 13
 4 0 0
@@ -238,6 +240,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc 5.01109 -2.38419e-007 46.0326
+texture "flash.png"
 crease 61.000000
 numvert 13
 4 0 0
@@ -354,6 +357,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc -2.50555 -2.38419e-007 22.969
+texture "flash.png"
 crease 61.000000
 numvert 13
 0 0 0
@@ -470,6 +474,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc 1.19209e-007 0 0.149338
+texture "flash.png"
 crease 61.000000
 numvert 13
 4 0 0

@@ -44,7 +44,7 @@
 	<submodel>
 		<name>strop impact splash</name>
 		<model>Aircraft/seahawk/Models/splash-impact.xml</model>
-		<!--<trigger>ai/submodels/trigger</trigger>-->
+		<trigger>ai/submodels[1]/trigger</trigger>
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<delay>0</delay>

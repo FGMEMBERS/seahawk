@@ -45,6 +45,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/attitude.xml</path>
+		<name>Attitude</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.00</y-m>
@@ -54,6 +55,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/hsi.xml</path>
+		<name>HSI</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.00</y-m>
@@ -63,6 +65,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/vsi.xml</path>
+		<name>VSI</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.10</y-m>
@@ -72,6 +75,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/asi.xml</path>
+		<name>ASI</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>-0.12</y-m>
@@ -99,9 +103,9 @@
 		</offsets>
 	</model>
 
-
 	<model>
 		<path>Aircraft/seahawk/Models/mach.xml</path>
+		<name>Mach</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>-0.205</y-m>
@@ -111,6 +115,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/fuel-fwd.xml</path>
+		<name>Fuel-fwd</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.18</y-m>
@@ -120,6 +125,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/fuel-aft.xml</path>
+		<name>Fuel-aft</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.24</y-m>
@@ -129,6 +135,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/rpm.xml</path>
+		<name>RPM</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.18</y-m>
@@ -138,6 +145,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/dme.xml</path>
+		<name>DME</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>-0.29</y-m>
@@ -147,6 +155,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/adf.xml</path>
+		<name>ADF</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>-0.20</y-m>
@@ -156,6 +165,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/dimmer.xml</path>
+		<name>Dimmer</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.25</y-m>
@@ -165,6 +175,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/nav-light-switch.xml</path>
+		<name>Nav-light-switch</name>
 		<offsets>
 			<x-m>-3.74</x-m>
 			<y-m>0.30</y-m>
@@ -186,6 +197,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/flaps.xml</path>
+		<name>Flaps-Indicator</name>
 		<offsets>
 			<x-m>-3.72</x-m>
 			<y-m>-0.35</y-m>
@@ -207,6 +219,7 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/switch-hook.xml</path>
+		<name>Switch-Hook</name>
 		<offsets>
 			<x-m>-3.715</x-m>
 			<y-m>-0.35</y-m>
@@ -228,6 +241,7 @@
 	<!-- **************** Right Panel *********** -->
 	<model>
 		<path>Aircraft/seahawk/Models/egt.xml</path>
+		<name>EGT</name>
 		<offsets>
 			<x-m>-3.62</x-m>
 			<y-m>0.42</y-m>
@@ -260,12 +274,45 @@
 
 	<model>
 		<path>Aircraft/seahawk/Models/asi-deck.xml</path>
+		<name>ASI-Deck</name>
 		<offsets>
 			<x-m>-3.63</x-m>
 			<y-m>-0.235</y-m>
 			<z-m>0.505</z-m>
 		</offsets>
 	</model>
+
+	<!-- ************** Panel Lights ********************** -->
+	<animation>
+		<type>material</type>
+		<object-name>Panel-Upper</object-name>
+		<object-name>Panel-Lower</object-name>
+		<object-name>Panel-L</object-name>
+		<object-name>Attitude</object-name>
+		<object-name>HSI</object-name>
+		<object-name>VSI</object-name>
+		<object-name>ASI</object-name>
+		<object-name>Altimeter</object-name>
+		<object-name>Turn</object-name>
+		<object-name>Mach</object-name>
+		<object-name>Fuel-fwd</object-name>
+		<object-name>Fuel-aft</object-name>
+		<object-name>RPM</object-name>
+		<object-name>DME</object-name>
+		<object-name>ADF</object-name>
+		<object-name>Dimmer</object-name>
+		<object-name>Nav-light-switch</object-name>
+		<object-name>Switch-Hook</object-name>
+		<object-name>Flaps-Indicator</object-name>
+		<object-name>ASI-Deck</object-name>
+		<object-name>EGT</object-name>
+		<emission>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.75</red>
+			<green>0.20</green>
+			<blue>0.20</blue>
+		</emission>
+	</animation>
 
 	<!-- **************************** Controls **************************** -->
 
@@ -381,7 +428,7 @@
 		<object-name>Flap-Inner-2-L</object-name>
 		<object-name>Flap-Inner-2-R</object-name>
 		<object-name>Tailplane-R</object-name>
-		<object-name>Exhausts</object-name>
+		<!--<object-name>Exhausts</object-name>-->
 		<condition>
 			<not>
 				<equals>
@@ -2376,20 +2423,7 @@
 		</axis>
 	</animation>
 
-	<!-- ************** Panel Lights ********************** -->
-
-	<animation>
-		<type>material</type>
-		<object-name>Panel-Upper</object-name>
-		<object-name>Panel-Lower</object-name>
-		<object-name>Panel-L</object-name>
-		<emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.6</red>
-			<green>0.20</green>
-			<blue>0.20</blue>
-		</emission>
-	</animation>
+	
 
 	<!-- ********************** Exhaust ******************* -->
 	<!-- 
@@ -2501,10 +2535,10 @@
 		<object-name>Pylons</object-name>
 	</animation>
 
-	<animation>
+	<!--<animation>
 		<type>noshadow</type>
 		<object-name>Exhausts</object-name>
-	</animation>
+	</animation>-->
 
 	<animation>
 		<type>noshadow</type>

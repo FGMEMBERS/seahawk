@@ -90,7 +90,7 @@
 		</axis>
 	</animation>
 
-	<!-- Panel Lighting -->
+	<!-- Panel Lighting 
 	<animation>
 		<type>material</type>
 		<emission>
@@ -100,7 +100,7 @@
 			<blue>0.25</blue>
 		</emission>
 	</animation>
-
+-->
 	<!-- *** LoD *** -->
 	<animation>
 		<type>range</type>

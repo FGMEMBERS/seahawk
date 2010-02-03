@@ -2591,10 +2591,10 @@
 		</condition>
 	</animation>-->
 
-	<animation>
+	<!--animation>
 		<type>noshadow</type>
 		<object-name>Exhausts</object-name>
-	</animation>
+	</animation>-->
 
 	<animation>
 		<type>noshadow</type>
