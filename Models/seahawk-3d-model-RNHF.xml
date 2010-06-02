@@ -2785,6 +2785,33 @@
 		<object-name>SCanopy-Stbd</object-name>
 	</animation>
 
+  <effect>
+    <inherits-from>Effects/seahawkreflect</inherits-from>
+    <object-name>Rudder</object-name>
+    <object-name>UC-Nose</object-name>
+    <object-name>UC-Main-L</object-name>
+    <object-name>UC-Main-R</object-name>
+    <object-name>Tailplane-L</object-name>
+    <object-name>Elevator-R</object-name>
+    <object-name>Elevator-L</object-name>
+    <object-name>Flap-R</object-name>
+    <object-name>Flap-L</object-name>
+    <object-name>Flap-Inner-1-L</object-name>
+    <object-name>Flap-Inner-1-R</object-name>
+    <object-name>Flap-Inner-2-L</object-name>
+    <object-name>Flap-Inner-2-R</object-name>
+    <object-name>Tailplane-R</object-name>
+    <object-name>Wing-R</object-name>
+    <object-name>Wing-L</object-name>
+    <object-name>Stub-Wing-R</object-name>
+    <object-name>Stub-Wing-L</object-name>
+    <object-name>Fuselage</object-name>
+    <object-name>FCanopy-Frame</object-name>
+    <object-name>Canopy-Frame</object-name>
+    <object-name>BCanopy</object-name>
+
+    <object-name>Visor</object-name>
+  </effect>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>

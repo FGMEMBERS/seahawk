@@ -2701,15 +2701,23 @@
 		<!--<threshold>0.001</threshold>-->
 	</animation>
 
-	<animation>
+	<!--<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-		<object-name>MCanopy</object-name>
+    <object-name>MCanopy</object-name>
 		<object-name>FCanopy</object-name>
 		<object-name>SCanopy-Port</object-name>
 		<object-name>SCanopy-Stbd</object-name>
-	</animation>
+	</animation>-->
+  
+  <effect>
+    <inherits-from>Effects/seahawkglass</inherits-from>
+    <object-name>MCanopy</object-name>
+		<object-name>FCanopy</object-name>
+		<object-name>SCanopy-Port</object-name>
+		<object-name>SCanopy-Stbd</object-name>
+  </effect>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>
