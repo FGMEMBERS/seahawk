@@ -57,12 +57,13 @@
 		<pitch-offset>0</pitch-offset>
 		<fuse-range>0</fuse-range>
 		<life>40</life>
+    <trigger>controls/armament/trigger</trigger>
 	</cannon>
 
 	<submodel>
 		<name>Hispano MkV P Inner</name>
 		<model alias="../../cannon/model"/>
-		<trigger>ai/submodels/trigger</trigger>
+    <trigger alias="../../cannon/trigger"/>
 		<speed alias="../../cannon/speed"/>
 		<cd alias="../../cannon/cd"/>
 		<eda alias="../../cannon/eda"/>
@@ -88,8 +89,8 @@
 	<submodel>
 		<name>Hispano MkV P Inner smoke</name>
 		<model>Aircraft/seahawk/Models/smoke.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
-		<speed>200</speed>
+    <trigger alias="../../cannon/trigger"/>
+    <speed>200</speed>
 		<repeat>true</repeat>
 		<delay>0.08</delay>
 		<count>200</count>
@@ -107,8 +108,8 @@
 	<submodel>
 		<name>Hispano MkV S Inner</name>
 		<model alias="../../cannon/model"/>
-		<trigger>ai/submodels/trigger</trigger>
-		<speed alias="../../cannon/speed"/>
+    <trigger alias="../../cannon/trigger"/>
+    <speed alias="../../cannon/speed"/>
 		<cd alias="../../cannon/cd"/>
 		<eda alias="../../cannon/eda"/>
 		<fuse-range alias="../../cannon/fuse-range"/>
@@ -133,8 +134,8 @@
 	<submodel>
 		<name>Hispano MkV S Inner smoke</name>
 		<model>Aircraft/seahawk/Models/smoke.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
-		<speed>200</speed>
+    <trigger alias="../../cannon/trigger"/>
+    <speed>200</speed>
 		<repeat>true</repeat>
 		<delay>0.08</delay>
 		<count>200</count>
@@ -152,8 +153,8 @@
 	<submodel>
 		<name>Hispano MkV P Outer</name>
 		<model alias="../../cannon/model"/>
-		<trigger>ai/submodels/trigger</trigger>
-		<speed alias="../../cannon/speed"/>
+    <trigger alias="../../cannon/trigger"/>
+    <speed alias="../../cannon/speed"/>
 		<cd alias="../../cannon/cd"/>
 		<eda alias="../../cannon/eda"/>
 		<fuse-range alias="../../cannon/fuse-range"/>
@@ -179,8 +180,8 @@
 	<submodel>
 		<name>Hispano MkV P Outer smoke</name>
 		<model>Aircraft/seahawk/Models/smoke.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
-		<speed>200</speed>
+    <trigger alias="../../cannon/trigger"/>
+    <speed>200</speed>
 		<repeat>true</repeat>
 		<delay>0.08</delay>
 		<count>200</count>
@@ -198,8 +199,8 @@
 	<submodel>
 		<name>Hispano MkV S Outer</name>
 		<model alias="../../cannon/model"/>
-		<trigger>ai/submodels/trigger</trigger>
-		<speed alias="../../cannon/speed"/>
+    <trigger alias="../../cannon/trigger"/>
+    <speed alias="../../cannon/speed"/>
 		<cd alias="../../cannon/cd"/>
 		<eda alias="../../cannon/eda"/>
 		<fuse-range alias="../../cannon/fuse-range"/>
@@ -224,8 +225,8 @@
 	<submodel>
 		<name>Hispano MkV S Outer smoke</name>
 		<model>Aircraft/seahawk/Models/smoke.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
-		<speed>200</speed>
+    <trigger alias="../../cannon/trigger"/>
+    <speed>200</speed>
 		<repeat>true</repeat>
 		<delay>0.08</delay>
 		<count>200</count>
