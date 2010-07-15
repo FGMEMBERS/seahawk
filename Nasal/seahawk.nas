@@ -639,7 +639,7 @@ var droptanks = func(n) {
 	var droptank = droptank_node.getValue();
 	var node = props.globals.getNode(n.getValue(), 1);
 	print (" droptank ", droptank, " lon " , node.getNode("impact/longitude-deg").getValue(),);
-	geo.put_model("Aircraft/seahawk/Models/droptank.xml",
+	geo.put_model("Aircraft/seahawk/Models/droptank-hot.xml",
 		node.getNode("impact/latitude-deg").getValue(),
 		node.getNode("impact/longitude-deg").getValue(),
 		node.getNode("impact/elevation-m").getValue()+ 0.25,
