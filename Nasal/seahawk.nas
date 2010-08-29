@@ -657,16 +657,17 @@ var ext_force_stbd = func {
        ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(0);
        return;
     } else {
-        ext_force_stbd_node.getChild("force-lb", 0, 1).setDoubleValue(10000);
+        ext_force_stbd_node.getChild("force-lb", 0, 1).setDoubleValue(1000);
         ext_force_stbd_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(hdg_node.getValue());
         ext_force_stbd_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(pitch_node.getValue()-90);
         ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(1);
         setprop("ai/models/ballistic[1]/controls/slave-to-ac",0);
+        setprop("ai/models/ballistic[3]/controls/slave-to-ac",0);
         settimer(ext_force_stbd,0.75);
     }
 }
 
-setlistener( "controls/armament/station[0]/jettison-all", ext_force_stbd);
+setlistener( "controls/armament/station[1]/jettison-all", ext_force_stbd);
 
 var ext_force_port = func {
     if(ext_force_port_node.getChild("force-lb", 0, 1).getValue() != 0){
@@ -675,12 +676,13 @@ var ext_force_port = func {
        return;
     } else {
         ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(1);
-        ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(10000);
+        ext_force_port_node.getChild("force-lb", 0, 1).setDoubleValue(1000);
         ext_force_port_node.getChild("force-azimuth-deg", 0, 1).setDoubleValue(hdg_node.getValue());
         ext_force_port_node.getChild("force-elevation-deg", 0, 1).setDoubleValue(pitch_node.getValue()-90);
         ext_force_port_node.getChild("force-norm", 0, 1).setDoubleValue(1);
 #        print ("elevation ", ext_force_port_node.getChild("force-elevation-deg", 0, 1).getValue());
         setprop("ai/models/ballistic[0]/controls/slave-to-ac",0);
+        setprop("ai/models/ballistic[2]/controls/slave-to-ac",0);
         settimer(ext_force_port,0.75);
     }
 }
@@ -688,6 +690,15 @@ var ext_force_port = func {
 setlistener( "controls/armament/station[0]/jettison-all", ext_force_port);
 
 print("droptanks running");
+
+setlistener("/sim/signals/fdm-initialized", func {
+    var droptank_set_node = props.globals.getNode("sim/stores/load-tanks", 1);
+    droptank_set_node.setBoolValue(1);
+    var droptank_set1_node = props.globals.getNode("sim/stores/load-tanks[1]", 1);
+    droptank_set1_node.setBoolValue(1);
+    print ("loading droptanks");
+	}
+);
 
 #============================ Tyre Smoke ===================================
 
