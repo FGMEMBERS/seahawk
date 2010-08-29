@@ -44,7 +44,6 @@
 	<submodel>
 		<name>Hispano MkV impact smoke</name>
 		<model>Aircraft/seahawk/Models/smoke-impact.xml</model>
-		<!--<trigger>ai/submodels[1]/trigger</trigger>-->
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<delay>0</delay>
