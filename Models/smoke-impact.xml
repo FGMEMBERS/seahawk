@@ -53,7 +53,7 @@
 		<object-name>disk</object-name>
 		<use-personality>true</use-personality>
 		<property>sim/time/elapsed-sec</property>
-		<factor>0.8</factor>
+		<factor>3.0</factor>
 		<!--<offset>0.8</offset>-->
 		<min>0.2</min>
 		<max>1.0</max>
