@@ -91,6 +91,11 @@ Hawker Sea Hawk simulation config.
 			</electrical>
 		</systems>
 
+		<stores>
+			<load-tanks type="bool">false</load-tanks>
+			<load-tanks type="bool">false</load-tanks>
+		</stores>
+
 		<instrumentation>
 			<path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
 		</instrumentation>
