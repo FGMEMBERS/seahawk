@@ -11,7 +11,7 @@
 		<type>translate</type>
 		<object-name>handle</object-name>
 		<object-name>cylinder</object-name>
-		<property>controls/flight/flaps-alternate-extension</property>
+		<property>/controls/flight/flaps-alternate-extension</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>

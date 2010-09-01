@@ -9,7 +9,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>asi-Needle1</object-name>
-		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>

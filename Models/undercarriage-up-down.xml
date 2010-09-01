@@ -11,7 +11,7 @@
 		<type>translate</type>
 		<object-name>up-button</object-name>
 		<object-name>up-button-front</object-name>
-		<property>controls/gear/gear-down</property>
+		<property>/controls/gear/gear-down</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -32,10 +32,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>up-lamp</object-name>
-		<property>controls/gear/gear-down</property>
+		<property>/controls/gear/gear-down</property>
 		<condition>
 			<equals>
-				<property>controls/gear/gear-down</property>
+				<property>/controls/gear/gear-down</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -46,7 +46,7 @@
 		<type>translate</type>
 		<object-name>down-button</object-name>
 		<object-name>down-button-front</object-name>
-		<property>controls/gear/gear-down</property>
+		<property>/controls/gear/gear-down</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -67,10 +67,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>down-lamp</object-name>
-		<property>controls/gear/gear-down</property>
+		<property>/controls/gear/gear-down</property>
 		<condition>
 			<equals>
-				<property>controls/gear/gear-down</property>
+				<property>/controls/gear/gear-down</property>
 				<value>0</value>
 			</equals>
 		</condition>

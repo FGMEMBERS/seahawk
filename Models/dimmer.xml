@@ -4,7 +4,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Knob</object-name>
-		<property>controls/lighting/panel-norm</property>
+		<property>/controls/lighting/panel-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>

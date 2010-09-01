@@ -9,7 +9,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>flaps-Needle1</object-name>
-		<property>surface-positions/flap-pos-norm[0]</property>
+		<property>/surface-positions/flap-pos-norm[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>

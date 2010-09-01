@@ -265,7 +265,7 @@
 
 	<submodel>
 		<name>wingman-droptank-s</name>
-		<model>Aircraft/seahawk/Models/droptank.xml</model>
+		<model>/Aircraft/seahawk/Models/droptank.xml</model>
 		<trigger>sim/stores/load-tanks</trigger>
 		<speed>0</speed>
 		<repeat>false</repeat>
@@ -284,7 +284,7 @@
 		<impact>true</impact>
 		<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
 		<external-force>true</external-force>
-		<force-path>sim/ai/ballistic/force[0]</force-path>
+		<force-path>/sim/ai/ballistic/force[0]</force-path>
 		<slaved>true</slaved>
 	</submodel>
 
@@ -309,7 +309,7 @@
 		<impact>true</impact>
 		<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
 		<external-force>true</external-force>
-		<force-path>sim/ai/ballistic/force[1]</force-path>
+		<force-path>/sim/ai/ballistic/force[1]</force-path>
 		<slaved>true</slaved>
 	</submodel>
 

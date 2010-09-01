@@ -15,7 +15,7 @@
 		<object-name>lamp-hook</object-name>
 		<condition>
 			<equals>
-				<property>gear/tailhook/position-norm</property>
+				<property>/gear/tailhook/position-norm</property>
 				<value>1</value>
 			</equals>
 		</condition>

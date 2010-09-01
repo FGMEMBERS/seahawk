@@ -9,7 +9,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lever</object-name>
-  <property>controls/flight/flaps-lever</property>
+  <property>/controls/flight/flaps-lever</property>
   <interpolation>
    <entry><ind>0</ind><dep>-45</dep></entry>
    <entry><ind>0.5</ind><dep>0</dep></entry>

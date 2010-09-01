@@ -21,7 +21,7 @@
 		<type>rotate</type>
 		<object-name>Face-m</object-name>
 		<object-name>Needle1-m</object-name>
-		<property>orientation/heading-magnetic-deg</property>
+		<property>/orientation/heading-magnetic-deg</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -56,14 +56,14 @@
 		<object-name>Face-m</object-name>
 		<object-name>Needle1-m</object-name>
 		<condition>
-			<property>instrumentation/heading-indicator/heading-source</property>
+			<property>/instrumentation/heading-indicator/heading-source</property>
 		</condition>
 	</animation>
 
 	<animation>
 		<type>rotate</type>
 		<object-name>Needle1-m</object-name>
-		<property>instrumentation/heading-indicator/heading-bug-deg/</property>
+		<property>/instrumentation/heading-indicator/heading-bug-deg/</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -97,7 +97,7 @@
 		<type>rotate</type>
 		<object-name>Face-t</object-name>
 		<object-name>Needle1-t</object-name>
-		<property>orientation/heading-deg</property>
+		<property>/orientation/heading-deg</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -133,7 +133,7 @@
 		<object-name>Needle1-t</object-name>
 		<condition>
 			<not>
-				<property>instrumentation/heading-indicator/heading-source</property>
+				<property>/instrumentation/heading-indicator/heading-source</property>
 			</not>
 		</condition>
 	</animation>
@@ -142,7 +142,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Needle1-t</object-name>
-		<property>instrumentation/heading-indicator/heading-bug-deg/</property>
+		<property>/instrumentation/heading-indicator/heading-bug-deg/</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -175,7 +175,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Knob1</object-name>
-		<property>instrumentation/heading-indicator/heading-bug-deg/</property>
+		<property>/instrumentation/heading-indicator/heading-bug-deg/</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -213,7 +213,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Knob2</object-name>
-		<property>instrumentation/heading-indicator/heading-source</property>
+		<property>/instrumentation/heading-indicator/heading-source</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>

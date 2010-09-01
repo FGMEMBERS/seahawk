@@ -10,7 +10,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>mach-Needle1</object-name>
-		<property>velocities/mach</property>
+		<property>/velocities/mach</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>

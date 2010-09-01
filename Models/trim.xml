@@ -9,7 +9,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>trim-Needle1</object-name>
-		<property>controls/flight/elevator-trim</property>
+		<property>/controls/flight/elevator-trim</property>
 		<interpolation>
 			<entry>
 				<ind>-1</ind>

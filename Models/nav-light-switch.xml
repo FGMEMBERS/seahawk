@@ -5,7 +5,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Switch</object-name>
-		<property>controls/lighting/nav-lights</property>
+		<property>/controls/lighting/nav-lights</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
