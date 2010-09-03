@@ -15,21 +15,8 @@
 		<spherical>true</spherical>
 		<object-name>White-Light-Flare</object-name>
 	</animation>
-
-	<animation>
-		<type>scale</type>
-		<object-name>White-Light-Flare</object-name>
-		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>2</x-factor>
-		<y-factor>2</y-factor>
-		<z-factor>2</z-factor>
-	</animation>
 	
-	<!--<animation>
+	<animation>
 		<type>dist-scale</type>
 		<object-name>White-Light-Flare</object-name>
 		<interpolation>
@@ -42,7 +29,22 @@
 				<dep>100</dep>
 			</entry>
 		</interpolation>
-	</animation>-->
+	</animation>
+
+	<animation>
+		<type>scale</type>
+		<object-name>White-Light-Flare</object-name>
+		<property>/sim/time/sun-angle-rad</property>
+		<offset>-1.4</offset>
+		<x-min>1</x-min>
+		<y-min>1</y-min>
+		<z-min>1</z-min>
+		<x-factor>2</x-factor>
+		<y-factor>2</y-factor>
+		<z-factor>2</z-factor>
+	</animation>
+	
+
 
 	<animation>
 		<type>select</type>
@@ -50,11 +52,11 @@
 		<condition>
 			<or>
 				<equals>
-					<property>controls/lighting/nav-lights</property>
+					<property>/controls/lighting/nav-lights</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>controls/lighting/nav-lights[1]</property>
+					<property>/controls/lighting/nav-lights[1]</property>
 					<value>1</value>
 				</equals>
 			</or>

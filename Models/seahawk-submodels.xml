@@ -58,6 +58,15 @@
 		<fuse-range>0</fuse-range>
 		<life>40</life>
 		<trigger>controls/armament/trigger</trigger>
+		<expiry>true</expiry>
+		<repeat>true</repeat>
+		<delay>0.41</delay>
+		<count>41</count>
+		<wind>false</wind>
+		<collision>true</collision>
+		<impact>true</impact>
+		<impact-reports>sim/ai/aircraft/collision/cannon</impact-reports>
+		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
 	</cannon>
 
 	<submodel>
@@ -70,19 +79,20 @@
 		<fuse-range alias="../../cannon/fuse-range"/>
 		<weight alias="../../cannon/weight"/>
 		<life alias="../../cannon/life"/>
-		<repeat>true</repeat>
-		<delay>0.41</delay>
-		<count>41</count>
+		<repeat alias="../../cannon/repeat"/>
+		<delay alias="../../cannon/delay"/>
+		<count alias="../../cannon/count"/>
+		<wind alias="../../cannon/wind"/>
+		<expiry alias="../../cannon/expiry"/>
+		<collision alias="../../cannon/collision"/>
+		<impact alias="../../cannon/impact"/>
+		<submodel-path alias="../../cannon/submodel-path"/>
 		<x-offset>12.1391  </x-offset>
 		<y-offset>-0.6562  </y-offset>
 		<z-offset>-1.6732  </z-offset>
 		<yaw-offset>0</yaw-offset>
 		<pitch-offset alias="../../cannon/pitch-offset"/>
-		<wind>false</wind>
-		<collision>true</collision>
-		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
-		<impact>true</impact>
-		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
+
 	</submodel>
 
 	<submodel>
@@ -114,19 +124,19 @@
 		<fuse-range alias="../../cannon/fuse-range"/>
 		<weight alias="../../cannon/weight"/>
 		<life alias="../../cannon/life"/>
-		<repeat>true</repeat>
-		<delay>0.39</delay>
-		<count>41</count>
+		<repeat alias="../../cannon/repeat"/>
+		<delay alias="../../cannon/delay"/>
+		<count alias="../../cannon/count"/>
+		<wind alias="../../cannon/wind"/>
+		<expiry alias="../../cannon/expiry"/>
+		<collision alias="../../cannon/collision"/>
+		<impact alias="../../cannon/impact"/>
+		<submodel-path alias="../../cannon/submodel-path"/>
 		<x-offset>12.1391  </x-offset>
 		<y-offset>0.6562  </y-offset>
 		<z-offset>-1.6732  </z-offset>
 		<yaw-offset>0</yaw-offset>
 		<pitch-offset alias="../../cannon/pitch-offset"/>
-		<wind>false</wind>
-		<collision>true</collision>
-		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
-		<impact>true</impact>
-		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
 	</submodel>
 
 	<submodel>
@@ -158,20 +168,19 @@
 		<fuse-range alias="../../cannon/fuse-range"/>
 		<weight alias="../../cannon/weight"/>
 		<life alias="../../cannon/life"/>
-		<repeat>true</repeat>
-		<delay>0.38</delay>
-		<count>41</count>
+		<repeat alias="../../cannon/repeat"/>
+		<delay alias="../../cannon/delay"/>
+		<count alias="../../cannon/count"/>
+		<wind alias="../../cannon/wind"/>
+		<expiry alias="../../cannon/expiry"/>
+		<collision alias="../../cannon/collision"/>
+		<impact alias="../../cannon/impact"/>
+		<submodel-path alias="../../cannon/submodel-path"/>
 		<x-offset>12.0079  </x-offset>
 		<y-offset>-1.2795  </y-offset>
 		<z-offset>-1.3451  </z-offset>
 		<yaw-offset>0</yaw-offset>
 		<pitch-offset alias="../../cannon/pitch-offset"/>
-		<wind>false</wind>
-		<collision>true</collision>
-		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
-		<impact>true</impact>
-		<fuse-range alias="../../cannon/fuse-range"/>
-		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
 	</submodel>
 
 	<submodel>
@@ -203,19 +212,19 @@
 		<fuse-range alias="../../cannon/fuse-range"/>
 		<weight alias="../../cannon/weight"/>
 		<life alias="../../cannon/life"/>
-		<delay>0.42</delay>
-		<repeat>true</repeat>
-		<count>41</count>
+		<repeat alias="../../cannon/repeat"/>
+		<delay alias="../../cannon/delay"/>
+		<count alias="../../cannon/count"/>
+		<wind alias="../../cannon/wind"/>
+		<expiry alias="../../cannon/expiry"/>
+		<collision alias="../../cannon/collision"/>
+		<impact alias="../../cannon/impact"/>
+		<submodel-path alias="../../cannon/submodel-path"/>
 		<x-offset>12.0079  </x-offset>
 		<y-offset>1.2795  </y-offset>
 		<z-offset>-1.3451  </z-offset>
 		<yaw-offset>0</yaw-offset>
 		<pitch-offset alias="../../cannon/pitch-offset"/>
-		<wind>false</wind>
-		<collision>true</collision>
-		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
-		<impact>true</impact>
-		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>
 	</submodel>
 
 	<submodel>

@@ -181,6 +181,70 @@ Hawker Sea Hawk simulation config.
 													 type="double">0</target-z-offset-m>
 			</config>
 		</view>
+		<view n="197">
+			<name>Model Cockpit View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">false</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+
+				<at-model type="bool">false</at-model>
+				<at-model-idx type="int">0</at-model-idx>
+
+				<eye-lat-deg-path>/sim/viewer/eye/latitude-deg</eye-lat-deg-path>
+				<eye-lon-deg-path>/sim/viewer/eye/longitude-deg</eye-lon-deg-path>
+				<eye-alt-ft-path>/sim/viewer/eye/altitude-ft</eye-alt-ft-path>
+				<eye-heading-deg-path>/sim/viewer/eye/heading-deg</eye-heading-deg-path>
+				<eye-pitch-deg-path>/sim/viewer/eye/pitch-deg</eye-pitch-deg-path>
+				<eye-roll-deg-path>/sim/viewer/eye/roll-deg</eye-roll-deg-path>
+
+				<ground-level-nearplane-m type="double">0.2f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+
+				<x-offset-m type="double">0</x-offset-m>
+				<y-offset-m
+					type="double">0</y-offset-m>
+				<z-offset-m
+					type="double">0</z-offset-m>
+				<heading-offset-deg>0</heading-offset-deg>
+				<pitch-offset-deg>0</pitch-offset-deg>
+				<roll-offset-deg>0</roll-offset-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
+
+		<viewer>
+			<eye>
+				<latitude-deg type="double">0</latitude-deg>
+				<longitude-deg type="double">0</longitude-deg>
+				<altitude-ft type="double">0</altitude-ft>
+				<heading-deg type="double">0</heading-deg>
+				<pitch-deg type="double">0</pitch-deg>
+				<roll-deg type="double">0</roll-deg>
+			</eye>
+			<target>
+				<latitude-deg type="double">0</latitude-deg>
+				<longitude-deg type="double">0</longitude-deg>
+				<altitude-ft type="double">0</altitude-ft>
+				<heading-deg type="double">0</heading-deg>
+				<pitch-deg type="double">0</pitch-deg>
+				<roll-deg type="double">0</roll-deg>
+			</target>
+		</viewer>
+		
 		<help>
 			<key>
 				<name>Ctrl-B</name>
@@ -331,34 +395,6 @@ Hawker Sea Hawk simulation config.
 			</tank>
 		</fuel>
 	</consumables>
-	<!--
- <autopilot>
-   <config>
-
-     <min-climb-speed-kt type="float">200.0</min-climb-speed-kt>
-     <best-climb-speed-kt type="float">300.0</best-climb-speed-kt>
-
-     <target-climb-rate-fpm type="float">3000.0</target-climb-rate-fpm>
-     <target-descent-rate-fpm type="float">1500.0</target-descent-rate-fpm>
-
-     <elevator-adj-factor type="float">5500.0</elevator-adj-factor>
-
-     <integral-contribution type="float">0.007</integral-contribution>
-
-     <max-aileron type="float">0.5</max-aileron>
-     <max-roll-deg type="float">45</max-roll-deg>
-
-     <roll-out-deg type="float">8</roll-out-deg>
-     <roll-out-smooth-deg type="float">15.0</roll-out-smooth-deg>
-
-     <zero-pitch-throttle type="float">0.5</zero-pitch-throttle>
-     <zero-pitch-trim-full-throttle type="float">0.001</zero-pitch-trim-full-throttle>
-
-   </config>
- </autopilot>
- -->
-
-
 
 	<!-- ************Instrumentation ************************* -->
 	<instrumentation>
@@ -597,9 +633,9 @@ Hawker Sea Hawk simulation config.
 		<recoil>
 			<file>Aircraft/seahawk/Nasal/recoil.nas</file>
 		</recoil>
-		<!--<rain>
-			<file>Aircraft/seahawk/Nasal/rain.nas</file>
-		</rain>-->
+		<model_cockpit_view>
+			<file>Aircraft/seahawk/Nasal/model-cockpit-view.nas</file>
+		</model_cockpit_view>
 	</nasal>
 
 	<environment>

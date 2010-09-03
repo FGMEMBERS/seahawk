@@ -75,7 +75,7 @@
 		</axis>
 	</animation>
 
-	<!--<animation>
+	<animation>
 		<type>material</type>
 		<emission>
 			<factor-prop>/controls/lighting/panel-norm</factor-prop>
@@ -83,7 +83,7 @@
 			<green>0.25</green>
 			<blue>0.25</blue>
 		</emission>
-	</animation>-->
+	</animation>
 
 	<!-- *** LoD *** -->
 	<animation>

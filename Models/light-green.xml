@@ -22,15 +22,30 @@
 		<condition>
 			<or>
 				<equals>
-					<property>controls/lighting/nav-lights</property>
+					<property>/controls/lighting/nav-lights</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>controls/lighting/nav-lights[1]</property>
+					<property>/controls/lighting/nav-lights[1]</property>
 					<value>1</value>
 				</equals>
 			</or>
 		</condition>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Green-Light-Flare</object-name>
+		<interpolation>
+			<entry>
+				<ind>0.001</ind>
+				<dep>2</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>100</dep>
+			</entry>
+		</interpolation>
 	</animation>
 
 	<animation>
@@ -45,7 +60,6 @@
 		<y-factor>2</y-factor>
 		<z-factor>2</z-factor>
 	</animation>
-
 	<!--    *** LoD *** 
     <animation> 
       <type>range</type>

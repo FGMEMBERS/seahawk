@@ -17,9 +17,25 @@
 	</animation>
 
 	<animation>
+		<type>dist-scale</type>
+		<object-name>Red-Light-Flare</object-name>
+		<interpolation>
+			<entry>
+				<ind>0.001</ind>
+				<dep>2</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>100</dep>
+			</entry>
+		</interpolation>
+	</animation>
+
+
+	<animation>
 		<type>scale</type>
 		<object-name>Red-Light-Flare</object-name>
-		<property>sim/time/sun-angle-rad</property>
+		<property>/sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
@@ -35,11 +51,11 @@
 		<condition>
 			<or>
 				<equals>
-					<property>controls/lighting/nav-lights</property>
+					<property>/controls/lighting/nav-lights</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>controls/lighting/nav-lights[1]</property>
+					<property>/controls/lighting/nav-lights[1]</property>
 					<value>1</value>
 				</equals>
 			</or>

@@ -163,7 +163,7 @@
 		<object-name>bezelinside</object-name>
 		<object-name>bezeloutside</object-name>
 		<emission>
-			<factor-prop>/controls/lighting/panel-norm</factor-prop>
+			<factor-prop>//controls/lighting/panel-norm</factor-prop>
 			<red>0.75</red>
 			<green>0.25</green>
 			<blue>0.25</blue>
