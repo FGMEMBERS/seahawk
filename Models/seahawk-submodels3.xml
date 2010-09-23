@@ -245,7 +245,7 @@
 		<life>5</life>
 	</submodel>
 
-	<!--<submodel>
+	<submodel>
 		<name>strop</name>
 		<model>Aircraft/seahawk/Models/strop.ac</model>
 		<trigger>/gear/launchbar/strop</trigger>
@@ -265,9 +265,9 @@
 		<impact>true</impact>
 		<impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
 		<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels2.xml</submodel-path>
-	</submodel>-->
+	</submodel>
 
-	<submodel>
+	<!--<submodel>
 		<name>wingman-droptank-s</name>
 		<model>/Aircraft/seahawk/Models/droptank.xml</model>
 		<trigger>sim/stores/load-tanks</trigger>
@@ -315,7 +315,7 @@
 		<external-force>true</external-force>
 		<force-path>/sim/ai/ballistic/force[1]</force-path>
 		<slaved>true</slaved>
-	</submodel>
+	</submodel>-->
 
 
 </PropertyList>
