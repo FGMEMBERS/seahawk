@@ -26,6 +26,9 @@ Hawker Sea Hawk simulation config.
 		<gear>
 			<brake-parking>1</brake-parking>
 			<tailwheel-lock>true</tailwheel-lock>
+			<launchbar>
+				<acceleration-norm type="float">0.4</acceleration-norm>
+			</launchbar>
 		</gear>
 		<flight>
 			<flaps-alternate-extension type="double">1</flaps-alternate-extension>
@@ -636,6 +639,9 @@ Hawker Sea Hawk simulation config.
 		<model_cockpit_view>
 			<file>Aircraft/seahawk/Nasal/model-cockpit-view.nas</file>
 		</model_cockpit_view>
+		<formation>
+			<file>Aircraft/Buccaneer/Nasal/formation.nas</file>
+		</formation>
 	</nasal>
 
 	<environment>
