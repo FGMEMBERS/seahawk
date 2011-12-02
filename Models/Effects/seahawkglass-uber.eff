@@ -21,6 +21,7 @@
 		</shader_quality>-->
 		<vertex-program-two-side type="bool">false</vertex-program-two-side>
 		<cull-face>back</cull-face>
+		<rendering-hint>opaque</rendering-hint>
 	</parameters>
 
 </PropertyList>
