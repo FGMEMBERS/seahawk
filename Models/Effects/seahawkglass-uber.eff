@@ -20,8 +20,13 @@
 		<!--<use>/sim/rendering/shaders/model/quality</use>
 		</shader_quality>-->
 		<vertex-program-two-side type="bool">false</vertex-program-two-side>
-		<cull-face>back</cull-face>
-		<rendering-hint>opaque</rendering-hint>
+		<!--<cull-face>back</cull-face>
+		<rendering-hint>transparent</rendering-hint>-->
+		<transparent>true</transparent>
+		<render-bin>
+			<bin-number>10</bin-number>
+			<bin-name>DepthSortedBin</bin-name>
+		</render-bin>
 	</parameters>
 
 </PropertyList>

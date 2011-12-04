@@ -452,7 +452,7 @@
 		</condition>
 	</animation>
 
-	<!--<animation>
+	<animation>
 		<type>select</type>
 		<object-name>FCanopy</object-name>
 		<condition>
@@ -461,7 +461,7 @@
 				<value>0.01</value>
 			</less-than-equals>
 		</condition>
-	</animation>-->
+	</animation>
 
 	<animation>
 		<type>select</type>
@@ -2799,18 +2799,20 @@
 		<object-name>FCanopy-Frame</object-name>
 		<object-name>Canopy-Frame</object-name>
 		<object-name>BCanopy</object-name>
-
 		<object-name>Visor</object-name>
 	</effect>
 
 	<effect>
 		<inherits-from>Effects/seahawkglass-uber</inherits-from>
-		<object-name>FCanopy</object-name>
-		<object-name>FCanopyP</object-name>
-		<object-name>FCanopyS</object-name>
 		<object-name>MCanopy</object-name>
 	</effect>
 
+	<effect>
+		<inherits-from>Effects/seahawkglass-uber</inherits-from>
+		<object-name>FCanopyS</object-name>
+		<object-name>FCanopy</object-name>
+		<object-name>FCanopyP</object-name>
+	</effect>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>

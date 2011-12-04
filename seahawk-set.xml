@@ -319,6 +319,7 @@ Hawker Sea Hawk simulation config.
 			</offsets>
 			<compression type ="float">2</compression>
 		</aim>
+		
 		<environment>
 			<rain-norm type="float">0</rain-norm>
 		</environment>/
