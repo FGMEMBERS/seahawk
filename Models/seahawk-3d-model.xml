@@ -2701,23 +2701,49 @@
 		<!--<threshold>0.001</threshold>-->
 	</animation>
 
-	<!--<animation>
-		<type>shader</type>
-		<shader>chrome</shader>
-		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>MCanopy</object-name>
+	<effect>
+		<inherits-from>Effects/seahawkreflect-uber</inherits-from>
+		<object-name>Rudder-L</object-name>
+		<object-name>Rudder-R</object-name>
+		<object-name>UC-Nose</object-name>
+		<object-name>UC-Main-L</object-name>
+		<object-name>UC-Main-R</object-name>
+		<object-name>Tailplane-L</object-name>
+		<object-name>Elevator-R</object-name>
+		<object-name>Elevator-L</object-name>
+		<object-name>Flap-R</object-name>
+		<object-name>Flap-L</object-name>
+		<object-name>Flap-Inner-1-L</object-name>
+		<object-name>Flap-Inner-1-R</object-name>
+		<object-name>Flap-Inner-2-L</object-name>
+		<object-name>Flap-Inner-2-R</object-name>
+		<object-name>Tailplane-R</object-name>
+		<object-name>Wing-R</object-name>
+		<object-name>Wing-L</object-name>
+		<object-name>Stub-Wing-R</object-name>
+		<object-name>Stub-Wing-L</object-name>
+		<object-name>Fuselage</object-name>
+		<object-name>FCanopy-Frame</object-name>
+		<object-name>Canopy-Frame</object-name>
+		<object-name>BCanopy</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/seahawkreflect-uber</inherits-from>
+		<object-name>Visor</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/seahawkglass-uber</inherits-from>
+		<object-name>MCanopy</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/seahawkglass-uber</inherits-from>
+		<object-name>FCanopyS</object-name>
 		<object-name>FCanopy</object-name>
-		<object-name>SCanopy-Port</object-name>
-		<object-name>SCanopy-Stbd</object-name>
-	</animation>-->
-  
-  <effect>
-    <inherits-from>Effects/seahawkglass</inherits-from>
-    <object-name>MCanopy</object-name>
-		<object-name>FCanopy</object-name>
-		<object-name>SCanopy-Port</object-name>
-		<object-name>SCanopy-Stbd</object-name>
-  </effect>
+		<object-name>FCanopyP</object-name>
+	</effect>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>

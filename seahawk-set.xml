@@ -322,7 +322,7 @@ Hawker Sea Hawk simulation config.
 		
 		<environment>
 			<rain-norm type="float">0</rain-norm>
-		</environment>/
+		</environment>
 
 	</sim>
 
