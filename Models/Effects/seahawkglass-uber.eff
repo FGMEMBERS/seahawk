@@ -4,21 +4,33 @@
 	<inherits-from>/Effects/model-combined</inherits-from>
 
 	<parameters>
-		<!-- Reflection -->
-		<reflection_enabled type="int">1</reflection_enabled>
-		<reflect_map_enabled type="int">0</reflect_map_enabled>
-		<reflection_dynamic type="int">1</reflection_dynamic>
 
-		<reflection_fresnel type="float">0.1</reflection_fresnel>
-		<reflection_rainbow type="float">0.1</reflection_rainbow>
-		<reflection_noise type="float">0.1</reflection_noise>
-		<reflection_correction type="float">0.9</reflection_correction>
-		<ambient_correction type="float">0.1</ambient_correction>
+		<!-- Normal Map -->
+		<normalmap-enabled type="int">1</normalmap-enabled>
+		<normalmap-dds type="int">0</normalmap-dds>
+		<normalmap-tiling type="float">20.0</normalmap-tiling>
+		<texture n="2">
+			<image>/Aircraft/seahawk/Models/Effects/nmap.png</image>
+			<!--<image>/Aircraft/seahawk/Models/Effects/plexi-1.png</image>-->
+			<wrap-s>repeat</wrap-s>
+			<wrap-t>repeat</wrap-t>
+		</texture>
+		
+		<!-- Reflection -->
+		<reflection-enabled type="int">1</reflection-enabled>
+		<reflect-map-enabled type="int">0</reflect-map-enabled>
+		<reflection-dynamic type="int">1</reflection-dynamic>
+
+		<reflection-fresnel type="float">0.0</reflection-fresnel>
+		<reflection-rainbow type="float">0.0</reflection-rainbow>
+		<reflection-noise type="float">0.0</reflection-noise>
+		<reflection-correction type="float">0.0</reflection-correction>
+		<ambient-correction type="float">0.2</ambient-correction>
 
 		<!-- 		quality slider -->
-		<shader_quality type="int">2</shader_quality>
+		<shader-quality type="int">2</shader-quality>
 		<!--<use>/sim/rendering/shaders/model/quality</use>
-		</shader_quality>-->
+		</shader-quality>-->
 		<vertex-program-two-side type="bool">false</vertex-program-two-side>
 		<!--<cull-face>back</cull-face>
 		<rendering-hint>transparent</rendering-hint>-->
@@ -28,5 +40,31 @@
 			<bin-name>DepthSortedBin</bin-name>
 		</render-bin>
 	</parameters>
+
+	<!-- ####################
+### NORMALMAP INCLUDE ###
+######################### -->
+	<generate>
+		<tangent type="int">6</tangent>
+		<binormal type="int">7</binormal>
+	</generate>
+
+	<technique n="10">
+		<pass>
+			<program>
+				<attribute>
+					<name>tangent</name>
+					<index>6</index>
+				</attribute>
+				<attribute>
+					<name>binormal</name>
+					<index>7</index>
+				</attribute>
+			</program>
+		</pass>
+	</technique>
+	<!-- ########################
+### END NORMALMAP INCLUDE ###
+############################# -->
 
 </PropertyList>
