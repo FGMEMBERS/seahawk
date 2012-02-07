@@ -51,11 +51,11 @@
 		<condition>
 			<or>
 				<equals>
-					<property>/controls/lighting/nav-lights</property>
+					<property>controls/lighting/nav-lights</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/controls/lighting/nav-lights[1]</property>
+					<property>controls/lighting/nav-lights[1]</property>
 					<value>1</value>
 				</equals>
 			</or>
