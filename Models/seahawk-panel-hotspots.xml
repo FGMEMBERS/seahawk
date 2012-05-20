@@ -53,7 +53,7 @@
 				<!-- ************** hsi hotspots ************** -->
 
 				<!-- left knob heading-bug -->
-				<action>
+				<!--<action>
 					<name>ccw-fine</name>
 					<button>0</button>
 					<x>-75</x>
@@ -120,10 +120,10 @@
 						<max>360</max>
 						<wrap>1</wrap>
 					</binding>
-				</action>
+				</action>-->
 
 				<!-- right knob source select -->
-				<action>
+				<!--<action>
 					<name>source select</name>
 					<button>0</button>
 					<x>30</x>
@@ -134,7 +134,7 @@
 						<command>property-toggle</command>
 						<property>instrumentation/heading-indicator/heading-source/</property>
 					</binding>
-				</action>
+				</action>-->
 
 				<!-- ************** altimeter hotspots ************** -->
 				<action>
@@ -209,8 +209,8 @@
 				<action>
 					<name>extend</name>
 					<button>0</button>
-					<x>-465</x>
-					<y>-62</y>
+					<x>-450</x>
+					<y>-12</y>
 					<w>40</w>
 					<h>40</h>
 					<binding>
@@ -223,8 +223,8 @@
 				<action>
 					<name>retract</name>
 					<button>0</button>
-					<x>-465</x>
-					<y>-15</y>
+					<x>-450</x>
+					<y>32</y>
 					<w>40</w>
 					<h>40</h>
 					<binding>
@@ -239,7 +239,7 @@
 					<name>extend</name>
 					<button>0</button>
 					<x>-405</x>
-					<y>35</y>
+					<y>50</y>
 					<w>40</w>
 					<h>40</h>
 					<binding>
@@ -253,7 +253,7 @@
 					<name>retract</name>
 					<button>0</button>
 					<x>-405</x>
-					<y>75</y>
+					<y>90</y>
 					<w>40</w>
 					<h>40</h>
 					<binding>

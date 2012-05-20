@@ -10,6 +10,11 @@
 		<alpha-factor>0.01</alpha-factor>
 	</animation>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Green-Light-Flare</object-name>
+  </effect>
+
 	<animation>
 		<type>billboard</type>
 		<spherical>true</spherical>
@@ -60,6 +65,7 @@
 		<y-factor>2</y-factor>
 		<z-factor>2</z-factor>
 	</animation>
+  
 	<!--    *** LoD *** 
     <animation> 
       <type>range</type>

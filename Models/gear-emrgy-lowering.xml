@@ -1,43 +1,39 @@
 <?xml version="1.0"?>
 
-<!-- hook lower/raise -->
+<!-- emergency flap loering -->
 
 <PropertyList>
 
-	<path>switch-hook.ac</path>
+	<path>handle-gear-emergy.ac</path>
 
-	<!-- **************** switch **************** -->
+	<!-- **************** handle **************** -->
 	<animation>
-		<type>rotate</type>
-		<object-name>Switch</object-name>
-		<property>/controls/gear/tailhook</property>
+		<type>translate</type>
+		<object-name>handle</object-name>
+		<object-name>cylinder</object-name>
+		<property>/controls/gear/wheel/alternate-extension</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
-				<dep>-20</dep>
+				<dep>0</dep>
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>20</dep>
+				<dep>0.01</dep>
 			</entry>
 		</interpolation>
-		<center>
-			<x>0.01</x>
-			<y>0</y>
-			<z>0</z>
-		</center>
 		<axis>
-			<x>0</x>
-			<y>1</y>
+			<x>1</x>
+			<y>0</y>
 			<z>0</z>
 		</axis>
 	</animation>
 
-	 Panel Lighting 
+	<!-- Panel Lighting -->
 	<animation>
 		<type>material</type>
 		<emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<factor-prop>/controls/lighting/panel-norm</factor-prop>
 			<red>0.75</red>
 			<green>0.25</green>
 			<blue>0.25</blue>

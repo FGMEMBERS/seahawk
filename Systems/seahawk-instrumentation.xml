@@ -53,33 +53,33 @@ file, these values will be used (they are hardcoded).
     <number>0</number>
     <suction>/systems/vacuum/suction-inhg</suction>
   </attitude-indicator>
-<!--
-  <clock>
+
+ <!-- <clock>
     <name>clock</name>
     <number>0</number>
-  </clock>
+  </clock>-->
 
-  <dme>
+  <!--<dme>
     <name>dme</name>
     <number>0</number>
-  </dme>
--->
-  <encoder>
+  </dme>-->
+
+  <!--<encoder>
     <name>encoder</name>
     <number>0</number>
     <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </encoder>
+  </encoder>-->
 
-  <marker-beacon>
+  <!--<marker-beacon>
     <name>marker-beacon</name>
     <number>0</number>
-  </marker-beacon>
+  </marker-beacon>-->
 
-  <heading-indicator>
+  <!--<heading-indicator>
     <name>heading-indicator</name>
     <number>0</number>
     <suction>/systems/vacuum/suction-inhg</suction>
-  </heading-indicator>
+  </heading-indicator>-->
 
   <KT-70>
     <name>kt-70</name>
@@ -90,6 +90,11 @@ file, these values will be used (they are hardcoded).
     <name>magnetic-compass</name>
     <number>0</number>
   </magnetic-compass>
+
+  <heading-indicator-dg>
+    <name>heading-indicator-dg</name>
+    <number>0</number>
+  </heading-indicator-dg>
 
   <nav-radio>
     <name>nav</name>

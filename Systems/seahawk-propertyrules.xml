@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<filter>
+		<name>Interpolator:flap_lever</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>3.33</max-rate-of-change>
+		<input>controls/flight/flaps-lever</input>
+		<output>controls/flight/flaps-lever-out</output>
+	</filter>
+
+  <filter>
+    <name>Interpolator:airbrake_lever</name>
+    <type>noise-spike</type>
+    <max-rate-of-change>3.33</max-rate-of-change>
+    <input>controls/flight/speedbrake-lever</input>
+    <output>controls/flight/speedbrake-lever-out</output>
+  </filter>
+
+
+
+  <!--<filter>
+		<name>IAR80Interpolator:light_switch_left</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>3.33</max-rate-of-change>
+		<input>controls/lighting/panel-left-sw-press</input>
+		<output>controls/lighting/panel-left-sw-pos</output>
+	</filter>
+
+	<filter>
+		<name>IAR80Interpolator:light_switch_right</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>3.33</max-rate-of-change>
+		<input>controls/lighting/panel-right-sw-press</input>
+		<output>controls/lighting/panel-right-sw-pos</output>
+	</filter>
+
+	<filter>
+		<name>IAR80Interpolator:gear_emergrel</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>2</max-rate-of-change>
+		<input>controls/gear/emergrel-click</input>
+		<output>controls/gear/emerg-release</output>
+	</filter>
+
+	<filter>
+		<name>IAR80Interpolator:gear_safety</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>1</max-rate-of-change>
+		<input>controls/gear/safety-click</input>
+		<output>controls/gear/safety-pos-norm</output>
+	</filter>
+
+	<filter>
+		<name>IAR80Interpolator:gear_manual</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>1</max-rate-of-change>
+		<input>controls/gear/mangear-click</input>
+		<output>controls/gear/mangear-pos-norm</output>
+	</filter>
+
+	<filter>
+		<name>IAR80Interpolator:gunsel_switch</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>2</max-rate-of-change>
+		<input>controls/armament/gunsel-click</input>
+		<output>controls/armament/gunsel-pos-norm</output>
+	</filter>
+
+	<filter>
+		<name>IAR80Interpolator:mgsel_switch</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>2</max-rate-of-change>
+		<input>controls/armament/mgsel-click</input>
+		<output>controls/armament/mgsel-pos-norm</output>
+	</filter>
+
+ <filter>
+	 <name>IAR80Interpolator:oil_temp</name>
+	 <type>noise-spike</type>
+	 <max-rate-of-change>0.66</max-rate-of-change>
+	 <input>engines/engine[0]/oil-temp</input>
+	 <output>engines/engine[0]/oil-temp-ind</output>
+ </filter>-->
+
+</PropertyList>

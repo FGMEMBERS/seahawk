@@ -24,7 +24,6 @@
 		<volts>28</volts>
 		<!-- stubbed in -->
 		<amps>60</amps>
-		<!-- from the 172S Skyhawk Information Manual -->
 	</supplier>
 
 	<supplier>
@@ -46,9 +45,9 @@
 		<!-- to put a circuit breaker or switch in front of the output. -->
 		<prop>/systems/electrical/outputs/avionics-fan</prop>
 		<prop>/systems/electrical/outputs/gps-mfd</prop>
-		<prop>/systems/electrical/outputs/hsi</prop>
+		<!--<prop>/systems/electrical/outputs/hsi</prop>-->
 		<prop>/systems/electrical/outputs/nav[0]</prop>
-		<prop>/systems/electrical/outputs/dme</prop>
+		<!--<prop>/systems/electrical/outputs/dme</prop>-->
 		<prop>/systems/electrical/outputs/audio-panel[0]</prop>
 		<prop>/systems/electrical/outputs/nav[1]</prop>
 		<prop>/systems/electrical/outputs/audio-panel[1]</prop>
@@ -125,6 +124,10 @@
 		<prop>/systems/electrical/outputs/pitot-heat</prop>
 	</output>
 
+  <output>
+    <name>Heading Indicator DG Power</name>
+    <prop>/systems/electrical/outputs/DG</prop>
+  </output>
 
 	<!-- connect in power sources -->
 
@@ -169,6 +172,14 @@
 			<prop>/controls/circuit-breakers/cabin-lights-pwr</prop>
 		</switch>
 	</connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Heading Indicator DG Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/heading-indicator-dg</prop>
+    </switch>
+  </connector>
 
 	<connector>
 		<input>Master Bus</input>

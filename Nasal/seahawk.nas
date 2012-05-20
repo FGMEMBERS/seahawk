@@ -3,7 +3,7 @@
 
 # set the update period
 
-UPDATE_PERIOD = 0.3;
+UPDATE_PERIOD = 0.0;
 
 # set the timer for the selected function
 
@@ -113,7 +113,7 @@ var updateCasterAngle = func {
 
 # print(sprintf("caster_angle_damped in=%0.5f, out=%0.5f", angle, angle_damp));
 
-	settimer(updateCasterAngle, 0.1);
+	settimer(updateCasterAngle, 0.0);
 
 } #end func updateCasterAngle()
 
@@ -281,7 +281,9 @@ setFlapLever = func{             #adjusts the lever up-down
 var input = getprop("/controls/flight/flaps");
 var lever = getprop("controls/flight/flaps-lever[0]");
 
-setprop("controls/flight/flaps-lever[0]",input);
+print ("flap input", input);
+
+setprop("controls/flight/flaps-lever[0]", input);
 
 adjustFlaps();
 
@@ -374,7 +376,7 @@ updatePilotG = func {
 
 # print(sprintf("pilot_g_damped in=%0.5f, out=%0.5f", g, g_damp));
 
-	settimer(updatePilotG, 0);
+	settimer(updatePilotG, 0.0);
 
 } #end updatePilotG()
 
@@ -663,7 +665,7 @@ var ext_force_stbd = func {
         ext_force_stbd_node.getChild("force-norm", 0, 1).setDoubleValue(1);
         setprop("ai/models/ballistic[1]/controls/slave-to-ac",0);
         setprop("ai/models/ballistic[3]/controls/slave-to-ac",0);
-        settimer(ext_force_stbd,0.75);
+        settimer(ext_force_stbd,0.0);
     }
 }
 
@@ -683,7 +685,7 @@ var ext_force_port = func {
 #        print ("elevation ", ext_force_port_node.getChild("force-elevation-deg", 0, 1).getValue());
         setprop("ai/models/ballistic[0]/controls/slave-to-ac",0);
         setprop("ai/models/ballistic[2]/controls/slave-to-ac",0);
-        settimer(ext_force_port,0.75);
+        settimer(ext_force_port,0.0);
     }
 }
 
