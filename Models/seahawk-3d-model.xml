@@ -334,7 +334,7 @@
   <model>
     <path>Aircraft/seahawk/Models/flap.xml</path>
     <offsets>
-      <x-m>-3.5362</x-m>
+      <x-m>-3.51</x-m>
       <y-m>-0.37</y-m>
       <z-m>0.0777141</z-m>
     </offsets>
@@ -344,7 +344,7 @@
   <model>
     <path>Aircraft/seahawk/Models/airbrake.xml</path>
     <offsets>
-      <x-m>-3.5362</x-m>
+      <x-m>-3.51</x-m>
       <y-m>-0.405</y-m>
       <z-m>0.0777141</z-m>
     </offsets>
@@ -354,7 +354,7 @@
   <model>
     <path>Aircraft/seahawk/Models/flap-emrgy-lowering.xml</path>
     <offsets>
-      <x-m>-3.595</x-m>
+      <x-m>-3.57</x-m>
       <y-m>-0.37</y-m>
       <z-m>0.0777141</z-m>
       <pitch-deg>-90</pitch-deg>
@@ -365,7 +365,7 @@
   <model>
     <path>Aircraft/seahawk/Models/gear-emrgy-lowering.xml</path>
     <offsets>
-      <x-m>-3.595</x-m>
+      <x-m>-3.57</x-m>
       <y-m>-0.41</y-m>
       <z-m>0.0777141</z-m>
       <pitch-deg>-90</pitch-deg>
@@ -376,7 +376,7 @@
   <model>
     <path>Aircraft/seahawk/Models/flap-emrgy-lowering.xml</path>
     <offsets>
-      <x-m>-3.595</x-m>
+      <x-m>-3.57</x-m>
       <y-m>-0.45</y-m>
       <z-m>0.0777141</z-m>
       <pitch-deg>-90</pitch-deg>
@@ -637,7 +637,7 @@
       </entry>
     </interpolation>
     <center>
-      <x-m>-3.5362</x-m>
+      <x-m>-3.51</x-m>
       <y-m>-0.428434</y-m>
       <z-m>0.0203291</z-m>
     </center>
@@ -667,7 +667,7 @@
       </entry>
     </interpolation>
     <center>
-      <x-m>-3.5362</x-m>
+      <x-m>-3.51</x-m>
       <y-m>-0.428434</y-m>
       <z-m>0.0203291</z-m>
     </center>
@@ -697,7 +697,7 @@
       </entry>
     </interpolation>
     <center>
-      <x-m>-3.5362</x-m>
+      <x-m>-3.51</x-m>
       <y-m>-0.428434</y-m>
       <z-m>0.168633</z-m>
     </center>
@@ -2779,7 +2779,26 @@
     <object-name>FCanopy</object-name>
     <object-name>FCanopyP</object-name>
   </effect>-->
+	
+	<model>
+		<name>exhaust_smoke</name>
+		<path>Aircraft/seahawk/Models/Effects/exhaust.xml</path>
+		<offsets>
+			<x-m>6.5</x-m>
+			<y-m>-0.25</y-m>
+			<z-m>0.0</z-m>
+		</offsets>
+	</model>
 
+	<model>
+		<name>exhaust_smoke</name>
+		<path>Aircraft/seahawk/Models/Effects/exhaust.xml</path>
+		<offsets>
+			<x-m>6.5</x-m>
+			<y-m>0.25</y-m>
+			<z-m>0.0</z-m>
+		</offsets>
+	</model>
   <!-- transparencies -->
 
   <effect>
