@@ -2777,6 +2777,13 @@
 
 	<effect>
 		<inherits-from>Effects/seahawkreflect-uber</inherits-from>
+		<parameters>
+			<reflection-fresnel type="float">0.1</reflection-fresnel>
+			<reflection-rainbow type="float">0.05</reflection-rainbow>
+			<reflection-noise type="float">0.1</reflection-noise>
+			<reflection-correction type="float">-0.1</reflection-correction>
+			<ambient-correction type="float">0.1</ambient-correction>
+		</parameters>
 		<object-name>Rudder</object-name>
 		<object-name>UC-Nose</object-name>
 		<object-name>UC-Main-L</object-name>
@@ -2795,7 +2802,10 @@
 		<object-name>Wing-L</object-name>
 		<object-name>Stub-Wing-R</object-name>
 		<object-name>Stub-Wing-L</object-name>
-		<object-name>Fuselage</object-name>
+		<object-name>Hull</object-name>
+		<object-name>Vents</object-name>
+		<object-name>Cat-Strop-Hook</object-name>
+		<object-name>Bumper</object-name>
 		<object-name>FCanopy-Frame</object-name>
 		<object-name>Canopy-Frame</object-name>
 		<object-name>BCanopy</object-name>
@@ -2812,6 +2822,19 @@
 		<object-name>FCanopyS</object-name>
 		<object-name>FCanopy</object-name>
 		<object-name>FCanopyP</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Nav-Light-Cover-Port</object-name>
+		<object-name>Nav-Light-Cover-Stbd</object-name>
+		<object-name>Tail-Lt-Cover</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Mk-SideNo-L</object-name>
+		<object-name>Mk-SideNo-R</object-name>
 	</effect>
 
 	<!-- *** LoD for the whole model *** -->
