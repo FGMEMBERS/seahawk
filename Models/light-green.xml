@@ -4,6 +4,12 @@
 
 	<path>light-green-flare.ac</path>
 
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Green-Light-Flare</object-name>
+	</effect>
+
+
 	<animation>
 		<type>alpha-test</type>
 		<object-name>Green-Light-Flare</object-name>

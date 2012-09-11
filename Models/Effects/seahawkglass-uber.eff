@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
 	<name>seahawkglass-uber</name>
-  <inherits-from>/Effects/model-combined-deferred</inherits-from>
+	<inherits-from>/Effects/model-combined</inherits-from>
 
 	<parameters>
 
@@ -15,7 +15,7 @@
 			<wrap-s>repeat</wrap-s>
 			<wrap-t>repeat</wrap-t>
 		</texture>
-		
+
 		<!-- Reflection -->
 		<reflection-enabled type="int">1</reflection-enabled>
 		<reflect-map-enabled type="int">0</reflect-map-enabled>
@@ -23,16 +23,20 @@
 
 		<reflection-fresnel type="float">0.0</reflection-fresnel>
 		<reflection-rainbow type="float">0.0</reflection-rainbow>
-		<reflection-noise type="float">0.0</reflection-noise>
+		<reflection-noise type="float">0.1</reflection-noise>
 		<reflection-correction type="float">0.0</reflection-correction>
 		<ambient-correction type="float">0.2</ambient-correction>
 
 		<rendering-hint>transparent</rendering-hint>
 		<transparent>true</transparent>
-		<render-bin>
+		<!--<render-bin>
 			<bin-number>10</bin-number>
 			<bin-name>DepthSortedBin</bin-name>
-		</render-bin>
+		</render-bin>-->
+		<render-bin>
+			<bin-number>111</bin-number>
+			<bin-name>DepthSortedBin</bin-name>
+		</render-bin> 
 	</parameters>
 
 	<!-- ####################
@@ -43,7 +47,21 @@
 		<binormal type="int">7</binormal>
 	</generate>
 
-	<technique n="10">
+	<technique n="9">
+		<pass>
+			<program>
+				<attribute>
+					<name>tangent</name>
+					<index>6</index>
+				</attribute>
+				<attribute>
+					<name>binormal</name>
+					<index>7</index>
+				</attribute>
+			</program>
+		</pass>
+	</technique>
+	<technique n="8">
 		<pass>
 			<program>
 				<attribute>
