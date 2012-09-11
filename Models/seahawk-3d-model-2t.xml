@@ -2872,10 +2872,11 @@
 		<object-name>Wing-L</object-name>
 		<object-name>Stub-Wing-R</object-name>
 		<object-name>Stub-Wing-L</object-name>
-		<object-name>Fuselage</object-name>
+		<object-name>Hull</object-name>
 		<object-name>FCanopy-Frame</object-name>
 		<object-name>Canopy-Frame</object-name>
 		<object-name>BCanopy</object-name>
+		<object-name>Vents</object-name>
 	</effect>
 
 	<effect>
@@ -2895,6 +2896,13 @@
 		<object-name>FCanopyP</object-name>
 	</effect>
 
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Nav-Light-Cover-Port</object-name>
+		<object-name>Nav-Light-Cover-Stbd</object-name>
+		<object-name>Tail-Lt-Cover</object-name>
+	</effect>
+ 
 	<!-- *** LoD for the whole model *** -->
 	<animation>
 		<type>range</type>
