@@ -6,6 +6,11 @@
 
 	<path>ggs-mod1.ac</path>
 
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>knob</object-name>
