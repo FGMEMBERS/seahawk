@@ -2,4 +2,10 @@
 
 <PropertyList>
 	<path>droptank.ac</path>
+
+	<effect>
+		<inherits-from>Effects/seahawkreflect-uber</inherits-from>
+		<object-name>droptank</object-name>
+	</effect>
+
 </PropertyList>

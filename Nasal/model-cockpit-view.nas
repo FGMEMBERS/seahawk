@@ -112,15 +112,14 @@ next : func(v) {
        if (type != "multiplayer")
            color = { text: { color: { red: 0.5, green: 0.8, blue: 0.5 }}};
 
-       if (type != "wingman" and getprop("/sim/current-view/view-number") == 8  )
+       if (type != "wingman" and getprop("/sim/current-view/view-number") == 9  )
            setprop("/sim/current-view/z-offset-m", me.offs = z);
 
-       if (type == "wingman" and getprop("/sim/current-view/view-number") == 8){
+       if (type == "wingman" and getprop("/sim/current-view/view-number") == 9){
            setprop("/sim/current-view/x-offset-m", 0.0);
            setprop("/sim/current-view/y-offset-m", 0.65);
            setprop("/sim/current-view/z-offset-m", me.offs = -3.15);
            setprop("/sim/current-view/pitch-offset-deg", -20);
-#          print("model cockpit view stuff");
        }
 
        if (name){
