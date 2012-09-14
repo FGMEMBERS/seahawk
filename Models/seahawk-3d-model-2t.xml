@@ -383,6 +383,7 @@
 			<pitch-deg>-90</pitch-deg>
 		</offsets>
 	</model>
+	
 	<!--<model>
 		<path>Aircraft/seahawk/Models/ejection-seat.xml</path>
 		<name>Ejection Seat</name>
@@ -2873,6 +2874,7 @@
 		<object-name>Stub-Wing-R</object-name>
 		<object-name>Stub-Wing-L</object-name>
 		<object-name>Hull</object-name>
+		<object-name>Pylons</object-name>
 		<object-name>FCanopy-Frame</object-name>
 		<object-name>Canopy-Frame</object-name>
 		<object-name>BCanopy</object-name>
@@ -2902,11 +2904,109 @@
 		<object-name>Nav-Light-Cover-Stbd</object-name>
 		<object-name>Tail-Lt-Cover</object-name>
 	</effect>
- 
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>MK-R-F188</object-name>
+		<object-name>MK-L-F188</object-name>
+		<object-name>MK-R-TF</object-name>
+		<object-name>MK-L-TF</object-name>
+		<object-name>MK-R-Wing-B</object-name>
+		<object-name>MK-L-Wing-B</object-name>
+		<object-name>MK-UC-F-FD-SN</object-name>
+	</effect>
+
+	<model>
+		<name>exhaust_haze_1</name>
+		<path>Aircraft/seahawk/Models/Effects/exhaust.xml</path>
+		<offsets>
+			<x-m>6.5</x-m>
+			<y-m>-0.25</y-m>
+			<z-m>0.0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>exhaust_haze_2</name>
+		<path>Aircraft/seahawk/Models/Effects/exhaust.xml</path>
+		<offsets>
+			<x-m>6.5</x-m>
+			<y-m>0.25</y-m>
+			<z-m>0.0</z-m>
+		</offsets>
+	</model>
+	
+	<!-- Material Animations -->
+	<property-base>sim/model/livery</property-base>
+	<texture-prop>texture</texture-prop>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-R-F188</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-L-F188</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-R-F188</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-R-TF</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-L-TF</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-R-Wing-B</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-L-Wing-B</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>MK-UC-F-FD-SN</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Markings-Side-No</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Liveries/seahawk-tx-01-2.png</texture>
+	</animation>
 	<!-- *** LoD for the whole model *** -->
 	<animation>
 		<type>range</type>
 		<min-m>0</min-m>
-		<max-m>10000</max-m>
+		<max-m>10000</max-m>v 
 	</animation>
 </PropertyList>

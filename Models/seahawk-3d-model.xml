@@ -492,7 +492,6 @@
 
 	<animation>
 		<object-name>Turn</object-name>
-
 		<object-name>Undercarriage-Control</object-name>
 		<object-name>Gear-Indicator</object-name>
 		<object-name>Nav-Light-Cover-Port</object-name>

@@ -77,6 +77,10 @@ setlistener("gear/gear[2]/position-norm", func {
 
 #controls.trigger = func(v) setprop("/ai/submodels/trigger", v);
 
+aircraft.livery.init("Aircraft/seahawk/Models/Liveries",
+	"sim/model/livery/name",
+	"sim/model/livery/index"
+	);
 
 # =============================== Gear stuff ====================================
 
@@ -281,7 +285,7 @@ setFlapLever = func{             #adjusts the lever up-down
 var input = getprop("/controls/flight/flaps");
 var lever = getprop("controls/flight/flaps-lever[0]");
 
-print ("flap input", input);
+#print ("flap input", input);
 
 setprop("controls/flight/flaps-lever[0]", input);
 
