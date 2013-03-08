@@ -206,7 +206,7 @@
 				</action>
 
 				<!-- gear control -->
-				<action>
+				<!--<action>
 					<name>extend</name>
 					<button>0</button>
 					<x>-450</x>
@@ -232,10 +232,10 @@
 						<property>/controls/gear/gear-down</property>
 						<value type="double">0</value>
 					</binding>
-				</action>
+				</action>-->
 
 				<!-- hook control -->
-				<action>
+				<!--<action>
 					<name>extend</name>
 					<button>0</button>
 					<x>-405</x>
@@ -261,7 +261,7 @@
 						<property>/controls/gear/tailhook</property>
 						<value type="double">0</value>
 					</binding>
-				</action>
+				</action>-->
 
 				<!--  cockpit light dimmer hotspots -->
 				<action>
@@ -298,7 +298,7 @@
 				</action>
 
 				<!-- navigation light switch -->
-				<action>
+				<!--<action>
 					<name>nav light up</name>
 					<button>0</button>
 					<x>300</x>
@@ -323,7 +323,7 @@
 						<property>controls/lighting/nav-lights</property>
 						<value type="bool">0</value>
 					</binding>
-				</action>
+				</action>-->
 
 
 			</actions>

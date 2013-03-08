@@ -8,6 +8,20 @@
 
 	<!-- **************** switch **************** -->
 	<animation>
+		<type>pick</type>
+		<object-name>Switch</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/gear/tailhook</property>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
 		<type>rotate</type>
 		<object-name>Switch</object-name>
 		<property>/controls/gear/tailhook</property>
@@ -33,7 +47,7 @@
 		</axis>
 	</animation>
 
-	 Panel Lighting 
+	<!--Panel Lighting-->
 	<animation>
 		<type>material</type>
 		<emission>
