@@ -264,7 +264,7 @@
 				</action>-->
 
 				<!--  cockpit light dimmer hotspots -->
-				<action>
+				<!--<action>
 					<name>panel brighter</name>
 					<button>0</button>
 					<x>235</x>
@@ -295,7 +295,7 @@
 						<max>1</max>
 						<wrap>0</wrap>
 					</binding>
-				</action>
+				</action>-->
 
 				<!-- navigation light switch -->
 				<!--<action>

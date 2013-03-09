@@ -353,7 +353,7 @@ refs 3
 kids 0
 OBJECT poly
 name "Knob"
-loc 0.00535175 -8.67993e-006 3.474e-005
+loc 0.00535175 -3.63798e-012 -1.96451e-010
 texture "dimmer.png"
 crease 61.000000
 numvert 37
