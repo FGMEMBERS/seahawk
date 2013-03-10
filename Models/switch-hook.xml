@@ -24,7 +24,7 @@
 			<binding>
 				<command>set-tooltip</command>
 				<label>Hook: %s</label>
-				<tooltip-id>hook-up-down</tooltip-id>
+				<tooltip-id>hook_up_down</tooltip-id>
 				<mapping>on-off</mapping>
 				<property>/controls/gear/tailhook</property>
 			</binding>

@@ -21,7 +21,7 @@
 			<binding>
 				<command>set-tooltip</command>
 				<label>Panel Light: %3d%%</label>
-				<tooltip-id>mixture</tooltip-id>
+				<tooltip-id>panel_light</tooltip-id>
 				<mapping>percent</mapping>
 				<property>/controls/lighting/panel-norm</property>
 			</binding>

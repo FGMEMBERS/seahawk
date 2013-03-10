@@ -6,7 +6,7 @@ Hawker Sea Hawk simulation config.
 2002-12-26 Lee Elliott  leee-fgfs@spatial.freeserve.co.uk
 
 2004-03-12 additions by Vivian Meazza vivian.meazza at lineone.net
-           to include keyboard bindings for carrier operations
+					 to include keyboard bindings for carrier operations
 ************************************************************************
 -->
 <PropertyList>
@@ -52,7 +52,7 @@ Hawker Sea Hawk simulation config.
 		</armament>
 	</controls>
 
-  <gear>
+	<gear>
 		<gear n="0">
 			<tyre-smoke type="int">0</tyre-smoke>
 			<sprayspeed-ms type="double">0</sprayspeed-ms>
@@ -87,16 +87,22 @@ Hawker Sea Hawk simulation config.
 	<sim>
 		<author type="string">Lee Elliott, Vivian Meazza</author>
 		<description type="string">Hawker Seahawk FGA6</description>
-		<status type="string">early-production</status>
+		<status type="string">production</status>
+		<rating>
+			<FDM type="int">3</FDM>
+			<systems type="int">2</systems>
+			<cockpit type="int">4</cockpit>
+			<model type="int">5</model>
+		</rating>
 		<flight-model>yasim</flight-model>
 		<aero>seahawk-3d-yasim</aero>
 		<systems>
 			<electrical>
 				<path>Aircraft/seahawk/Systems/seahawk-electrical.xml</path>
 			</electrical>
-      <property-rule n="110">
-        <path>Aircraft/seahawk/Systems/seahawk-propertyrules.xml</path>
-      </property-rule>
+			<property-rule n="110">
+				<path>Aircraft/seahawk/Systems/seahawk-propertyrules.xml</path>
+			</property-rule>
 		</systems>
 
 		<stores>
@@ -104,7 +110,7 @@ Hawker Sea Hawk simulation config.
 			<load-tanks type="bool">false</load-tanks>
 		</stores>
 
-    <hud>
+		<hud>
 			<path n="1">Aircraft/seahawk/Systems/seahawk-sight.xml</path>
 			<visibility n="1">true</visibility>
 			<font>
@@ -318,26 +324,26 @@ Hawker Sea Hawk simulation config.
 			</offsets>
 			<compression type ="float">2</compression>
 		</aim>
-		
+
 		<environment>
 			<rain-norm type="float">0</rain-norm>
 		</environment>
 
-    <!-- ************Instrumentation ************************* -->
-    <instrumentation>
-      <path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
-      <tacan n="0">
-        <serviceable type="bool"
-                     archive="y">true</serviceable>
-        <switch-position type="int"
-                         archive="y">1</switch-position>
-      </tacan>
-      <!-- hsi heading bug and source select-->
-      <heading-indicator>
-        <heading-bug-deg type="double">95</heading-bug-deg>
-        <heading-source type="bool">true</heading-source>
-      </heading-indicator>
-    </instrumentation>
+		<!-- ************Instrumentation ************************* -->
+		<instrumentation>
+			<path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
+			<tacan n="0">
+				<serviceable type="bool"
+										 archive="y">true</serviceable>
+				<switch-position type="int"
+												 archive="y">1</switch-position>
+			</tacan>
+			<!-- hsi heading bug and source select-->
+			<heading-indicator>
+				<heading-bug-deg type="double">95</heading-bug-deg>
+				<heading-source type="bool">true</heading-source>
+			</heading-indicator>
+		</instrumentation>
 
 	</sim>
 
