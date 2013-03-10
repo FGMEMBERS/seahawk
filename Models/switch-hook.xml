@@ -19,6 +19,16 @@
 				<property>/controls/gear/tailhook</property>
 			</binding>
 		</action>
+
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<label>Hook: %s</label>
+				<tooltip-id>hook-up-down</tooltip-id>
+				<mapping>on-off</mapping>
+				<property>/controls/gear/tailhook</property>
+			</binding>
+		</hovered>
 	</animation>
 
 	<animation>
