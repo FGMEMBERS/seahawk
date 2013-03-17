@@ -6,7 +6,7 @@ Hawker Sea Hawk simulation config.
 2002-12-26 Lee Elliott  leee-fgfs@spatial.freeserve.co.uk
 
 2004-03-12 additions by Vivian Meazza vivian.meazza at lineone.net
-           to include keyboard bindings for carrier operations
+					 to include keyboard bindings for carrier operations
 ************************************************************************
 -->
 <PropertyList>
@@ -84,13 +84,13 @@ Hawker Sea Hawk simulation config.
 	<sim>
 		<author type="string">Lee Elliott, Vivian Meazza</author>
 		<description type="string">Hawker Seahawk FGA6 (2 Tanks)</description>
-    <status type="string">production</status>
-    <rating>
-      <FDM type="int">3</FDM>
-      <systems type="int">2</systems>
-      <cockpit type="int">4</cockpit>
-      <model type="int">5</model>
-    </rating>
+		<status type="string">production</status>
+		<rating>
+			<FDM type="int">3</FDM>
+			<systems type="int">2</systems>
+			<cockpit type="int">4</cockpit>
+			<model type="int">5</model>
+		</rating>
 		<flight-model>yasim</flight-model>
 		<aero>seahawk-3d-2t-yasim</aero>
 		<fuel-fraction>0.99</fuel-fraction>
@@ -319,55 +319,55 @@ Hawker Sea Hawk simulation config.
 		<fuel>
 			<tank n="0">
 				<name type="string">Fwd</name>
-				<level-gal_us>300</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">1</selected>
 			</tank>
 			<tank n="1">
 				<name type="string">Aft</name>
-				<level-gal_us>300</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">1</selected>
 			</tank>
 			<tank n="2">
 				<name type="string">Saddle</name>
-				<level-gal_us>180</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">0</selected>
 			</tank>
 			<tank n="3">
 				<name type="string">Droptank Stbd</name>
-				<level-gal_us>120</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">0</selected>
 			</tank>
 			<tank n="4">
 				<name type="string">Droptank Port</name>
-				<level-gal_us>120</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">0</selected>
 			</tank>
 		</fuel>
 	</consumables>
 	<!--
  <autopilot>
-   <config>
+	 <config>
 
-     <min-climb-speed-kt type="float">200.0</min-climb-speed-kt>
-     <best-climb-speed-kt type="float">300.0</best-climb-speed-kt>
+		 <min-climb-speed-kt type="float">200.0</min-climb-speed-kt>
+		 <best-climb-speed-kt type="float">300.0</best-climb-speed-kt>
 
-     <target-climb-rate-fpm type="float">3000.0</target-climb-rate-fpm>
-     <target-descent-rate-fpm type="float">1500.0</target-descent-rate-fpm>
+		 <target-climb-rate-fpm type="float">3000.0</target-climb-rate-fpm>
+		 <target-descent-rate-fpm type="float">1500.0</target-descent-rate-fpm>
 
-     <elevator-adj-factor type="float">5500.0</elevator-adj-factor>
+		 <elevator-adj-factor type="float">5500.0</elevator-adj-factor>
 
-     <integral-contribution type="float">0.007</integral-contribution>
+		 <integral-contribution type="float">0.007</integral-contribution>
 
-     <max-aileron type="float">0.5</max-aileron>
-     <max-roll-deg type="float">45</max-roll-deg>
+		 <max-aileron type="float">0.5</max-aileron>
+		 <max-roll-deg type="float">45</max-roll-deg>
 
-     <roll-out-deg type="float">8</roll-out-deg>
-     <roll-out-smooth-deg type="float">15.0</roll-out-smooth-deg>
+		 <roll-out-deg type="float">8</roll-out-deg>
+		 <roll-out-smooth-deg type="float">15.0</roll-out-smooth-deg>
 
-     <zero-pitch-throttle type="float">0.5</zero-pitch-throttle>
-     <zero-pitch-trim-full-throttle type="float">0.001</zero-pitch-trim-full-throttle>
+		 <zero-pitch-throttle type="float">0.5</zero-pitch-throttle>
+		 <zero-pitch-trim-full-throttle type="float">0.001</zero-pitch-trim-full-throttle>
 
-   </config>
+	 </config>
  </autopilot>
  -->
 

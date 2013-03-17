@@ -94,20 +94,12 @@ var loop = func {
 }
 
 var init_double_prop = func(node, prop, val) {
-	if (node.getNode(prop) != nil) {
-		val = num(node.getNode(prop).getValue());
-	}
-	node.getNode(prop, 1).setDoubleValue(val);
 
-    foreach (var t; tanks) {
-		var level = t.getNode("level-gal_us").getValue();
-		var density = t.getNode("density-ppg").getValue();
-		t.getNode("level-lbs").setDoubleValue(level * density);
-#		print (t , " level " , level, " density " , density, " lbs ", level * density);
-#lbs += t.getNode("level-lbs").getValue();
-#		gals += level;
-#		cap += t.getNode("capacity-gal_us").getValue();
-	}
+	print("init props ", node, " ", prop, " ", val);
+
+	if (node.getNode(prop) != nil) val = num(node.getNode(prop).getValue());
+	if(val == nil) val = 0;
+	node.getNode(prop, 1).setDoubleValue(val);
 }
 
 var tanks = [];
@@ -141,7 +133,7 @@ var L = _setlistener("/sim/signals/fdm-initialized", func {
 		init_double_prop(t, "level-gal_us", 0.0);
 		init_double_prop(t, "level-lbs", 0.0);
 		init_double_prop(t, "capacity-gal_us", 0.01); # not zero (div/zero issue)
-		init_double_prop(t, "density-ppg", 6.0);      # gasoline
+		init_double_prop(t, "density-ppg", 6.8);      # avcat
 
 		if (t.getNode("selected") == nil) {
 			t.getNode("selected", 1).setBoolValue(1);

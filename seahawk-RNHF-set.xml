@@ -212,27 +212,27 @@ Hawker Sea Hawk simulation config.
 		<fuel>
 			<tank n="0">
 				<name type="string">Fwd</name>
-				<level-gal_us>300</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">1</selected>
 			</tank>
 			<tank n="1">
 				<name type="string">Aft</name>
-				<level-gal_us>300</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">1</selected>
 			</tank>
 			<tank n="2">
 				<name type="string">Saddle</name>
-				<level-gal_us>180</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">0</selected>
 			</tank>
 			<!--<tank n="3">
 				<name type="string">Droptank Stbd</name>
-				<level-gal_us>0</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">0</selected>
 			</tank>
 			<tank n="4">
 				<name type="string">Droptank Port</name>
-				<level-gal_us>0</level-gal_us>
+				<density-ppg type="double">6.8</density-ppg>
 				<selected type="bool">0</selected>
 			</tank>-->
 		</fuel>
