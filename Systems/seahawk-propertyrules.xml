@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-	<filter>
+	<filter n="100">
 		<name>Interpolator:flap_lever</name>
 		<type>noise-spike</type>
 		<max-rate-of-change>3.33</max-rate-of-change>
@@ -9,7 +9,7 @@
 		<output>controls/flight/flaps-lever-out</output>
 	</filter>
 
-  <filter>
+  <filter n="101">
     <name>Interpolator:airbrake_lever</name>
     <type>noise-spike</type>
     <max-rate-of-change>3.33</max-rate-of-change>

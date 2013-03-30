@@ -17,9 +17,10 @@
      of the docs or pictures I found.
 -->
 	<approach speed="110"
-						aoa="7">
+						aoa="7"
+            fuel="0.3">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
-										 value="0.5"/>
+										 value="0.7"/>
 		<control-setting axis="/controls/flight/flaps"
 										 value="1.0"/>
 		<control-setting axis="/controls/gear/gear-down"
@@ -31,7 +32,8 @@
      also quoted 587 mph at 'altitude'.
 -->
 	<cruise speed="521"
-					alt="0">
+					alt="0"
+          fuel="0.5">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
 										 value="1.0"/>
 		<control-setting axis="/controls/flight/flaps"

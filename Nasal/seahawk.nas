@@ -21,6 +21,8 @@ var tyresmoke_0 = aircraft.tyresmoke.new(0);
 var tyresmoke_1 = aircraft.tyresmoke.new(1);
 var tyresmoke_2 = aircraft.tyresmoke.new(2);
 
+#does what it says on the tin
+var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
 
 # =============================== listeners ===============================
 #
@@ -354,6 +356,26 @@ flapBlowin = func{
 
 
 } # end function
+	
+	var	aileron_input = props.globals.getNode("controls/flight/aileron",1);
+	var aileron_actuator_left = props.globals.getNode("/systems/hydraulic/outputs/aileron",1); 
+	var aileron_actuator_right = props.globals.getNode("/systems/hydraulic/outputs/aileron[1]",1);
+
+Ailerons =  func{
+	
+	var x = aileron_input.getValue();
+
+	var y = -0.25 * x * x + 0.75 * x;
+	aileron_actuator_left.setValue( clamp(y, -1.0, 0.5 ));
+
+	y = 0.25 * x * x + 0.75 * x;
+	aileron_actuator_right.setValue( clamp(y, -0.5, 1.0 ));
+
+	settimer(Ailerons, 0);
+
+	} #  end function
+
+Ailerons();
 
 # =============================== end flap stuff =========================================
 

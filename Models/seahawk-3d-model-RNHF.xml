@@ -2781,8 +2781,8 @@
 			<reflection-fresnel type="float">0.1</reflection-fresnel>
 			<reflection-rainbow type="float">0.05</reflection-rainbow>
 			<reflection-noise type="float">0.1</reflection-noise>
-			<reflection-correction type="float">-0.1</reflection-correction>
-			<ambient-correction type="float">0.1</ambient-correction>
+			<reflection-correction type="float">-0.4</reflection-correction>
+			<ambient-correction type="float">0.2</ambient-correction>
 		</parameters>
 		<object-name>Rudder</object-name>
 		<object-name>UC-Nose</object-name>

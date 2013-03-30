@@ -1,44 +1,46 @@
 <!--  Hawker Sea Hawk yasim config.  This is a hack and not an
-      authentic representation of the aircraft.  Having said
-      that, the numbers, where I could find them, roughly match
-      those of the original aircraft.
-      Lee Elliott. leee-fgfs@spatial.freeserve.co.uk
+			authentic representation of the aircraft.  Having said
+			that, the numbers, where I could find them, roughly match
+			those of the original aircraft.
+			Lee Elliott. leee-fgfs@spatial.freeserve.co.uk
 
 16.12.2004
-	  
-	  Modified by Vivian Meazza. vivian.meazza at lineone.net 
-      to add new arrester hook and launchbar code to make 
-      the seahawk carrier-capable  
-	  
+		
+		Modified by Vivian Meazza. vivian.meazza at lineone.net 
+			to add new arrester hook and launchbar code to make 
+			the seahawk carrier-capable  
+		
 -->
 <airplane mass="9720">
 	<!-- Approach configuration.
-     Approach Details are taken from the Pilot' Notes
-     The airbrakes are modelled as spoilers
+		 Approach Details are taken from the Pilot' Notes
+		 The airbrakes are modelled as spoilers
 -->
-	<approach speed="110"
-						aoa="5.0">
+	<approach speed="105"
+						aoa="6.5"
+            fuel="0.3">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
-										 value="0.6"/>
+										 value="0.73"/>
 		<control-setting axis="/controls/flight/flaps"
 										 value="1.0"/>
 		<control-setting axis="/controls/gear/gear-down"
 										 value="1"/>
 		<solve-weight idx="0"
 									weight="200"/>
-		<solve-weight idx="1"
+		<!--<solve-weight idx="1"
 									weight="/yasim/weights/tank-100gal-lbs[0]"/>
 		<solve-weight idx="2"
-									weight="/yasim/weights/tank-100gal-lbs[1]"/>
+									weight="/yasim/weights/tank-100gal-lbs[1]"/>-->
 	</approach>
 
 	<!-- Cruise configuration.
-     Max speed at sea level is 599 mph = 521 knots.  The same source
-     also quoted 587 mph at 'altitude'. Here with droptanks, I assume 
+		 Max speed at sea level is 599 mph = 521 knots.  The same source
+		 also quoted 587 mph at 'altitude'. With droptanks, I assume 
 		 a speed reduction to 500 kts
 -->
-	<cruise speed="500"
-					alt="0">
+	<cruise speed="521"
+					alt="0"
+          fuel="0.5">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
 										 value="1.0"/>
 		<control-setting axis="/controls/flight/flaps"
@@ -68,65 +70,126 @@
 						midpoint= "0.4"/>
 
 	<!-- The wing length is from tips to stub wing, excluding intakes.
-     The aileron figures are probably too low but the roll rate seemed
-     too high otherwise.
+		 The aileron figures are probably too low but the roll rate seemed
+		 too high otherwise.
 -->
-
-	<wing
-		x="0.1"
-		y="1.66"
-		z="0.0"
-		taper="0.456"
-		incidence="2.0"
-		twist="-2.0"
-		length="4.31"
-		chord="2.368"
-		sweep="-3.0"
-		dihedral="3.0"
-		effectiveness="1.0" >
+  <!-- -0.106178	-0.0174621	1.49442-->
+  <wing x="-0.106178"
+				y="1.49442"
+				z="0.0"
+				taper="0.7569"
+				incidence="0.0"
+				twist="0.0"
+				length="1.99091"
+				chord="2.38877"
+				sweep="-5.0"
+				dihedral="3.0"
+			 >
 		<stall aoa="17"
 					 width="3"
 					 peak="1.3"/>
 		<flap0 start="0.0"
-					 end="0.4"
+					 end="1.0"
 					 lift="1.4"
 					 drag="1.6"/>
-		<flap1 start="0.4"
-					 end="0.95"
-					 lift="1.2"
-					 drag="1.2"/>
 		<spoiler start="0.0"
-						 end="0.4"
+						 end="1.0"
 						 lift="0.0"
-						 drag="1.6"/>
+						 drag="5.0"/>
 		<control-input axis="/controls/flight/flaps-pos-norm"
 									 control="FLAP0"/>
-		<control-input axis="/controls/flight/aileron"
-									 control="FLAP1"
-									 split="true"/>
-		<control-input axis="/controls/flight/aileron-trim"
-									 control="FLAP1"
-									 split="true"/>
 		<control-input axis="/controls/flight/speedbrake-pos-norm"
 									 control="SPOILER"/>
 		<control-output control="FLAP0"
 										prop="/surface-positions/flap-pos-norm"/>
-		<control-output control="FLAP1"
-										side="left"
-										prop="/surface-positions/left-aileron-pos-norm"/>
-		<control-output control="FLAP1"
-										side="right"
-										prop="/surface-positions/right-aileron-pos-norm"/>
 		<control-output control="SPOILER"
 										prop="/surface-positions/speedbrake-pos-norm"/>
 		<control-speed control="FLAP0"
 									 transition-time="10"/>
-		<control-speed control="FLAP1"
-									 transition-time="1"/>
 		<control-speed control="SPOILER"
 									 transition-time="2"/>
 	</wing>
+  
+  <!-- simulate diffential ailerons -->
+	<!-- wing, left aileron section -->
+	<!-- -0.267628	0.134247	3.47423-->
+	<vstab x="-0.267628"
+				 y="3.47423"
+				 z="0.134247"
+				 taper="0.6267"
+				 incidence="0.0"
+				 twist="0.0"
+				 length="2.36183"
+				 chord="2.62"
+				 sweep="-5.0"
+				 dihedral="3.0">
+		<stall aoa="17.5"
+					 width="22.5"
+					 peak="1.593"/>
+		<flap0 start="0.00"
+					 end="1.0"
+					 lift="1.2"
+					 drag="1.5"/>
+		<control-input axis="/systems/hydraulic/outputs/aileron"
+									 control="FLAP0"
+									 src0="-1.0"
+									 dst0="-1.0"
+									 src1="1.0"
+									 dst1="1.0"
+									 />
+		<control-input axis="/controls/flight/aileron-trim"
+									 control="FLAP0"
+									 src0="-1.0"
+									 dst0="-1.0"
+									 src1="1.0"
+									 dst1="1.0"
+																		 />
+		<control-output control="FLAP0"
+										prop="/surface-positions/left-aileron-pos-norm"/>
+		<control-speed control="FLAP0"
+									 transition-time="1.0"/>
+	</vstab>
 
+	<!-- wing, right aileron section -->
+	<!-- -0.267628	0.134247	3.47423-->
+	<vstab x="-0.267628"
+				 y="-3.47423"
+				 z="0.134247"
+				 taper="0.6267"
+				 incidence="0.0"
+				 twist="0.0"
+				 length="2.36183"
+				 chord="2.62"
+				 sweep="-5.0"
+				 dihedral="177.0">
+		<stall aoa="17.5"
+					 width="22.5"
+					 peak="1.593"/>
+		<flap0 start="0.00"
+					 end="1.0"
+					 lift="1.3"
+					 drag="1.5"/>
+		<control-input axis="/systems/hydraulic/outputs/aileron[1]"
+									 control="FLAP0"
+									 src0="-1.0"
+									 dst0="-1.0"
+									 src1="1.0"
+									 dst1="1.0"
+									 />
+		<control-input axis="/controls/flight/aileron-trim"
+									 control="FLAP0"
+									 src0="-1.0"
+									 dst0="-1.0"
+									 src1="1.0"
+									 dst1="1.0"
+																		 />
+		<control-output control="FLAP0"
+										prop="/surface-positions/right-aileron-pos-norm"/>
+		<control-speed control="FLAP0"
+									 transition-time="1.0"/>
+	</vstab>
+
+  <!--inner flap section-->
 	<mstab
 		x="0.1"
 		y="0.70"
@@ -221,7 +284,7 @@
 	</jet>
 
 	<!-- Fuel tanks in front, behind and above (saddle tank - actually feeds into
-     tank two in real life) the engine. -->
+		 tank two in real life) the engine. -->
 	<tank x="1.4"
 				y="0.0"
 				z="0.0"
@@ -366,8 +429,8 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 									 dst0="0"
 									 dst1="1"/>
 	</thruster>
-	
-<thruster x="3.5"
+
+	<thruster x="3.5"
 						y="0"
 						z="0.4"
 						vx="1"
@@ -396,7 +459,7 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 									 dst0="0"
 									 dst1="1"/>
 	</thruster>
-	
+
 	<thruster x="0.93157"
 						y="-1.70211"
 						z="-0.024736"
@@ -412,7 +475,7 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 									 dst1="1"/>
 	</thruster>
 
-<!-- Simulate lashing the aircraft down -->
+	<!-- Simulate lashing the aircraft down -->
 	<thruster x="-1.99074"
 						y="0"
 						z="-0.759429"
@@ -427,7 +490,7 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 									 dst0="0"
 									 dst1="1"/>
 	</thruster>
-	
+
 	<!-- Ballast & Weights-->
 	<ballast x="3.0"
 					 y="0"
@@ -449,16 +512,16 @@ Note: the Seahawk was not fitted with a catpult launch-bar - it used a catapult 
 					z="-0.04"
 					mass-prop="/yasim/weights/pilot-lb"/>
 	<!-- Pilot -->
-	<weight x="-0.7094"
+	<!--<weight x="-0.7094"
 					y="1.6900"
 					z="-0.5715"
 					size="0.5"
 					mass-prop="/yasim/weights/tank-100gal-lbs[0]"/>
-<!--	 port droptank - dry wt -->
+	--><!--	 port droptank - dry wt --><!--
 	<weight x="-0.7094"
 					y="-1.6900"
 					z="-0.5715"
 					size="0.5"
 					mass-prop="/yasim/weights/tank-100gal-lbs[1]"/>
-<!-- 	stbd droptank - dry wt -->
+	--><!-- 	stbd droptank - dry wt -->
 </airplane>

@@ -1495,7 +1495,7 @@
 		<object-name>R-Aileron-B</object-name>
 		<object-name>R-Aileron-C</object-name>
 		<property>surface-positions/right-aileron-pos-norm</property>
-		<factor>-20</factor>
+		<factor>20</factor>
 		<center>
 			<x-m>0.24</x-m>
 			<y-m>3.39</y-m>
