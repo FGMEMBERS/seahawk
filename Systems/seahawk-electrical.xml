@@ -44,12 +44,12 @@
 		<!-- simple way to provide electrical outputs if you don't need -->
 		<!-- to put a circuit breaker or switch in front of the output. -->
 		<prop>/systems/electrical/outputs/avionics-fan</prop>
-		<prop>/systems/electrical/outputs/gps-mfd</prop>
+		<!--<prop>/systems/electrical/outputs/gps-mfd</prop>-->
 		<!--<prop>/systems/electrical/outputs/hsi</prop>-->
 		<prop>/systems/electrical/outputs/nav[0]</prop>
-		<!--<prop>/systems/electrical/outputs/dme</prop>-->
+    <prop>/systems/electrical/outputs/nav[1]</prop>
+    <!--<prop>/systems/electrical/outputs/dme</prop>-->
 		<prop>/systems/electrical/outputs/audio-panel[0]</prop>
-		<prop>/systems/electrical/outputs/nav[1]</prop>
 		<prop>/systems/electrical/outputs/audio-panel[1]</prop>
 		<prop>/systems/electrical/outputs/transponder</prop>
 		<prop>/systems/electrical/outputs/autopilot</prop>

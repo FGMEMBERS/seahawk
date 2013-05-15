@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<PropertyList>
+  <tacan n="0">
+    <serviceable type="bool"
+                 archive="y">true</serviceable>
+    <switch-position type="int"
+                     archive="y">1</switch-position>
+  </tacan>
+
+  <!-- hsi heading bug and source select-->
+  <heading-indicator>
+    <heading-bug-deg type="double">95</heading-bug-deg>
+    <heading-source type="bool">true</heading-source>
+  </heading-indicator>
+
+  <transponder>
+    <id-code type="int"
+             archive="y">7000</id-code>
+  </transponder>
+  <encoder>
+    <serviceable type="bool">true</serviceable>
+  </encoder>
+</PropertyList>

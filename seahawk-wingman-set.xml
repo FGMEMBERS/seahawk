@@ -6,7 +6,7 @@ Hawker Sea Hawk simulation config.
 2002-12-26 Lee Elliott  leee-fgfs@spatial.freeserve.co.uk
 
 2004-03-12 additions by Vivian Meazza vivian.meazza at lineone.net
-           to include keyboard bindings for carrier operations
+					 to include keyboard bindings for carrier operations
 ************************************************************************
 -->
 <PropertyList>
@@ -74,6 +74,9 @@ Hawker Sea Hawk simulation config.
 		</engine>
 	</engines>
 
+	<!-- ************Instrumentation ************************* -->
+	<instrumentation include="/Aircraft/seahawk/Systems/instruments.xml"/>
+
 	<position>
 		<altitude-agl-ft type="double">0</altitude-agl-ft>
 	</position>
@@ -81,13 +84,13 @@ Hawker Sea Hawk simulation config.
 	<sim>
 		<author type="string">Lee Elliott, Vivian Meazza</author>
 		<description type="string">Hawker Seahawk FGA6 (Wingman)</description>
-    <status type="string">production</status>
-    <rating>
-      <FDM type="int">3</FDM>
-      <systems type="int">2</systems>
-      <cockpit type="int">4</cockpit>
-      <model type="int">5</model>
-    </rating>		<flight-model>yasim</flight-model>
+		<status type="string">production</status>
+		<rating>
+			<FDM type="int">3</FDM>
+			<systems type="int">2</systems>
+			<cockpit type="int">4</cockpit>
+			<model type="int">5</model>
+		</rating>		<flight-model>yasim</flight-model>
 		<aero>seahawk-3d-2t-yasim</aero>
 		<fuel-fraction>0.99</fuel-fraction>
 		<systems>

@@ -64,12 +64,6 @@ file, these values will be used (they are hardcoded).
     <number>0</number>
   </dme>-->
 
-  <!--<encoder>
-    <name>encoder</name>
-    <number>0</number>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </encoder>-->
-
   <!--<marker-beacon>
     <name>marker-beacon</name>
     <number>0</number>
@@ -81,10 +75,10 @@ file, these values will be used (they are hardcoded).
     <suction>/systems/vacuum/suction-inhg</suction>
   </heading-indicator>-->
 
-  <KT-70>
+  <!--<KT-70>
     <name>kt-70</name>
     <number>0</number>
-  </KT-70>
+  </KT-70>-->
 
   <magnetic-compass>
     <name>magnetic-compass</name>
@@ -114,8 +108,14 @@ file, these values will be used (they are hardcoded).
   <transponder>
     <name>transponder</name>
     <number>0</number>
-    <mode-c-altitude>/instrumentation/encoder/mode-c-alt-ft</mode-c-altitude>
+    <encoder-path>/instrumentation/encoder</encoder-path>
   </transponder>
+
+  <encoder>
+    <name>encoder</name>
+    <number>0</number>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  </encoder>
 
   <turn-indicator>
     <name>turn-indicator</name>
@@ -137,6 +137,5 @@ file, these values will be used (they are hardcoded).
     <name>tacan</name>
     <number>0</number>
   </tacan>
-
 
 </PropertyList>

@@ -237,32 +237,6 @@ Hawker Sea Hawk simulation config.
 			</tank>-->
 		</fuel>
 	</consumables>
-	<!--
- <autopilot>
-   <config>
-
-     <min-climb-speed-kt type="float">200.0</min-climb-speed-kt>
-     <best-climb-speed-kt type="float">300.0</best-climb-speed-kt>
-
-     <target-climb-rate-fpm type="float">3000.0</target-climb-rate-fpm>
-     <target-descent-rate-fpm type="float">1500.0</target-descent-rate-fpm>
-
-     <elevator-adj-factor type="float">5500.0</elevator-adj-factor>
-
-     <integral-contribution type="float">0.007</integral-contribution>
-
-     <max-aileron type="float">0.5</max-aileron>
-     <max-roll-deg type="float">45</max-roll-deg>
-
-     <roll-out-deg type="float">8</roll-out-deg>
-     <roll-out-smooth-deg type="float">15.0</roll-out-smooth-deg>
-
-     <zero-pitch-throttle type="float">0.5</zero-pitch-throttle>
-     <zero-pitch-trim-full-throttle type="float">0.001</zero-pitch-trim-full-throttle>
-
-   </config>
- </autopilot>
- -->
 
 	<!-- *************** set properties **********************-->
 	<!--parking brake ON -->
@@ -292,22 +266,7 @@ Hawker Sea Hawk simulation config.
 			<nav-lights type="bool">false</nav-lights>
 		</lighting>
 	</controls>
-
-	<!-- ************Instrumentation ************************* -->
-	<instrumentation>
-		<path>Aircraft/seahawk/Systems/seahawk-instrumentation.xml</path>
-		<tacan n="0">
-			<serviceable type="bool"
-									 archive="y">true</serviceable>
-			<switch-position type="int"
-											 archive="y">1</switch-position>
-		</tacan>
-		<!-- hsi heading bug and source select-->
-		<heading-indicator>
-			<heading-bug-deg type="double">95</heading-bug-deg>
-			<heading-source type="bool">true</heading-source>
-		</heading-indicator>
-	</instrumentation>
+  <instrumentation include="/Aircraft/seahawk/Systems/instruments.xml"/>
 
 	<!-- **************** map keyboard input ********************** -->
 	<input>
