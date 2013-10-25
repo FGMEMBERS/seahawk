@@ -611,13 +611,13 @@ setlistener("/sim/signals/fdm-initialized", func {
 
 # ======================================= jet exhaust ========================
 
-speed_node = props.globals.getNode("velocities/uBody-fps", 1);
+speed_node = props.globals.getNode("instrumentation/airspeed-indicator/true-speed-kt", 1);
 exhaust_node = props.globals.getNode("sim/ai/aircraft/exhaust", 1);
 
 exhaust_node.setBoolValue(1) ;
 
 updateExhaustState = func {
-	var speed = speed_node.getValue(); 
+	var speed = speed_node.getValue() * KT2FPS; # was initially used as fps
 	var exhaust = exhaust_node.getValue() ;
 
 	if (speed == nil) {return;}
