@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<variant type="string">Side No 471</variant>
+				<index type="int">1</index>
+				<material>
+					<Fuselage-Markings-Side-No>
+						<texture type="string">Liveries/seahawk-tx-01-2.png</texture>
+					</Fuselage-Markings-Side-No>
+				</material>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>
