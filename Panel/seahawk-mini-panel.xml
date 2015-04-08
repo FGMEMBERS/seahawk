@@ -47,7 +47,7 @@ Hacked by Lee Elliott for the seahawk mock panel
 
  <instruments>
 
-  <instrument include="../Instruments/engine0-prop-thrust.xml">
+  <instrument include="Aircraft/Instruments/engine0-prop-thrust.xml">
    <name>Prop Thrust Gauge</name>
    <x>835</x>
    <y>98</y>
@@ -55,7 +55,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>70</h>
   </instrument>
 <!--
-  <instrument include="../Instruments/engine1-prop-thrust.xml">
+  <instrument include="Aircraft/Instruments/engine1-prop-thrust.xml">
    <name>Fuel Flow GPH Gauge</name>
    <x>900</x>
    <y>98</y>
@@ -63,7 +63,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>70</h>
   </instrument>
 -->
-  <instrument include="../Instruments/engine0-fuel-flow-gph.xml">
+  <instrument include="Aircraft/Instruments/engine0-fuel-flow-gph.xml">
    <name>Fuel Flow GPH Gauge</name>
    <x>835</x>
    <y>33</y>
@@ -71,7 +71,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>70</h>
   </instrument>
 <!--
-  <instrument include="../Instruments/engine1-fuel-flow-gph.xml">
+  <instrument include="Aircraft/Instruments/engine1-fuel-flow-gph.xml">
    <name>Fuel Flow GPH Gauge</name>
    <x>900</x>
    <y>33</y>
@@ -81,7 +81,7 @@ Hacked by Lee Elliott for the seahawk mock panel
 -->
 <!-- controls cluster -->
 
- <instrument include="../Instruments/jet-throttle-quadrant.xml">
+ <instrument include="Aircraft/Instruments/jet-throttle-quadrant.xml">
    <x>980</x>
    <y>105</y>
    <w>75</w>
@@ -94,7 +94,7 @@ Hacked by Lee Elliott for the seahawk mock panel
 <!-- controls visual feedback cluster -->
 
 
-  <instrument include="../Instruments/brakes.xml">
+  <instrument include="Aircraft/Instruments/brakes.xml">
    <name>Brake Indicator Light</name>
    <x>390</x>
    <y>115</y>
@@ -102,7 +102,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>15</h>
   </instrument>
 
-  <instrument include="../Instruments/gear-indicator.xml">
+  <instrument include="Aircraft/Instruments/gear-indicator.xml">
    <name>Gear Indicator Light</name>
    <x>425</x>
    <y>115</y>
@@ -110,7 +110,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>14</h>
   </instrument>
 
-  <instrument include="../Instruments/controls.xml">
+  <instrument include="Aircraft/Instruments/controls.xml">
    <name>Control Position Indicators</name>
    <x>410</x>
    <y>60</y>
@@ -122,7 +122,7 @@ Hacked by Lee Elliott for the seahawk mock panel
 
 <!-- sacred six -->
 
-  <instrument include="../Instruments/asi-1k-knot.xml">
+  <instrument include="Aircraft/Instruments/asi-1k-knot.xml">
    <name>Airspeed Indicator</name>
    <x>265</x>
    <y>100</y>
@@ -130,7 +130,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>65</h>
   </instrument>
 
-  <instrument include="../Instruments/tsr2-attitude-indicator.xml">
+  <instrument include="Aircraft/Instruments/tsr2-attitude-indicator.xml">
    <name>Attitude Gyro</name>
    <x>330</x>
    <y>100</y>
@@ -138,7 +138,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>65</h>
   </instrument>
 
-  <instrument include="../Instruments/altimeter.xml">
+  <instrument include="Aircraft/Instruments/altimeter.xml">
    <name>Altimeter</name>
    <x>690</x>
    <y>65</y>
@@ -146,7 +146,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="../Instruments/turn.xml">
+  <instrument include="Aircraft/Instruments/turn.xml">
    <name>Turn Coordinator</name>
    <x>265</x>
    <y>35</y>
@@ -154,7 +154,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>65</h>
   </instrument>
 
-  <instrument include="../Instruments/hsi.xml">
+  <instrument include="Aircraft/Instruments/hsi.xml">
    <name>Horizontal Situation Indicator</name>
    <x>610</x>
    <y>65</y>
@@ -162,7 +162,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="../Instruments/vertical1k.xml">
+  <instrument include="Aircraft/Instruments/vertical1k.xml">
    <name>Vertical Velocity Indicator</name>
    <x>770</x>
    <y>65</y>
@@ -173,13 +173,13 @@ Hacked by Lee Elliott for the seahawk mock panel
 <!-- end sacred six -->
 
 
-  <instrument include="../Instruments/magcompass.xml">
+  <instrument include="Aircraft/Instruments/magcompass.xml">
    <name>Magnetic Compass</name>
    <x>768</x>
    <y>155</y>
   </instrument>
 
-  <instrument include="../Instruments/fuel-tot-gal.xml">
+  <instrument include="Aircraft/Instruments/fuel-tot-gal.xml">
    <name>Fuel Gauge</name>
    <x>330</x>
    <y>35</y>
@@ -187,7 +187,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>70</h>
   </instrument>
 
-  <instrument include="../Instruments/aoa-indexer.xml">
+  <instrument include="Aircraft/Instruments/aoa-indexer.xml">
    <name>AoAI</name>
    <x>385</x>
    <y>60</y>
@@ -195,7 +195,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>65</h>
   </instrument>
 
-  <instrument include="../Instruments/pilot-g.xml">
+  <instrument include="Aircraft/Instruments/pilot-g.xml">
    <name>Pilot G</name>
    <x>200</x>
    <y>100</y>
@@ -203,7 +203,7 @@ Hacked by Lee Elliott for the seahawk mock panel
    <h>65</h>
   </instrument>
 
-  <instrument include="../Instruments/aoa.xml">
+  <instrument include="Aircraft/Instruments/aoa.xml">
    <name>AoA</name>
    <x>135</x>
    <y>100</y>
