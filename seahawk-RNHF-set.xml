@@ -16,6 +16,8 @@ Hawker Sea Hawk simulation config.
 		<status type="string">early-production</status>
 		<flight-model>yasim</flight-model>
 		<aero>seahawk-3d-yasim</aero>
+		<variant-of>seahawk</variant-of>
+		
 		<systems>
 			<autopilot>
 				<path>Aircraft/seahawk/Systems/seahawk-autopilot.xml</path>
@@ -178,7 +180,7 @@ Hawker Sea Hawk simulation config.
 				</menu>
 			</default>
 		</menubar>
-		
+
 		<seahawk>
 			<show-pilot archive="y"
 									type="bool">true</show-pilot>
