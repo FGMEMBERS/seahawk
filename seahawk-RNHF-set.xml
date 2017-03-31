@@ -17,6 +17,18 @@ Hawker Sea Hawk simulation config.
 		<flight-model>yasim</flight-model>
 		<aero>seahawk-3d-yasim</aero>
 		<variant-of>seahawk</variant-of>
+
+		<tags>
+		   <tag>fighter</tag>
+		   <tag>1950s</tag>
+		   <tag>1960s</tag>
+		   <tag>1970s</tag>
+		   <tag>1980s</tag>
+		   <tag>retractable-gear</tag>
+		   <tag>tail-hook</tag>
+		   <tag>jet</tag>
+		   <tag>single-engine</tag>
+		</tags>
 		
 		<systems>
 			<autopilot>
